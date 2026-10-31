@@ -5,11 +5,11 @@ export function QuickSession() {
 <div className="session-mode-switch" role="group" aria-label="Modo del generador">
 {"\n"}
 <button type="button" className="btn btn-ghost" id="session-mode-quick" aria-pressed="false">
-{"Modo rápido · 3 pasos"}
+{"Asistente · 3 pasos"}
 </button>
 {"\n"}
 <button type="button" className="btn btn-ghost" id="session-mode-advanced" aria-pressed="true">
-{"Modo avanzado"}
+{"Edición completa"}
 </button>
 {"\n"}
 </div>
@@ -101,7 +101,7 @@ export function QuickSession() {
 <section data-quick-panel="3" hidden={true} aria-labelledby="quick-title-3">
 {"\n"}
 <h3 id="quick-title-3" tabIndex={-1}>
-{"Revisar y generar"}
+{"Revisión y creación"}
 </h3>
 {"\n"}
 <dl id="quick-review">

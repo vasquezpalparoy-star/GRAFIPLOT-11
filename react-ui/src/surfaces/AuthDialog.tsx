@@ -22,21 +22,7 @@ export function AuthDialog() {
 {"\n"}
 <div style={{"background": "#090a0f", "border": "1px solid rgba(255,255,255,0.06)", "padding": "12px", "borderRadius": "8px", "display": "inline-flex", "alignItems": "center", "justifyContent": "center", "boxShadow": "var(--shadow-sm)"} as CSSProperties}>
 {"\n"}
-<svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{"filter": "drop-shadow(0px 0px 8px rgba(0, 210, 255, 0.5))"} as CSSProperties}>
-{"\n"}
-<rect x="2" y="2" width="96" height="96" rx="28" fill="#0d0e12" stroke="#1f2937" strokeWidth="2">
-
-</rect>
-{"\n"}
-<path d="M55 22C42.5 22 36.5 30 36.5 35C36.5 37.5 38.5 39.5 41 39.5C43.5 39.5 45 37.5 45.5 35.5C46.2 33 49 28.5 54.5 28.5C60.5 28.5 63 32.5 63 36.5C63 42.5 56.5 44.5 51 46.5L42.5 49.5C36.5 51.5 34.5 57.5 34.5 63.5C34.5 72.5 43.5 78 54 78C66.5 78 72 70 72 65C72 62.5 70 60.5 67.5 60.5C65 60.5 63.5 62.5 63 64.5C62.3 67 59.5 71.5 54 71.5C47.5 71.5 45 67.5 45 63.5C45 57.5 51.5 55.5 57 53.5L65.5 50.5C71.5 48.5 73.5 42.5 73.5 36.5C73.5 27.5 65.5 22 55 22Z" fill="#ffffff">
-
-</path>
-{"\n"}
-<path d="M56 25L38 52H48L44 75L62 48H52L56 25Z" fill="#ffffff">
-
-</path>
-{"\n"}
-</svg>
+<img src="assets/grafiplot-sesiones.png" alt="Sesiones GRAFIPLOT" className="gp-auth-logo"/>
 {"\n"}
 </div>
 {"\n"}
@@ -50,7 +36,7 @@ export function AuthDialog() {
 </button>
 {"\n"}
 <button type="button" id="auth-tab-register" className="auth-tab">
-{"Crear cuenta"}
+{"Registrarme"}
 </button>
 {"\n"}
 </div>
@@ -59,7 +45,7 @@ export function AuthDialog() {
 <div className="load-modal-header" style={{"display": "none"} as CSSProperties}>
 {"\n"}
 <h3 id="auth-title">
-{"Iniciar Sesión"}
+{"Acceder a mi cuenta"}
 </h3>
 {"\n"}
 </div>
@@ -77,7 +63,7 @@ export function AuthDialog() {
 {"\n"}
 <div id="auth-group-username" className="form-group hidden" style={{"textAlign": "left", "marginBottom": "1rem"} as CSSProperties}>
 {"\n"}
-<input type="text" id="auth-username" className="auth-field" placeholder="Apodo único (sin espacios)"/>
+<input type="text" id="auth-username" className="auth-field" placeholder="Nombre de usuario sin espacios"/>
 {"\n"}
 </div>
 {"\n"}
@@ -98,7 +84,7 @@ export function AuthDialog() {
 {"\n"}
 <div id="auth-group-confirm-password" className="form-group hidden" style={{"textAlign": "left", "marginBottom": "1rem"} as CSSProperties}>
 {"\n"}
-<input type="password" id="auth-confirm-password" className="auth-field" placeholder="Confirmar contraseña"/>
+<input type="password" id="auth-confirm-password" className="auth-field" placeholder="Repite tu contraseña"/>
 {"\n"}
 </div>
 {"\n"}
@@ -119,11 +105,11 @@ export function AuthDialog() {
 {"\n"}
 {"\n"}
 <button type="submit" id="btn-submit-auth" className="auth-submit-btn">
-{"\n                    Iniciar Sesión\n                "}
+{"\n                    Acceder a mi cuenta\n                "}
 </button>
 {"\n"}
 <button type="button" id="btn-forgot-password" className="btn btn-ghost">
-{"Olvidé mi contraseña"}
+{"Recuperar mi acceso"}
 </button>
 {"\n"}
 </form>
@@ -132,7 +118,7 @@ export function AuthDialog() {
 <div style={{"display": "none"} as CSSProperties}>
 {"\n"}
 <span id="auth-toggle-text">
-{"¿No tienes una cuenta?"}
+{"¿Es tu primera visita?"}
 </span>
 {"\n"}
 <a href="#" id="auth-toggle-mode">

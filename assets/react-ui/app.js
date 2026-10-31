@@ -11608,7 +11608,7 @@ function ja({ bridge: e, state: t }) {
 				className: "sl-brand-symbol",
 				children: /* @__PURE__ */ (0, T.jsx)("img", {
 					className: "sl-brand-logo",
-					src: "assets/favicon.svg",
+					src: "assets/grafiplot-sesiones.png",
 					alt: "",
 					width: "40",
 					height: "40"
@@ -11616,30 +11616,30 @@ function ja({ bridge: e, state: t }) {
 			}), /* @__PURE__ */ (0, T.jsxs)("span", {
 				className: "workspace-nav-copy",
 				children: [
-					"Space",
+					"Sesiones",
 					/* @__PURE__ */ (0, T.jsx)("span", {
 						className: "sl-brand-light",
-						children: "Lab"
+						children: "GRAFIPLOT"
 					}),
-					/* @__PURE__ */ (0, T.jsx)("small", { children: "EL ESPACIO DE TUS IDEAS" })
+					/* @__PURE__ */ (0, T.jsx)("small", { children: "IDEAS QUE LLEGAN AL AULA." })
 				]
 			})]
 		}),
 		/* @__PURE__ */ (0, T.jsxs)("button", {
 			type: "button",
 			className: "sl-create-button",
-			title: "Nueva sesión",
+			title: "Nueva planificación",
 			onClick: () => void c(async () => {
 				await e.newSession() && e.setField("duracion", "90 min");
 			}),
 			children: [/* @__PURE__ */ (0, T.jsx)(ca, { size: 19 }), /* @__PURE__ */ (0, T.jsx)("span", {
 				className: "workspace-nav-copy",
-				children: "Nueva sesión"
+				children: "Nueva planificación"
 			})]
 		}),
 		/* @__PURE__ */ (0, T.jsx)("span", {
 			className: "sl-nav-label workspace-nav-copy",
-			children: "TU ESPACIO DOCENTE"
+			children: "TU ORGANIZADOR PEDAGÓGICO"
 		}),
 		/* @__PURE__ */ (0, T.jsx)("nav", {
 			"aria-label": "Navegación principal",
@@ -11647,13 +11647,13 @@ function ja({ bridge: e, state: t }) {
 			children: [
 				{
 					id: "home",
-					label: "Mi espacio",
+					label: "Mi panel",
 					Icon: Pi,
 					action: () => e.showLegacy("home")
 				},
 				{
 					id: "create",
-					label: "Crear sesión",
+					label: "Preparar una clase",
 					Icon: ma,
 					action: () => e.prepare()
 				},
@@ -11665,7 +11665,7 @@ function ja({ bridge: e, state: t }) {
 				},
 				{
 					id: "library",
-					label: "Mi biblioteca",
+					label: "Mis documentos",
 					Icon: Ai,
 					action: () => e.showLegacy("library")
 				}
@@ -11695,13 +11695,13 @@ function ja({ bridge: e, state: t }) {
 						className: "sl-tip-symbol",
 						children: /* @__PURE__ */ (0, T.jsx)(ma, { size: 20 })
 					}),
-					/* @__PURE__ */ (0, T.jsx)("strong", { children: "Más tiempo para enseñar." }),
-					/* @__PURE__ */ (0, T.jsx)("p", { children: "Dale forma a tus ideas y crea experiencias para tu aula." }),
+					/* @__PURE__ */ (0, T.jsx)("strong", { children: "Más espacio para tu vocación." }),
+					/* @__PURE__ */ (0, T.jsx)("p", { children: "Transforma lo que imaginas en propuestas para tu grupo." }),
 					/* @__PURE__ */ (0, T.jsx)("span", { className: "sl-tip-line" })
 				]
 			}), /* @__PURE__ */ (0, T.jsxs)("span", {
 				className: "sl-sidebar-footer",
-				children: [/* @__PURE__ */ (0, T.jsx)("span", { className: "sl-status-dot" }), "Hecho para docentes"]
+				children: [/* @__PURE__ */ (0, T.jsx)("span", { className: "sl-status-dot" }), "Pensado para tu labor docente"]
 			})]
 		})
 	] });
@@ -11743,7 +11743,7 @@ function ja({ bridge: e, state: t }) {
 					children: [
 						/* @__PURE__ */ (0, T.jsx)(Rr, {
 							className: "sl-sr-only",
-							children: "Navegación de Space Lab"
+							children: "Navegación de Sesiones GRAFIPLOT"
 						}),
 						/* @__PURE__ */ (0, T.jsx)(zr, {
 							className: "sl-sr-only",
@@ -12604,9 +12604,9 @@ function L({ state: e, bridge: t, errors: n }) {
 		"aria-labelledby": "react-step-heading",
 		children: [/* @__PURE__ */ (0, T.jsx)(Ko, {
 			icon: Mi,
-			eyebrow: "EL PUNTO DE PARTIDA",
-			title: "Cuéntanos sobre tu clase",
-			description: "Solo lo esencial para crear una sesión que conecte con tus estudiantes."
+			eyebrow: "CONOZCAMOS TU AULA",
+			title: "Define el contexto de aprendizaje",
+			description: "Indica el contexto que orientarán una propuesta adecuada para tu grupo."
 		}), /* @__PURE__ */ (0, T.jsxs)("div", {
 			className: "sl-form-body",
 			children: [
@@ -12664,11 +12664,11 @@ function L({ state: e, bridge: t, errors: n }) {
 						}),
 						/* @__PURE__ */ (0, T.jsx)(I, {
 							name: "titulo",
-							label: "¿Qué aprenderán hoy?",
+							label: "¿Cuál será el tema de tu clase?",
 							state: e,
 							bridge: t,
-							placeholder: "Ej. Descubrimos las matemáticas en nuestro mercado",
-							hint: "Dale un título que describa el aprendizaje de la sesión.",
+							placeholder: "Ej. Reconocemos las plantas que cuidan nuestra salud",
+							hint: "Escribe un título que refleje lo que aprenderán tus estudiantes.",
 							error: n.titulo,
 							wide: !0
 						}),
@@ -12676,7 +12676,7 @@ function L({ state: e, bridge: t, errors: n }) {
 							className: "sl-duration sl-wide",
 							children: [/* @__PURE__ */ (0, T.jsxs)("div", {
 								className: "sl-duration-heading",
-								children: [/* @__PURE__ */ (0, T.jsx)(Ei, { size: 17 }), /* @__PURE__ */ (0, T.jsx)("span", { children: "Tiempo para aprender" })]
+								children: [/* @__PURE__ */ (0, T.jsx)(Ei, { size: 17 }), /* @__PURE__ */ (0, T.jsx)("span", { children: "Tiempo destinado a la sesión" })]
 							}), /* @__PURE__ */ (0, T.jsxs)("div", {
 								className: "sl-duration-options",
 								children: [[
@@ -12692,7 +12692,7 @@ function L({ state: e, bridge: t, errors: n }) {
 									children: [n, /* @__PURE__ */ (0, T.jsx)("small", { children: " min" })]
 								}, n)), /* @__PURE__ */ (0, T.jsx)(I, {
 									name: "duracion",
-									label: "Duración personalizada",
+									label: "Otro tiempo de duración",
 									state: e,
 									bridge: t,
 									placeholder: "Ej. 80 min",
@@ -12704,8 +12704,8 @@ function L({ state: e, bridge: t, errors: n }) {
 				}),
 				/* @__PURE__ */ (0, T.jsxs)(Go, {
 					icon: mi,
-					title: "Tu institución y tu aula",
-					note: "Opcional · puedes completarlo después",
+					title: "Datos de tu centro educativo",
+					note: "Opcional · complétalo cuando lo necesites",
 					children: [/* @__PURE__ */ (0, T.jsxs)("div", {
 						className: "sl-field-grid",
 						children: [
@@ -12744,7 +12744,7 @@ function L({ state: e, bridge: t, errors: n }) {
 						]
 					}), /* @__PURE__ */ (0, T.jsx)("p", {
 						className: "sl-small-note",
-						children: "Usamos los datos disponibles de tu perfil sin reemplazar lo que ya escribiste."
+						children: "Recuperamos la información de tu perfil y respetamos los datos que ya ingresaste."
 					})]
 				})
 			]
@@ -12761,9 +12761,9 @@ function Jo({ state: e, bridge: t }) {
 		"aria-labelledby": "react-step-heading",
 		children: [/* @__PURE__ */ (0, T.jsx)(Ko, {
 			icon: ui,
-			eyebrow: "CON INTENCIÓN PEDAGÓGICA",
-			title: "Define los aprendizajes",
-			description: "Elige qué trabajarán tus estudiantes y aporta tus ideas para la clase."
+			eyebrow: "EL APRENDIZAJE COMO EJE",
+			title: "Selecciona qué aprenderá tu grupo",
+			description: "Determina los aprendizajes esperados y añade las propuestas que quieras desarrollar."
 		}), /* @__PURE__ */ (0, T.jsxs)("div", {
 			className: "sl-form-body",
 			children: [
@@ -12804,14 +12804,14 @@ function Jo({ state: e, bridge: t }) {
 				}),
 				/* @__PURE__ */ (0, T.jsxs)(Go, {
 					icon: oa,
-					title: e.profiles.length ? "Ajustar o aportar aprendizajes manualmente" : "Añadir aprendizajes de tu programa curricular",
+					title: e.profiles.length ? "Editar o incorporar aprendizajes propios" : "Incorporar aprendizajes del programa curricular",
 					children: [/* @__PURE__ */ (0, T.jsx)(I, {
 						name: "competencia",
 						label: "Competencias",
 						state: e,
 						bridge: t,
 						rows: 3,
-						hint: "Una por línea o separadas por punto y coma."
+						hint: "Escribe cada una en una línea; también puedes separarlas con punto y coma."
 					}), /* @__PURE__ */ (0, T.jsx)(I, {
 						name: "capacidad",
 						label: "Capacidades",
@@ -12826,12 +12826,12 @@ function Jo({ state: e, bridge: t }) {
 					state: e,
 					bridge: t,
 					rows: 3,
-					placeholder: "¿Qué desempeño observable esperas en esta sesión?",
-					hint: "Aporta el desempeño de tu programa curricular y contextualízalo para tu aula."
+					placeholder: "¿Qué actuación esperas observar durante la clase?",
+					hint: "Incorpora el desempeño de referencia y adáptalo al contexto de tus estudiantes."
 				}),
 				n.length > 0 && /* @__PURE__ */ (0, T.jsx)(Go, {
 					icon: ui,
-					title: "Consultar desempeños de referencia",
+					title: "Revisar ejemplos de desempeños curriculares",
 					children: n.map((t) => /* @__PURE__ */ (0, T.jsxs)("div", {
 						className: "sl-reference",
 						children: [
@@ -12848,17 +12848,17 @@ function Jo({ state: e, bridge: t }) {
 							className: "sl-ideas-heading",
 							children: [
 								/* @__PURE__ */ (0, T.jsx)("span", { children: /* @__PURE__ */ (0, T.jsx)(Ri, { size: 21 }) }),
-								/* @__PURE__ */ (0, T.jsxs)("div", { children: [/* @__PURE__ */ (0, T.jsx)("h3", { children: "Tus ideas hacen la diferencia" }), /* @__PURE__ */ (0, T.jsx)("p", { children: "Propuestas editables, separadas de las referencias curriculares." })] }),
+								/* @__PURE__ */ (0, T.jsxs)("div", { children: [/* @__PURE__ */ (0, T.jsx)("h3", { children: "Tu experiencia enriquece la propuesta" }), /* @__PURE__ */ (0, T.jsx)("p", { children: "Estas aportaciones se pueden modificar y se distinguen de las referencias del currículo." })] }),
 								/* @__PURE__ */ (0, T.jsx)(ma, { size: 19 })
 							]
 						}),
 						/* @__PURE__ */ (0, T.jsx)(I, {
 							name: "activities",
-							label: "Actividades que te gustaría incluir",
+							label: "Actividades que deseas desarrollar",
 							state: e,
 							bridge: t,
 							rows: 3,
-							placeholder: "Ej. Explorar precios del mercado y comparar cantidades en equipos"
+							placeholder: "Ej. Observar plantas de la localidad y registrar sus características en grupos"
 						}),
 						/* @__PURE__ */ (0, T.jsx)(I, {
 							name: "criteria",
@@ -12866,7 +12866,7 @@ function Jo({ state: e, bridge: t }) {
 							state: e,
 							bridge: t,
 							rows: 3,
-							placeholder: "¿Cómo reconocerás que están aprendiendo? Un criterio por línea."
+							placeholder: "¿Qué señales mostrarán el aprendizaje? Escribe un criterio en cada línea."
 						}),
 						/* @__PURE__ */ (0, T.jsx)(I, {
 							name: "evidence",
@@ -12874,11 +12874,11 @@ function Jo({ state: e, bridge: t }) {
 							state: e,
 							bridge: t,
 							rows: 2,
-							placeholder: "¿Qué producirán o demostrarán tus estudiantes?"
+							placeholder: "¿Con qué producto o actuación evidenciarán lo aprendido?"
 						}),
 						/* @__PURE__ */ (0, T.jsx)("p", {
 							className: "sl-small-note",
-							children: "Si dejas estas propuestas vacías, podrás revisar las que complete la IA al generar. No se presentarán como textos curriculares oficiales."
+							children: "Si no añades propuestas, podrás revisar las sugerencias de la IA al crear la sesión. Estas sugerencias no constituyen enunciados oficiales del currículo."
 						})
 					]
 				})
@@ -12894,9 +12894,9 @@ function Yo({ state: e, bridge: t }) {
 		"aria-labelledby": "react-step-heading",
 		children: [/* @__PURE__ */ (0, T.jsx)(Ko, {
 			icon: vi,
-			eyebrow: "DALE EL ÚLTIMO VISTAZO",
-			title: "Tu sesión está tomando forma",
-			description: "Revisa el contexto y ajusta lo que necesites antes de generar."
+			eyebrow: "ANTES DE DAR EL SIGUIENTE PASO",
+			title: "Comprueba tu propuesta de clase",
+			description: "Verifica la información y realiza los ajustes que consideres necesarios antes de crear la sesión."
 		}), /* @__PURE__ */ (0, T.jsxs)("div", {
 			className: "sl-form-body",
 			children: [
@@ -12924,11 +12924,11 @@ function Yo({ state: e, bridge: t }) {
 						["Actividades propuestas", n.activities],
 						["Criterios de evaluación", n.criteria],
 						["Evidencia", n.evidence]
-					].map(([e, t]) => /* @__PURE__ */ (0, T.jsxs)("div", { children: [/* @__PURE__ */ (0, T.jsx)("h4", { children: e }), /* @__PURE__ */ (0, T.jsx)("p", { children: t || "Por definir y revisar con el resultado" })] }, e))
+					].map(([e, t]) => /* @__PURE__ */ (0, T.jsxs)("div", { children: [/* @__PURE__ */ (0, T.jsx)("h4", { children: e }), /* @__PURE__ */ (0, T.jsx)("p", { children: t || "Pendiente de completar y comprobar en la propuesta" })] }, e))
 				}),
 				e.warnings.length > 0 && /* @__PURE__ */ (0, T.jsx)(Go, {
 					icon: wa,
-					title: "Aspectos para revisar",
+					title: "Puntos que conviene comprobar",
 					note: `${e.warnings.length} observaciones · no bloquean por sí solas la generación`,
 					children: /* @__PURE__ */ (0, T.jsx)("ul", {
 						className: "sl-warning-list",
@@ -12937,12 +12937,12 @@ function Yo({ state: e, bridge: t }) {
 				}),
 				/* @__PURE__ */ (0, T.jsxs)("div", {
 					className: "sl-section-label",
-					children: [/* @__PURE__ */ (0, T.jsx)("h3", { children: "A tu manera" }), /* @__PURE__ */ (0, T.jsx)("span", { children: "Opciones adicionales" })]
+					children: [/* @__PURE__ */ (0, T.jsx)("h3", { children: "Personaliza los detalles" }), /* @__PURE__ */ (0, T.jsx)("span", { children: "Ajustes complementarios" })]
 				}),
 				/* @__PURE__ */ (0, T.jsxs)(Go, {
 					icon: ua,
-					title: "IA y metodología",
-					note: "Calidad de generación y enfoque didáctico",
+					title: "Asistencia y enfoque didáctico",
+					note: "Preferencias de elaboración y método de trabajo",
 					children: [
 						/* @__PURE__ */ (0, T.jsxs)("div", {
 							className: "sl-field-grid",
@@ -12974,8 +12974,8 @@ function Yo({ state: e, bridge: t }) {
 				}),
 				/* @__PURE__ */ (0, T.jsxs)(Go, {
 					icon: ia,
-					title: "Material de referencia",
-					note: e.sourceFile || "Un archivo para dar contexto a la IA",
+					title: "Fuentes de apoyo",
+					note: e.sourceFile || "Adjunta un archivo que ayude a contextualizar la propuesta",
 					children: [e.sourceFile ? /* @__PURE__ */ (0, T.jsxs)("div", {
 						className: "sl-attached-file",
 						children: [
@@ -13015,8 +13015,8 @@ function Yo({ state: e, bridge: t }) {
 				}),
 				/* @__PURE__ */ (0, T.jsxs)(Go, {
 					icon: Qi,
-					title: "Documento y presentación",
-					note: "Plantilla y estilo de exportación",
+					title: "Formato y apariencia del documento",
+					note: "Estructura y diseño del archivo final",
 					children: [/* @__PURE__ */ (0, T.jsxs)("div", {
 						className: "sl-field-grid",
 						children: [/* @__PURE__ */ (0, T.jsx)(I, {
@@ -13042,7 +13042,7 @@ function Yo({ state: e, bridge: t }) {
 				/* @__PURE__ */ (0, T.jsx)(Go, {
 					icon: Ea,
 					title: "Estudiantes",
-					note: R(n.alumnos).length ? `${R(n.alumnos).length} registrados` : "Opcional · puedes generar sin una lista",
+					note: R(n.alumnos).length ? `${R(n.alumnos).length} registrados` : "Opcional · no se necesita una lista para crear la sesión",
 					children: /* @__PURE__ */ (0, T.jsx)(I, {
 						name: "alumnos",
 						label: "Lista de estudiantes",
@@ -13086,15 +13086,15 @@ function Xo({ state: e }) {
 					}),
 					/* @__PURE__ */ (0, T.jsx)("span", {
 						className: "sl-preview-kicker",
-						children: "ASÍ VA TU SESIÓN"
+						children: "TU PLANIFICACIÓN, EN RESUMEN"
 					}),
 					/* @__PURE__ */ (0, T.jsx)("h3", {
 						className: t.titulo ? "" : "empty",
-						children: t.titulo || "Una idea que se convierte en aprendizaje"
+						children: t.titulo || "Una propuesta que empieza a tomar forma"
 					}),
 					/* @__PURE__ */ (0, T.jsxs)("div", {
 						className: "sl-preview-tags",
-						children: [/* @__PURE__ */ (0, T.jsxs)("span", { children: [/* @__PURE__ */ (0, T.jsx)(Mi, { size: 14 }), t.grado || "Tu grupo"] }), /* @__PURE__ */ (0, T.jsxs)("span", { children: [/* @__PURE__ */ (0, T.jsx)(Ei, { size: 14 }), t.duracion || "Tu tiempo"] })]
+						children: [/* @__PURE__ */ (0, T.jsxs)("span", { children: [/* @__PURE__ */ (0, T.jsx)(Mi, { size: 14 }), t.grado || "El grupo de aprendizaje"] }), /* @__PURE__ */ (0, T.jsxs)("span", { children: [/* @__PURE__ */ (0, T.jsx)(Ei, { size: 14 }), t.duracion || "Duración prevista"] })]
 					}),
 					/* @__PURE__ */ (0, T.jsxs)("div", {
 						className: "sl-preview-area",
@@ -13106,22 +13106,22 @@ function Xo({ state: e }) {
 				className: "sl-summary-details",
 				children: [/* @__PURE__ */ (0, T.jsxs)("div", {
 					className: "sl-section-label",
-					children: [/* @__PURE__ */ (0, T.jsx)("h3", { children: "Una clase con propósito" }), /* @__PURE__ */ (0, T.jsx)("span", { className: "sl-status-dot" })]
+					children: [/* @__PURE__ */ (0, T.jsx)("h3", { children: "Una experiencia con intención" }), /* @__PURE__ */ (0, T.jsx)("span", { className: "sl-status-dot" })]
 				}), [
 					{
 						Icon: ba,
-						title: "Aprendizajes claros",
+						title: "Aprendizajes bien definidos",
 						text: R(t.competencia).length ? `${R(t.competencia).length} competencias seleccionadas` : "Competencias y criterios de evaluación"
 					},
 					{
 						Icon: Ii,
-						title: "Una secuencia completa",
+						title: "Cada momento de la clase",
 						text: "Inicio, desarrollo y cierre"
 					},
 					{
 						Icon: Oi,
-						title: "Lista para trabajar",
-						text: "Revisa, edita y exporta a Word o PDF"
+						title: "Preparada para continuar",
+						text: "Comprueba, personaliza y descarga en Word o PDF"
 					}
 				].map(({ Icon: e, title: t, text: n }) => /* @__PURE__ */ (0, T.jsxs)("div", {
 					className: "sl-summary-item",
@@ -13134,7 +13134,7 @@ function Xo({ state: e }) {
 			}),
 			/* @__PURE__ */ (0, T.jsxs)("div", {
 				className: "sl-teacher-note",
-				children: [/* @__PURE__ */ (0, T.jsx)(P, { size: 20 }), /* @__PURE__ */ (0, T.jsxs)("div", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Tu criterio, siempre al centro." }), /* @__PURE__ */ (0, T.jsx)("p", { children: "La IA propone. Tú revisas y adaptas cada aprendizaje a tu aula." })] })]
+				children: [/* @__PURE__ */ (0, T.jsx)(P, { size: 20 }), /* @__PURE__ */ (0, T.jsxs)("div", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "La decisión pedagógica sigue siendo tuya." }), /* @__PURE__ */ (0, T.jsx)("p", { children: "La IA aporta una propuesta. Tú compruebas los contenidos y los adecuas a tu grupo." })] })]
 			})
 		]
 	});
@@ -13143,17 +13143,17 @@ function Xo({ state: e }) {
 var Zo = [
 	{
 		title: "Datos",
-		description: "El contexto de tu clase",
+		description: "El grupo de aprendizaje y su contexto",
 		Icon: Mi
 	},
 	{
 		title: "Aprendizajes",
-		description: "Qué y cómo aprenderán",
+		description: "El aprendizaje y su camino",
 		Icon: fi
 	},
 	{
-		title: "Revisar y generar",
-		description: "Tu último vistazo",
+		title: "Revisión y creación",
+		description: "Comprueba los detalles",
 		Icon: ma
 	}
 ];
@@ -13204,10 +13204,10 @@ function Qo({ bridge: e }) {
 		"landing"
 	].includes(t.legacyDestination) ? null : /* @__PURE__ */ (0, T.jsxs)("div", {
 		className: "sl-return-bar",
-		children: [/* @__PURE__ */ (0, T.jsxs)("span", { children: [/* @__PURE__ */ (0, T.jsx)(B, {}), "Space Lab"] }), /* @__PURE__ */ (0, T.jsxs)("button", {
+		children: [/* @__PURE__ */ (0, T.jsxs)("span", { children: [/* @__PURE__ */ (0, T.jsx)(B, {}), "Sesiones GRAFIPLOT"] }), /* @__PURE__ */ (0, T.jsxs)("button", {
 			type: "button",
 			onClick: () => e.prepare(),
-			children: [/* @__PURE__ */ (0, T.jsx)(ii, { size: 17 }), "Volver al generador"]
+			children: [/* @__PURE__ */ (0, T.jsx)(ii, { size: 17 }), "Regresar al planificador"]
 		})]
 	}) : /* @__PURE__ */ (0, T.jsxs)("div", {
 		className: "sl-app",
@@ -13227,8 +13227,8 @@ function Qo({ bridge: e }) {
 						className: "sl-mobile-brand",
 						children: [
 							/* @__PURE__ */ (0, T.jsx)(B, {}),
-							"Space",
-							/* @__PURE__ */ (0, T.jsx)("span", { children: "Lab" })
+							"Sesiones ",
+							/* @__PURE__ */ (0, T.jsx)("span", { children: "GRAFIPLOT" })
 						]
 					}),
 					/* @__PURE__ */ (0, T.jsxs)("div", {
@@ -13236,7 +13236,7 @@ function Qo({ bridge: e }) {
 						children: [
 							/* @__PURE__ */ (0, T.jsx)("span", { children: "Planificador" }),
 							/* @__PURE__ */ (0, T.jsx)(Si, { size: 14 }),
-							/* @__PURE__ */ (0, T.jsx)("strong", { children: f ? "Unidades y experiencias" : t.linked ? "Sesión vinculada" : "Nueva sesión" })
+							/* @__PURE__ */ (0, T.jsx)("strong", { children: f ? "Unidades y experiencias" : t.linked ? "Sesión vinculada" : "Nueva planificación" })
 						]
 					}),
 					/* @__PURE__ */ (0, T.jsxs)("div", {
@@ -13283,17 +13283,17 @@ function Qo({ bridge: e }) {
 							children: [/* @__PURE__ */ (0, T.jsxs)("div", { children: [
 								/* @__PURE__ */ (0, T.jsxs)("span", {
 									className: "sl-page-eyebrow",
-									children: [/* @__PURE__ */ (0, T.jsx)("span", {}), "MENOS PAPELEO, MÁS APRENDIZAJE"]
+									children: [/* @__PURE__ */ (0, T.jsx)("span", {}), "TU TIEMPO, PARA LO QUE IMPORTA"]
 								}),
-								/* @__PURE__ */ (0, T.jsxs)("h1", { children: ["Tu próxima gran clase empieza aquí", /* @__PURE__ */ (0, T.jsx)("span", { children: "." })] }),
-								/* @__PURE__ */ (0, T.jsx)("p", { children: "Trae una idea. Dale propósito. Conviértela en una sesión para tu aula." })
+								/* @__PURE__ */ (0, T.jsxs)("h1", { children: ["Dale forma a tu siguiente experiencia", /* @__PURE__ */ (0, T.jsx)("span", { children: "." })] }),
+								/* @__PURE__ */ (0, T.jsx)("p", { children: "Parte de una idea, define su intención y construye una propuesta para tus estudiantes." })
 							] }), /* @__PURE__ */ (0, T.jsxs)("button", {
 								className: "sl-advanced-link",
 								type: "button",
 								onClick: () => e.showLegacy("advanced"),
 								children: [
 									/* @__PURE__ */ (0, T.jsx)(fa, { size: 17 }),
-									/* @__PURE__ */ (0, T.jsx)("span", { children: "Modo avanzado" }),
+									/* @__PURE__ */ (0, T.jsx)("span", { children: "Edición completa" }),
 									/* @__PURE__ */ (0, T.jsx)(ci, { size: 15 })
 								]
 							})]
@@ -13340,7 +13340,7 @@ function Qo({ bridge: e }) {
 									bridge: e
 								}), /* @__PURE__ */ (0, T.jsxs)("div", {
 									className: "sl-trust-line",
-									children: [/* @__PURE__ */ (0, T.jsx)(Oi, { size: 15 }), /* @__PURE__ */ (0, T.jsx)("span", { children: t.hasDocument ? "Tus cambios se guardan con el documento." : "Podrás guardar y exportar tu sesión cuando esté generada." })]
+									children: [/* @__PURE__ */ (0, T.jsx)(Oi, { size: 15 }), /* @__PURE__ */ (0, T.jsx)("span", { children: t.hasDocument ? "Las modificaciones se conservan junto con tu documento." : "Cuando la sesión esté creada, podrás conservarla y descargar su documento." })]
 								})]
 							}), /* @__PURE__ */ (0, T.jsx)(Xo, { state: t })]
 						})
@@ -13362,7 +13362,7 @@ function Qo({ bridge: e }) {
 							"PASO ",
 							n + 1,
 							" DE 3"
-						] }), /* @__PURE__ */ (0, T.jsx)("strong", { children: t.busy ? "Preparando tu sesión…" : Zo[n].title })]
+						] }), /* @__PURE__ */ (0, T.jsx)("strong", { children: t.busy ? "Organizando tu propuesta…" : Zo[n].title })]
 					}),
 					/* @__PURE__ */ (0, T.jsx)("button", {
 						type: "button",
@@ -13372,7 +13372,7 @@ function Qo({ bridge: e }) {
 						children: t.busy ? /* @__PURE__ */ (0, T.jsxs)(T.Fragment, { children: [/* @__PURE__ */ (0, T.jsx)(Bi, {
 							size: 19,
 							className: "sl-spin"
-						}), "Generando…"] }) : n === 2 ? /* @__PURE__ */ (0, T.jsxs)(T.Fragment, { children: [/* @__PURE__ */ (0, T.jsx)(ma, { size: 19 }), "Generar mi sesión"] }) : /* @__PURE__ */ (0, T.jsxs)(T.Fragment, { children: ["Continuar", /* @__PURE__ */ (0, T.jsx)(oi, { size: 19 })] })
+						}), "Elaborando…"] }) : n === 2 ? /* @__PURE__ */ (0, T.jsxs)(T.Fragment, { children: [/* @__PURE__ */ (0, T.jsx)(ma, { size: 19 }), "Crear mi propuesta"] }) : /* @__PURE__ */ (0, T.jsxs)(T.Fragment, { children: ["Continuar", /* @__PURE__ */ (0, T.jsx)(oi, { size: 19 })] })
 					})
 				] })
 			})] })]
@@ -13398,7 +13398,7 @@ function $o() {
 function B() {
 	return /* @__PURE__ */ (0, T.jsx)("img", {
 		className: "sl-brand-logo",
-		src: "assets/favicon.svg",
+		src: "assets/grafiplot-sesiones.png",
 		alt: "",
 		width: 40,
 		height: 40
@@ -13427,12 +13427,12 @@ function es() {
 					className: "sl-help-symbol",
 					children: /* @__PURE__ */ (0, T.jsx)(ma, { size: 29 })
 				}),
-				/* @__PURE__ */ (0, T.jsx)(Rr, { children: "De tu idea a tu próxima clase." }),
-				/* @__PURE__ */ (0, T.jsx)(zr, { children: "El generador te acompaña en tres pasos. Tú mantienes las decisiones pedagógicas." }),
+				/* @__PURE__ */ (0, T.jsx)(Rr, { children: "Convierte tu idea en una experiencia de aula." }),
+				/* @__PURE__ */ (0, T.jsx)(zr, { children: "Organiza tu propuesta en tres etapas y conserva el control de cada decisión pedagógica." }),
 				/* @__PURE__ */ (0, T.jsxs)("ol", { children: [
 					/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Datos." }), " Define grupo, tema y tiempo."] }),
 					/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Aprendizajes." }), " Revisa las referencias y aporta tus propuestas."] }),
-					/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Revisar y generar." }), " Ajusta las opciones y crea la sesión con tu cuenta."] })
+					/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Revisión y creación." }), " Ajusta las opciones y crea la sesión con tu cuenta."] })
 				] }),
 				/* @__PURE__ */ (0, T.jsx)("p", { children: "La disponibilidad curricular varía por nivel. La generación requiere una cuenta y créditos; revisa siempre el resultado antes de compartirlo." }),
 				/* @__PURE__ */ (0, T.jsx)(Vr, {
@@ -13440,7 +13440,7 @@ function es() {
 					children: /* @__PURE__ */ (0, T.jsxs)("button", {
 						className: "sl-primary-button",
 						type: "button",
-						children: ["Vamos a crear", /* @__PURE__ */ (0, T.jsx)(oi, { size: 18 })]
+						children: ["Comenzar a preparar", /* @__PURE__ */ (0, T.jsx)(oi, { size: 18 })]
 					})
 				})
 			]
@@ -13997,11 +13997,11 @@ function vs() {
 	}) : /* @__PURE__ */ (0, T.jsxs)("button", {
 		id: "btn-login-trigger",
 		className: "btn btn-ghost btn-sm",
-		"aria-label": "Iniciar sesión",
+		"aria-label": "Acceder a mi cuenta",
 		onClick: e.onLogin,
 		children: [/* @__PURE__ */ (0, T.jsx)(gs, { name: "user" }), /* @__PURE__ */ (0, T.jsx)("span", {
 			className: "auth-label",
-			children: "Iniciar sesión"
+			children: "Acceder a mi cuenta"
 		})]
 	});
 }
@@ -14115,37 +14115,10 @@ function xs() {
 									},
 									children: [
 										"\n",
-										/* @__PURE__ */ (0, T.jsxs)("svg", {
-											width: "42",
-											height: "42",
-											viewBox: "0 0 100 100",
-											fill: "none",
-											xmlns: "http://www.w3.org/2000/svg",
-											style: { filter: "drop-shadow(0px 0px 8px rgba(0, 210, 255, 0.5))" },
-											children: [
-												"\n",
-												/* @__PURE__ */ (0, T.jsx)("rect", {
-													x: "2",
-													y: "2",
-													width: "96",
-													height: "96",
-													rx: "28",
-													fill: "#0d0e12",
-													stroke: "#1f2937",
-													strokeWidth: "2"
-												}),
-												"\n",
-												/* @__PURE__ */ (0, T.jsx)("path", {
-													d: "M55 22C42.5 22 36.5 30 36.5 35C36.5 37.5 38.5 39.5 41 39.5C43.5 39.5 45 37.5 45.5 35.5C46.2 33 49 28.5 54.5 28.5C60.5 28.5 63 32.5 63 36.5C63 42.5 56.5 44.5 51 46.5L42.5 49.5C36.5 51.5 34.5 57.5 34.5 63.5C34.5 72.5 43.5 78 54 78C66.5 78 72 70 72 65C72 62.5 70 60.5 67.5 60.5C65 60.5 63.5 62.5 63 64.5C62.3 67 59.5 71.5 54 71.5C47.5 71.5 45 67.5 45 63.5C45 57.5 51.5 55.5 57 53.5L65.5 50.5C71.5 48.5 73.5 42.5 73.5 36.5C73.5 27.5 65.5 22 55 22Z",
-													fill: "#ffffff"
-												}),
-												"\n",
-												/* @__PURE__ */ (0, T.jsx)("path", {
-													d: "M56 25L38 52H48L44 75L62 48H52L56 25Z",
-													fill: "#ffffff"
-												}),
-												"\n"
-											]
+										/* @__PURE__ */ (0, T.jsx)("img", {
+											src: "assets/grafiplot-sesiones.png",
+											alt: "Sesiones GRAFIPLOT",
+											className: "gp-auth-logo"
 										}),
 										"\n"
 									]
@@ -14170,7 +14143,7 @@ function xs() {
 									type: "button",
 									id: "auth-tab-register",
 									className: "auth-tab",
-									children: "Crear cuenta"
+									children: "Registrarme"
 								}),
 								"\n"
 							]
@@ -14184,7 +14157,7 @@ function xs() {
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("h3", {
 									id: "auth-title",
-									children: "Iniciar Sesión"
+									children: "Acceder a mi cuenta"
 								}),
 								"\n"
 							]
@@ -14220,7 +14193,7 @@ function xs() {
 											type: "text",
 											id: "auth-username",
 											className: "auth-field",
-											placeholder: "Apodo único (sin espacios)"
+											placeholder: "Nombre de usuario sin espacios"
 										}),
 										"\n"
 									]
@@ -14280,7 +14253,7 @@ function xs() {
 											type: "password",
 											id: "auth-confirm-password",
 											className: "auth-field",
-											placeholder: "Confirmar contraseña"
+											placeholder: "Repite tu contraseña"
 										}),
 										"\n"
 									]
@@ -14344,14 +14317,14 @@ function xs() {
 									type: "submit",
 									id: "btn-submit-auth",
 									className: "auth-submit-btn",
-									children: "\n                    Iniciar Sesión\n                "
+									children: "\n                    Acceder a mi cuenta\n                "
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("button", {
 									type: "button",
 									id: "btn-forgot-password",
 									className: "btn btn-ghost",
-									children: "Olvidé mi contraseña"
+									children: "Recuperar mi acceso"
 								}),
 								"\n"
 							]
@@ -14364,7 +14337,7 @@ function xs() {
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("span", {
 									id: "auth-toggle-text",
-									children: "¿No tienes una cuenta?"
+									children: "¿Es tu primera visita?"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("a", {
@@ -14511,7 +14484,7 @@ function Cs() {
 						"\n",
 						/* @__PURE__ */ (0, T.jsx)("h3", {
 							className: "pdf-guide-title",
-							children: "Motor Local Requerido"
+							children: "Motor de escritorio Requerido"
 						}),
 						"\n",
 						/* @__PURE__ */ (0, T.jsx)("p", {
@@ -14567,7 +14540,7 @@ function Cs() {
 											"aria-hidden": "true",
 											children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-download" })
 										}),
-										" Descargar Motor Local (.exe)\n                "
+										" Obtener motor para Windows (.exe)\n                "
 									]
 								}),
 								"\n",
@@ -14650,7 +14623,7 @@ function ws() {
 									"aria-hidden": "true",
 									children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-alert" })
 								}),
-								" Motor Local Desconectado: Se usará la impresión de Windows\n            "
+								" Motor de escritorio Desconectado: Se usará la impresión de Windows\n            "
 							]
 						}),
 						"\n",
@@ -14809,7 +14782,7 @@ function ws() {
 											"aria-hidden": "true",
 											children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-download" })
 										}),
-										" Descargar Motor Local (.exe)\n                "
+										" Obtener motor para Windows (.exe)\n                "
 									]
 								}),
 								"\n"
@@ -14911,7 +14884,7 @@ function Ts() {
 												color: "var(--color-foreground)",
 												margin: "0"
 											},
-											children: "\n                        Términos, Condiciones de Uso y Políticas de Privacidad — Space Lab\n                    "
+											children: "\n                        Condiciones de uso y tratamiento de la información — Sesiones GRAFIPLOT\n                    "
 										}),
 										"\n"
 									]
@@ -14958,7 +14931,7 @@ function Ts() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("strong", { children: "Última actualización: Octubre de 2026" }),
 										" | Versión del Sistema: ",
-										/* @__PURE__ */ (0, T.jsx)("strong", { children: "Space Lab 2.0 (Motor v1.4.1)" }),
+										/* @__PURE__ */ (0, T.jsx)("strong", { children: "Sesiones GRAFIPLOT 2.0 (Motor v1.4.1)" }),
 										/* @__PURE__ */ (0, T.jsx)("br", {}),
 										"\n                    Desarrollado y operado por ",
 										/* @__PURE__ */ (0, T.jsx)("strong", { children: "Samuel Y. Pablo Claudio (pablitodp)" }),
@@ -14968,10 +14941,10 @@ function Ts() {
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("p", { children: [
 									"Bienvenido a ",
-									/* @__PURE__ */ (0, T.jsx)("strong", { children: "Space Lab" }),
+									/* @__PURE__ */ (0, T.jsx)("strong", { children: "Sesiones GRAFIPLOT" }),
 									" (",
 									/* @__PURE__ */ (0, T.jsx)("code", { children: "sesiones.sypablitodp.site" }),
-									"). Esta plataforma de asistencia pedagógica, planificación curricular y exportación documental está diseñada para facilitar el trabajo técnico-pedagógico de los docentes de Educación Básica Regular (Inicial, Primaria y Secundaria) del Perú. Al acceder, registrarte y utilizar nuestros servicios, aceptas en su totalidad los siguientes Términos y Condiciones y la Política de Privacidad conforme a la legislación vigente de la República del Perú."
+									"). Este espacio de apoyo pedagógico, planificación curricular y generación de documentos busca facilitar la labor de docentes de Educación Básica Regular del Perú en Inicial, Primaria y Secundaria. El acceso, registro y uso de sus servicios implica aceptar estas condiciones y la política de privacidad dentro del marco legal peruano vigente."
 								] }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("h4", {
@@ -14994,7 +14967,7 @@ function Ts() {
 									]
 								}),
 								"\n",
-								/* @__PURE__ */ (0, T.jsx)("p", { children: "El registro en Space Lab es de carácter personal e intransferible. El usuario es responsable de mantener la confidencialidad de sus credenciales. La plataforma utiliza infraestructura segura en la nube (Supabase Auth) con contraseñas encriptadas mediante algoritmos criptográficos robustos y políticas de seguridad a nivel de fila (Row Level Security - RLS). Cada docente tiene acceso exclusivo y privado a sus propias sesiones, perfiles y datos." }),
+								/* @__PURE__ */ (0, T.jsx)("p", { children: "La cuenta de Sesiones GRAFIPLOT es individual y no debe transferirse. Cada persona debe proteger sus datos de acceso. La autenticación se gestiona con Supabase Auth y el acceso a los registros se limita mediante políticas por fila (RLS), de modo que cada docente consulte sus propios datos, perfil y planificaciones." }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("h4", {
 									style: {
@@ -15012,7 +14985,7 @@ function Ts() {
 											"aria-hidden": "true",
 											children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-download" })
 										}),
-										"\n                    2. ARQUITECTURA DEL MOTOR LOCAL (pablitohost.exe / pablitopyhost.exe) Y PRIVACIDAD TOTAL DE TU PC\n                "
+										"\n                    2. FUNCIONAMIENTO DEL MOTOR DE ESCRITORIO (pablitohost.exe / pablitopyhost.exe) Y DATOS DEL EQUIPO\n                "
 									]
 								}),
 								"\n",
@@ -15031,8 +15004,8 @@ function Ts() {
 										/* @__PURE__ */ (0, T.jsxs)("p", { children: [
 											/* @__PURE__ */ (0, T.jsx)("strong", { children: "¿Por qué se descarga el ejecutable local?" }),
 											/* @__PURE__ */ (0, T.jsx)("br", {}),
-											"\n                    Los navegadores web estándar tienen limitaciones técnicas estrictas: no pueden generar de forma nativa documentos de Microsoft Word (.docx) con estructuras complejas como tablas anidadas con anchos milimétricos del MINEDU, listas de cotejo con formato oficial de evaluación formativa y fórmulas matemáticas o científicas editables en formato OMML (Office Math Markup Language). Para lograr una calidad de impresión física 100% idéntica a la normativa de UGEL/DRE y ",
-											/* @__PURE__ */ (0, T.jsx)("strong", { children: "sin subir tus documentos pedagógicos a servidores o convertidores externos en la nube" }),
+											"\n                    La generación de documentos Word complejos desde un navegador presenta limitaciones. Para trabajar con tablas anidadas, anchos definidos, instrumentos de evaluación y fórmulas editables en OMML (Office Math Markup Language), se utiliza un motor de escritorio que busca mantener la estructura del documento y ",
+											/* @__PURE__ */ (0, T.jsx)("strong", { children: "procesar tus documentos pedagógicos en el equipo, sin enviarlos a convertidores externos en la nube" }),
 											", se desarrolló el motor local ",
 											/* @__PURE__ */ (0, T.jsx)("code", { children: "pablitohost.exe" }),
 											" (también denominado ",
@@ -15045,7 +15018,7 @@ function Ts() {
 											/* @__PURE__ */ (0, T.jsx)("br", {}),
 											"\n                    El motor es un micro-servicio local programado íntegramente en ",
 											/* @__PURE__ */ (0, T.jsx)("strong", { children: "Python" }),
-											" utilizando un servidor asíncrono ultraligero (FastAPI / Uvicorn) y bibliotecas especializadas de manipulación XML/docx. Se ejecuta de forma aislada en segundo plano en tu propia computadora escuchando únicamente en el puerto local ",
+											" mediante un servicio asíncrono ligero (FastAPI / Uvicorn) y bibliotecas para XML y docx. Permanece en segundo plano en tu computadora y atiende únicamente en el puerto local ",
 											/* @__PURE__ */ (0, T.jsx)("code", { children: "http://127.0.0.1:8000" }),
 											"."
 										] }),
@@ -15053,13 +15026,13 @@ function Ts() {
 										/* @__PURE__ */ (0, T.jsxs)("p", { children: [
 											/* @__PURE__ */ (0, T.jsx)("strong", { children: "Comunicación segura mediante Tokens Autorizados:" }),
 											/* @__PURE__ */ (0, T.jsx)("br", {}),
-											"\n                    La aplicación web se conecta con el motor local a través del estándar de seguridad ",
+											"\n                    La comunicación entre la página y el motor del equipo aplica el mecanismo de seguridad ",
 											/* @__PURE__ */ (0, T.jsx)("strong", { children: "Private Network Access (PNA)" }),
 											". Toda petición requiere obligatoriamente un ",
 											/* @__PURE__ */ (0, T.jsx)("strong", { children: "token criptográfico de vinculación" }),
-											" generado al iniciar el programa. Asimismo, el motor cuenta con validación estricta de origen (CORS): únicamente procesa solicitudes emitidas desde el dominio oficial verificado (",
+											" creado al poner en marcha el programa. Además, la validación de origen (CORS) limita las solicitudes a los dominios autorizados (",
 											/* @__PURE__ */ (0, T.jsx)("code", { children: "https://sesiones.sypablitodp.site" }),
-											") o el entorno local de desarrollo. Cualquier solicitud proveniente de páginas web no autorizadas o scripts de terceros es rechazada automáticamente."
+											") y al entorno de desarrollo local. Las peticiones de otros sitios u orígenes sin autorización se rechazan."
 										] }),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", { children: /* @__PURE__ */ (0, T.jsx)("strong", { children: "Garantía de Privacidad y Aislamiento (No intrusión en tu sistema):" }) }),
@@ -15074,11 +15047,11 @@ function Ts() {
 											},
 											children: [
 												"\n",
-												/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Sin exploración de documentos personales:" }), " El motor no busca ni recopila tus fotos, documentos o archivos personales. Utiliza sus recursos de aplicación y el contenido que el navegador le envía para exportar."] }),
+												/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Sin exploración de documentos personales:" }), " El componente no explora ni recolecta fotografías, documentos u otros archivos personales. Trabaja con sus propios recursos y con el contenido enviado desde la página para la exportación."] }),
 												"\n",
-												/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Cero telemetría invasiva:" }), " No monitorea la actividad de tu PC, no registra pulsaciones de teclado, ni accede a periféricos, micrófonos o cámaras."] }),
+												/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Cero telemetría invasiva:" }), " No observa el uso de tu computadora, no guarda lo que escribes en el teclado y no utiliza cámaras, micrófonos ni otros periféricos."] }),
 												"\n",
-												/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Exportación local:" }), " Recibe el contenido de la sesión o planificación desde el navegador y devuelve el archivo Word o PDF. Según el formato, puede utilizar archivos temporales durante la conversión."] }),
+												/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Exportación local:" }), " Toma la sesión o planificación remitida por el navegador y entrega un documento Word o PDF. El proceso de conversión puede requerir archivos temporales según el formato solicitado."] }),
 												"\n"
 											]
 										}),
@@ -15107,7 +15080,7 @@ function Ts() {
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("p", { children: [
-									"Space Lab utiliza OpenAI, Google Gemini y DeepSeek para asistir en la redacción pedagógica. Al solicitar una función de IA, el contenido necesario de tu solicitud y, si los adjuntas, textos o imágenes, se envía mediante las funciones de Supabase al proveedor seleccionado. Estos proveedores procesan ese contenido según sus propias condiciones. Los nombres de alumnos no son necesarios para generar una sesión: evita incluir datos personales de estudiantes en instrucciones y adjuntos. Las claves de los proveedores permanecen en los secretos del servidor y no se entregan al navegador. El uso de IA se registra mediante un ",
+									"Sesiones GRAFIPLOT contempla asistentes de OpenAI, Google Gemini y DeepSeek como apoyo de redacción pedagógica. Cuando se habilita y solicita una función de IA, los datos necesarios de la petición y los adjuntos incluidos se remiten por servicios de Supabase al proveedor configurado, que los trata conforme a sus condiciones. No necesitas indicar nombres de estudiantes: evita añadir información personal en los mensajes y archivos. Las credenciales del proveedor se mantienen en el servidor y no se exponen al navegador. El consumo de IA queda reflejado en un ",
 									/* @__PURE__ */ (0, T.jsx)("strong", { children: "sistema de créditos" }),
 									"."
 								] }),
@@ -15133,9 +15106,9 @@ function Ts() {
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("p", { children: [
-									"Todas las sesiones de aprendizaje, programaciones curriculares, fichas de aplicación, rúbricas y materiales creados o editados en la plataforma son ",
+									"Las planificaciones, sesiones, fichas, rúbricas y demás recursos que elabores o modifiques en este espacio son ",
 									/* @__PURE__ */ (0, T.jsx)("strong", { children: "propiedad intelectual exclusiva del docente que los elabora" }),
-									". Space Lab no se atribuye ningún derecho de autor sobre los contenidos pedagógicos generados por sus usuarios."
+									". Sesiones GRAFIPLOT no reclama derechos de autor sobre el material pedagógico producido por sus usuarios."
 								] }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("h4", {
@@ -15158,7 +15131,7 @@ function Ts() {
 									]
 								}),
 								"\n",
-								/* @__PURE__ */ (0, T.jsx)("p", { children: "La inteligencia artificial y los asistentes de Space Lab actúan como herramientas de apoyo para agilizar la labor administrativa y brindar sugerencias curriculares basadas en el CNEB. Es responsabilidad exclusiva del docente revisar, adecuar a su contexto real y validar pedagógicamente cada sesión antes de su desarrollo en el aula o presentación formal ante la dirección de su institución educativa, UGEL o DRE." }),
+								/* @__PURE__ */ (0, T.jsx)("p", { children: "Los asistentes de IA de Sesiones GRAFIPLOT son recursos de apoyo para reducir tareas administrativas y ofrecer propuestas curriculares con referencia al CNEB. La revisión, adaptación al contexto y validación pedagógica de cada sesión corresponde al docente antes de aplicarla en clase o presentarla ante su institución, UGEL o DRE." }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("h4", {
 									style: {
@@ -15180,7 +15153,7 @@ function Ts() {
 									]
 								}),
 								"\n",
-								/* @__PURE__ */ (0, T.jsx)("p", { children: "Supabase gestiona la autenticación y el almacenamiento de perfiles, sesiones, planificaciones y listas de alumnos que guardas en tu cuenta. El navegador conserva copias y borradores locales; en equipos compartidos, cada cuenta dispone de un espacio local separado. La información necesaria para las funciones de IA se procesa como se describe en la sección anterior. No vendemos ni alquilamos tus datos. Para solicitar acceso, rectificación, cancelación u oposición al tratamiento de tus datos, o la eliminación de tu cuenta y contenido, utiliza el canal oficial de soporte indicado a continuación. El alcance y los plazos de conservación y eliminación deben confirmarse con soporte durante la beta." }),
+								/* @__PURE__ */ (0, T.jsx)("p", { children: "La autenticación y la conservación de los datos de cuenta, sesiones, planificaciones y padrones se realizan mediante Supabase. El navegador mantiene borradores y copias locales separados por cuenta, también en equipos de uso compartido. Las solicitudes de IA siguen el tratamiento explicado en la sección anterior. Tus datos no se venden ni se alquilan. Si deseas ejercer derechos de acceso, rectificación, cancelación u oposición, o pedir la eliminación de la cuenta y su contenido, contacta al soporte indicado más abajo. Durante la beta, confirma con soporte los plazos y el alcance de la conservación y eliminación." }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("h4", {
 									style: {
@@ -15202,7 +15175,7 @@ function Ts() {
 									]
 								}),
 								"\n",
-								/* @__PURE__ */ (0, T.jsx)("p", { children: "Para consultas técnicas, asistencia con el motor local, dudas sobre privacidad o reportes, puedes comunicarte directamente con el desarrollador:" }),
+								/* @__PURE__ */ (0, T.jsx)("p", { children: "Si necesitas orientación técnica, ayuda con la exportación, información sobre privacidad o comunicar un incidente, utiliza el contacto del desarrollador:" }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("div", {
 									style: {
@@ -15313,7 +15286,7 @@ function Ts() {
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("p", { children: [
-									"Los presentes Términos y Condiciones se rigen e interpretan según las leyes de la República del Perú. Para cualquier controversia, las partes se someten voluntariamente a la competencia exclusiva de los jueces y tribunales del distrito judicial de ",
+									"Estas condiciones se interpretan y aplican de acuerdo con la legislación de la República del Perú. En caso de controversia, las partes acuerdan someterse a la competencia exclusiva de los órganos judiciales del distrito de ",
 									/* @__PURE__ */ (0, T.jsx)("strong", { children: "Huánuco, Perú" }),
 									"."
 								] }),
@@ -15450,7 +15423,7 @@ function Ds() {
 						/* @__PURE__ */ (0, T.jsxs)("a", {
 							href: "#/",
 							className: "landing-brand",
-							"aria-label": "Space Lab - Inicio",
+							"aria-label": "Sesiones GRAFIPLOT - Inicio",
 							children: [
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("div", {
@@ -15458,8 +15431,8 @@ function Ds() {
 									children: [
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("img", {
-											src: "assets/favicon.svg",
-											alt: "Space Lab Logo"
+											src: "assets/grafiplot-sesiones.png",
+											alt: "Sesiones GRAFIPLOT Logo"
 										}),
 										"\n"
 									]
@@ -15471,12 +15444,12 @@ function Ds() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("span", {
 											className: "landing-brand-title",
-											children: "Space Lab"
+											children: "Sesiones GRAFIPLOT"
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("span", {
 											className: "landing-brand-badge",
-											children: "MINEDU 2026 · CNEB"
+											children: "PLANIFICACIÓN DOCENTE · PERÚ"
 										}),
 										"\n"
 									]
@@ -15492,25 +15465,25 @@ function Ds() {
 								/* @__PURE__ */ (0, T.jsx)("li", { children: /* @__PURE__ */ (0, T.jsx)("a", {
 									href: "#como-funciona",
 									className: "landing-nav-link",
-									children: "¿Cómo Funciona?"
+									children: "Cómo empezar"
 								}) }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("li", { children: /* @__PURE__ */ (0, T.jsx)("a", {
 									href: "#motor-local",
 									className: "landing-nav-link",
-									children: "Motor Local"
+									children: "Motor de escritorio"
 								}) }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("li", { children: /* @__PURE__ */ (0, T.jsx)("a", {
 									href: "#modelos-ia",
 									className: "landing-nav-link",
-									children: "Modelos IA"
+									children: "Asistentes de IA"
 								}) }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("li", { children: /* @__PURE__ */ (0, T.jsx)("a", {
 									href: "#preguntas-frecuentes",
 									className: "landing-nav-link",
-									children: "Preguntas Frecuentes"
+									children: "Dudas habituales"
 								}) }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("li", { children: /* @__PURE__ */ (0, T.jsx)("a", {
@@ -15578,7 +15551,7 @@ function Ds() {
 									type: "button",
 									className: "btn btn-ghost btn-sm",
 									"data-action": "open-login",
-									"aria-label": "Iniciar sesión con tu cuenta",
+									"aria-label": "Acceder a tu cuenta",
 									children: [
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("svg", {
@@ -15587,7 +15560,7 @@ function Ds() {
 											children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-user" })
 										}),
 										"\n",
-										/* @__PURE__ */ (0, T.jsx)("span", { children: "Iniciar Sesión" }),
+										/* @__PURE__ */ (0, T.jsx)("span", { children: "Acceder a mi cuenta" }),
 										"\n"
 									]
 								}),
@@ -15605,7 +15578,7 @@ function Ds() {
 											children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-sparkles" })
 										}),
 										"\n",
-										/* @__PURE__ */ (0, T.jsx)("span", { children: "Ir al Editor" }),
+										/* @__PURE__ */ (0, T.jsx)("span", { children: "Abrir mi espacio" }),
 										"\n"
 									]
 								}),
@@ -15635,7 +15608,7 @@ function Ds() {
 											children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-sparkles" })
 										}),
 										"\n",
-										/* @__PURE__ */ (0, T.jsx)("span", { children: "Plataforma Inteligente MINEDU 2026 · CNEB Perú" }),
+										/* @__PURE__ */ (0, T.jsx)("span", { children: "DA FORMA A TU PRÓXIMA CLASE" }),
 										"\n"
 									]
 								}),
@@ -15643,11 +15616,11 @@ function Ds() {
 								/* @__PURE__ */ (0, T.jsxs)("h1", {
 									className: "landing-hero-title",
 									children: [
-										"\n                    Menos tiempo planificando.",
+										"\n                    Una enseñanza que inspira",
 										/* @__PURE__ */ (0, T.jsx)("br", {}),
 										/* @__PURE__ */ (0, T.jsx)("span", {
 											className: "highlight",
-											children: "Más tiempo enseñando."
+											children: "nace de una buena planificación."
 										}),
 										"\n"
 									]
@@ -15656,9 +15629,9 @@ function Ds() {
 								/* @__PURE__ */ (0, T.jsxs)("p", {
 									className: "landing-hero-subtitle",
 									children: [
-										"\n                    Prepara tu próxima clase para ",
+										"\n                    Organiza experiencias de aprendizaje para ",
 										/* @__PURE__ */ (0, T.jsx)("strong", { children: "Inicial, Primaria o Secundaria" }),
-										". Elige los aprendizajes, construye tu sesión con ayuda de la IA y dale tu toque antes de exportarla a ",
+										". Selecciona los aprendizajes, desarrolla tu propuesta con apoyo de la IA y personalízala antes de descargarla en ",
 										/* @__PURE__ */ (0, T.jsx)("strong", { children: "Word o PDF" }),
 										".\n                "
 									]
@@ -15681,7 +15654,7 @@ function Ds() {
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-sparkles" })
 												}),
 												"\n",
-												/* @__PURE__ */ (0, T.jsx)("span", { children: "Crear mi sesión" }),
+												/* @__PURE__ */ (0, T.jsx)("span", { children: "Empezar mi planificación" }),
 												"\n",
 												/* @__PURE__ */ (0, T.jsx)("svg", {
 													className: "ui-icon",
@@ -15698,7 +15671,7 @@ function Ds() {
 											"aria-label": "Ver cómo funciona la plataforma",
 											children: [
 												"\n",
-												/* @__PURE__ */ (0, T.jsx)("span", { children: "Ver Cómo Funciona" }),
+												/* @__PURE__ */ (0, T.jsx)("span", { children: "Conocer el proceso" }),
 												"\n"
 											]
 										}),
@@ -15720,7 +15693,7 @@ function Ds() {
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-check" })
 												}),
 												"\n",
-												/* @__PURE__ */ (0, T.jsx)("span", { children: "CNEB 2026 Oficial" }),
+												/* @__PURE__ */ (0, T.jsx)("span", { children: "Alineado al CNEB" }),
 												"\n"
 											]
 										}),
@@ -15735,7 +15708,7 @@ function Ds() {
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-sparkles" })
 												}),
 												"\n",
-												/* @__PURE__ */ (0, T.jsx)("span", { children: "GPT-6 Luna & DeepSeek R1" }),
+												/* @__PURE__ */ (0, T.jsx)("span", { children: "Asistencia pedagógica con IA" }),
 												"\n"
 											]
 										}),
@@ -15750,7 +15723,7 @@ function Ds() {
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-file" })
 												}),
 												"\n",
-												/* @__PURE__ */ (0, T.jsx)("span", { children: "Motor Word (.docx) Nativo" }),
+												/* @__PURE__ */ (0, T.jsx)("span", { children: "Documentos Word editables" }),
 												"\n"
 											]
 										}),
@@ -15765,7 +15738,7 @@ function Ds() {
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-shield" })
 												}),
 												"\n",
-												/* @__PURE__ */ (0, T.jsx)("span", { children: "Privado y Seguro" }),
+												/* @__PURE__ */ (0, T.jsx)("span", { children: "Tu trabajo bajo tu control" }),
 												"\n"
 											]
 										}),
@@ -15784,6 +15757,20 @@ function Ds() {
 							children: [
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("div", {
+									className: "gp-studio-heading",
+									"aria-hidden": "true",
+									children: [/* @__PURE__ */ (0, T.jsxs)("span", {
+										className: "gp-studio-brand",
+										children: [/* @__PURE__ */ (0, T.jsx)("img", {
+											src: "assets/grafiplot-sesiones.png",
+											alt: ""
+										}), /* @__PURE__ */ (0, T.jsxs)("span", { children: ["Sesiones ", /* @__PURE__ */ (0, T.jsx)("strong", { children: "GRAFIPLOT" })] })]
+									}), /* @__PURE__ */ (0, T.jsx)("span", {
+										className: "gp-studio-label",
+										children: "TU TALLER DE APRENDIZAJE"
+									})]
+								}),
+								/* @__PURE__ */ (0, T.jsxs)("div", {
 									className: "lesson-scene",
 									"aria-hidden": "true",
 									children: [
@@ -15799,7 +15786,7 @@ function Ds() {
 													children: [/* @__PURE__ */ (0, T.jsxs)("span", { children: [/* @__PURE__ */ (0, T.jsx)("svg", {
 														className: "ui-icon",
 														children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-folder" })
-													}), " Tu próxima clase"] }), /* @__PURE__ */ (0, T.jsxs)("span", {
+													}), " Tu siguiente experiencia"] }), /* @__PURE__ */ (0, T.jsxs)("span", {
 														className: "lesson-mini-saved",
 														children: [/* @__PURE__ */ (0, T.jsx)("i", {}), " Guardado"]
 													})]
@@ -15827,12 +15814,12 @@ function Ds() {
 														}),
 														"\n",
 														/* @__PURE__ */ (0, T.jsxs)("h2", { children: [
-															"Aprender también",
+															"Todo aprendizaje",
 															/* @__PURE__ */ (0, T.jsx)("br", {}),
-															"empieza con elegir."
+															"comienza con una elección."
 														] }),
 														"\n",
-														/* @__PURE__ */ (0, T.jsx)("p", { children: "¿Qué trabajarán tus estudiantes?" }),
+														/* @__PURE__ */ (0, T.jsx)("p", { children: "¿Qué aprenderá tu grupo?" }),
 														"\n",
 														/* @__PURE__ */ (0, T.jsxs)("div", {
 															className: "lesson-mini-option selected",
@@ -15842,7 +15829,7 @@ function Ds() {
 																	className: "ui-icon",
 																	children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-check" })
 																})
-															}), /* @__PURE__ */ (0, T.jsxs)("span", { children: ["Resuelve problemas de cantidad", /* @__PURE__ */ (0, T.jsx)("small", { children: "4 capacidades disponibles" })] })]
+															}), /* @__PURE__ */ (0, T.jsxs)("span", { children: ["Resuelve problemas de cantidad", /* @__PURE__ */ (0, T.jsx)("small", { children: "4 capacidades para seleccionar" })] })]
 														}),
 														"\n",
 														/* @__PURE__ */ (0, T.jsxs)("div", {
@@ -15872,7 +15859,7 @@ function Ds() {
 														"\n",
 														/* @__PURE__ */ (0, T.jsx)("div", {
 															className: "lesson-mini-bottom",
-															children: "Tu sesión va tomando forma"
+															children: "Tu propuesta ya está en marcha"
 														}),
 														"\n"
 													]
@@ -15889,7 +15876,7 @@ function Ds() {
 													children: [/* @__PURE__ */ (0, T.jsx)("svg", {
 														className: "ui-icon",
 														children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-file" })
-													}), " TU SESIÓN, LISTA PARA EL AULA"]
+													}), " DE LA PLANIFICACIÓN AL AULA"]
 												}),
 												/* @__PURE__ */ (0, T.jsxs)("div", {
 													className: "lesson-paper-lines",
@@ -15931,9 +15918,9 @@ function Ds() {
 												className: "ui-icon",
 												children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-sparkles" })
 											}), /* @__PURE__ */ (0, T.jsxs)("span", { children: [
-												"La IA propone.",
+												"La IA aporta una propuesta.",
 												/* @__PURE__ */ (0, T.jsx)("br", {}),
-												/* @__PURE__ */ (0, T.jsx)("strong", { children: "Tú le das tu toque." })
+												/* @__PURE__ */ (0, T.jsx)("strong", { children: "Tú decides cómo enseñarla." })
 											] })]
 										}),
 										"\n"
@@ -15958,17 +15945,17 @@ function Ds() {
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("span", {
 									className: "landing-section-eyebrow",
-									children: "Flujo Pedagógico"
+									children: "Tu ruta de trabajo"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("h2", {
 									className: "landing-section-title",
-									children: "¿Cómo Funciona en 3 Simples Pasos?"
+									children: "Tu planificación, en tres momentos"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("p", {
 									className: "landing-section-desc",
-									children: "Diseñado para ahorrarte horas de trabajo administrativo y enfocarte en la enseñanza."
+									children: "Dedica menos tiempo a las tareas administrativas y más a acompañar el aprendizaje de tu grupo."
 								}),
 								"\n"
 							]
@@ -15989,12 +15976,12 @@ function Ds() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("h3", {
 											className: "landing-step-title",
-											children: "Configuración Curricular CNEB"
+											children: "Organiza el marco curricular"
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-step-text",
-											children: "Elige tu nivel educativo (Inicial, Primaria o Secundaria), área, grado, competencias y capacidades precargadas del CNEB de forma automática."
+											children: "Indica el nivel, el grado y el área de tu clase; después selecciona las competencias y capacidades del CNEB disponibles para ese contexto."
 										}),
 										"\n"
 									]
@@ -16011,12 +15998,12 @@ function Ds() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("h3", {
 											className: "landing-step-title",
-											children: "Generación Pedagógica con IA"
+											children: "Desarrolla tu propuesta con IA"
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-step-text",
-											children: "Los modelos de IA (GPT-6 Luna, DeepSeek R1 o Gemini) redactan situaciones significativas, la secuencia didáctica completa (Inicio, Desarrollo, Cierre) y los criterios de evaluación."
+											children: "Los asistentes de IA pueden ayudarte a redactar la situación significativa, organizar el inicio, desarrollo y cierre, y formular criterios de evaluación. Su uso requiere la configuración del servicio."
 										}),
 										"\n"
 									]
@@ -16033,12 +16020,12 @@ function Ds() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("h3", {
 											className: "landing-step-title",
-											children: "Compilación Nativa con Motor Local"
+											children: "Convierte tu trabajo en un documento"
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-step-text",
-											children: "Descarga el motor de escritorio para compilar Word (.docx) nativo con tablas CNEB perfectas, fórmulas matemáticas OMML editables y membretes oficiales sin descuadres."
+											children: "Utiliza el motor de escritorio para producir archivos Word (.docx) con tablas curriculares, ecuaciones OMML editables y encabezados institucionales."
 										}),
 										"\n"
 									]
@@ -16062,17 +16049,17 @@ function Ds() {
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("span", {
 									className: "landing-section-eyebrow",
-									children: "Arquitectura Híbrida"
+									children: "Web y escritorio, conectados"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("h2", {
 									className: "landing-section-title",
-									children: "¿Por qué Space Lab Incluye un Motor Local?"
+									children: "¿Para qué sirve el motor de escritorio?"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("p", {
 									className: "landing-section-desc",
-									children: "Unificamos la flexibilidad de la web con la potencia del compilador nativo de escritorio para documentos Word (.docx) de máxima fidelidad."
+									children: "La plataforma combina la comodidad del navegador con el procesamiento de escritorio para conservar la estructura de tus documentos Word (.docx)."
 								}),
 								"\n"
 							]
@@ -16096,22 +16083,22 @@ function Ds() {
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-sparkles" })
 												}),
 												"\n",
-												/* @__PURE__ */ (0, T.jsx)("span", { children: "Fidelidad Documental 100%" }),
+												/* @__PURE__ */ (0, T.jsx)("span", { children: "Estructura documental cuidada" }),
 												"\n"
 											]
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("h3", {
 											className: "motor-local-title",
-											children: "Motor Local de Exportación para Windows"
+											children: "Generación de documentos desde Windows"
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsxs)("p", {
 											className: "motor-local-desc",
 											children: [
-												"\n                        Los navegadores web no pueden crear de forma nativa documentos de Microsoft Word con tablas anidadas multinivel, márgenes físicos A4 de imprenta ni fórmulas matemáticas editables (OMML). Por eso creamos ",
+												"\n                        Para conservar tablas anidadas, márgenes A4 y ecuaciones OMML editables en Word, el proyecto utiliza un componente de escritorio llamado ",
 												/* @__PURE__ */ (0, T.jsx)("strong", { children: "pablitopyhost.exe" }),
-												": un motor ultraligero que corre en tu PC y se comunica de forma transparente y segura con esta aplicación web a través de ",
+												": un servicio ligero que se ejecuta en tu equipo y se enlaza con esta página mediante ",
 												/* @__PURE__ */ (0, T.jsx)("code", { children: "localhost:8000" }),
 												".\n                    "
 											]
@@ -16131,7 +16118,7 @@ function Ds() {
 															children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-check" })
 														}),
 														"\n",
-														/* @__PURE__ */ (0, T.jsx)("span", { children: "Tablas CNEB oficiales sin celdas descuadradas" }),
+														/* @__PURE__ */ (0, T.jsx)("span", { children: "Tablas curriculares con una distribución consistente" }),
 														"\n"
 													]
 												}),
@@ -16146,7 +16133,7 @@ function Ds() {
 															children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-check" })
 														}),
 														"\n",
-														/* @__PURE__ */ (0, T.jsx)("span", { children: "Ecuaciones matemáticas editables en formato OMML" }),
+														/* @__PURE__ */ (0, T.jsx)("span", { children: "Fórmulas en OMML que puedes seguir editando" }),
 														"\n"
 													]
 												}),
@@ -16161,7 +16148,7 @@ function Ds() {
 															children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-check" })
 														}),
 														"\n",
-														/* @__PURE__ */ (0, T.jsx)("span", { children: "Membretes institucionales de DRE y UGEL" }),
+														/* @__PURE__ */ (0, T.jsx)("span", { children: "Encabezados con los datos de tu institución, DRE y UGEL" }),
 														"\n"
 													]
 												}),
@@ -16176,7 +16163,7 @@ function Ds() {
 															children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-check" })
 														}),
 														"\n",
-														/* @__PURE__ */ (0, T.jsx)("span", { children: "Exportación instantánea sin límites de memoria web" }),
+														/* @__PURE__ */ (0, T.jsx)("span", { children: "Procesamiento local independiente de la memoria del navegador" }),
 														"\n"
 													]
 												}),
@@ -16200,7 +16187,7 @@ function Ds() {
 															children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-download" })
 														}),
 														"\n",
-														/* @__PURE__ */ (0, T.jsx)("span", { children: "Descargar Motor Local (.exe)" }),
+														/* @__PURE__ */ (0, T.jsx)("span", { children: "Obtener motor para Windows (.exe)" }),
 														"\n"
 													]
 												}),
@@ -16217,7 +16204,7 @@ function Ds() {
 															children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-refresh" })
 														}),
 														"\n",
-														/* @__PURE__ */ (0, T.jsx)("span", { children: "Verificar Estado de Conexión" }),
+														/* @__PURE__ */ (0, T.jsx)("span", { children: "Comprobar la conexión" }),
 														"\n"
 													]
 												}),
@@ -16246,17 +16233,17 @@ function Ds() {
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("span", {
 									className: "landing-section-eyebrow",
-									children: "Tecnología de Vanguardia"
+									children: "Herramientas para tu práctica docente"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("h2", {
 									className: "landing-section-title",
-									children: "Impulsado por los Mejores Modelos de IA"
+									children: "Distintas capacidades de IA para tu aula"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("p", {
 									className: "landing-section-desc",
-									children: "Elige el motor de inteligencia artificial que mejor se adapte a tu estilo pedagógico."
+									children: "Selecciona la alternativa de inteligencia artificial que responda a las necesidades de tu planificación."
 								}),
 								"\n"
 							]
@@ -16300,7 +16287,7 @@ function Ds() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-model-desc",
-											children: "Máxima agilidad y creatividad en el planteamiento de situaciones significativas contextualizadas a la realidad y coyuntura peruana."
+											children: "Apoyo ágil para proponer situaciones significativas y creativas vinculadas al contexto peruano."
 										}),
 										"\n"
 									]
@@ -16346,7 +16333,7 @@ function Ds() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-model-desc",
-											children: "Razonamiento pedagógico profundo, coherencia estricta en la alineación de propósitos y diseño de instrumentos de evaluación formativa."
+											children: "Asistencia para relacionar los propósitos de aprendizaje y construir instrumentos de evaluación formativa con coherencia pedagógica."
 										}),
 										"\n"
 									]
@@ -16392,7 +16379,7 @@ function Ds() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-model-desc",
-											children: "Velocidad instantánea para actividades prácticas de inicio, desarrollo y cierre, fichas de trabajo y adaptación a distintos ritmos de aprendizaje."
+											children: "Ayuda para preparar actividades de cada momento de la clase, elaborar fichas y ajustar las propuestas a diferentes ritmos de aprendizaje."
 										}),
 										"\n"
 									]
@@ -16416,17 +16403,17 @@ function Ds() {
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("span", {
 									className: "landing-section-eyebrow",
-									children: "Respuestas Claras"
+									children: "Resolvemos tus consultas"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("h2", {
 									className: "landing-section-title",
-									children: "Preguntas Frecuentes para Docentes"
+									children: "Lo que necesitas conocer antes de empezar"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("p", {
 									className: "landing-section-desc",
-									children: "Todo lo que necesitas saber sobre la plataforma, el motor local y el currículo."
+									children: "Consulta las dudas habituales sobre el espacio de trabajo, la exportación y las referencias curriculares."
 								}),
 								"\n"
 							]
@@ -16449,16 +16436,16 @@ function Ds() {
 													"aria-hidden": "true",
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-download" })
 												}),
-												"\n                        ¿Qué es el Motor Local y por qué debo descargarlo?\n                    "
+												"\n                        ¿Qué hace el motor de escritorio y cuándo lo necesito?\n                    "
 											]
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsxs)("p", {
 											className: "landing-faq-answer",
 											children: [
-												"Para que tus sesiones se descarguen en Microsoft Word (.docx) con las tablas oficiales del MINEDU, márgenes exactos, listas de cotejo y fórmulas matemáticas editables (OMML) sin que se mueva ninguna celda, desarrollamos un motor nativo (",
+												"El componente de escritorio permite preparar documentos Word (.docx) con tablas curriculares, márgenes definidos, instrumentos de evaluación y ecuaciones OMML editables. Este motor (",
 												/* @__PURE__ */ (0, T.jsx)("code", { children: "pablitopyhost.exe" }),
-												"). Se ejecuta en segundo plano en tu computadora y procesa el documento con máxima fidelidad."
+												") funciona en segundo plano dentro de tu equipo y procesa el archivo para conservar su estructura."
 											]
 										}),
 										"\n"
@@ -16478,13 +16465,13 @@ function Ds() {
 													"aria-hidden": "true",
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-check" })
 												}),
-												"\n                        ¿Puedo usar la plataforma sin descargar el motor local?\n                    "
+												"\n                        ¿Se puede trabajar únicamente desde el navegador?\n                    "
 											]
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-faq-answer",
-											children: "Sí. Puedes diseñar, redactar, editar, guardar en la nube o localmente, y utilizar todos los modelos de Inteligencia Artificial directamente en tu navegador. El motor local solo es necesario cuando deseas compilar y descargar tus sesiones en formato Word (.docx) editable de alta fidelidad."
+											children: "Sí. El navegador permite planificar, escribir, editar y conservar tu trabajo en el dispositivo o en tu cuenta. La asistencia de IA requiere su servicio configurado. Para las exportaciones que utilizan el motor nativo, debes tenerlo instalado y en ejecución."
 										}),
 										"\n"
 									]
@@ -16503,13 +16490,13 @@ function Ds() {
 													"aria-hidden": "true",
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-target" })
 												}),
-												"\n                        ¿Cómo se alinea al Currículo Nacional de la Educación Básica (CNEB)?\n                    "
+												"\n                        ¿Qué relación tiene la plataforma con el CNEB?\n                    "
 											]
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-faq-answer",
-											children: "Toda la base de datos de competencias, capacidades, desempeños por grado y ciclo (Inicial, Primaria y Secundaria), enfoques transversales e instrumentos de evaluación está completamente estructurada según las directivas curriculares vigentes del Ministerio de Educación del Perú (MINEDU)."
+											children: "Las referencias de competencias, capacidades, desempeños y enfoques se organizan tomando como base el Currículo Nacional del MINEDU. La cobertura disponible depende del nivel, área y grado; contrasta siempre las referencias con tu programa curricular."
 										}),
 										"\n"
 									]
@@ -16528,13 +16515,13 @@ function Ds() {
 													"aria-hidden": "true",
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-sparkles" })
 												}),
-												"\n                        ¿Qué modelos de Inteligencia Artificial están disponibles?\n                    "
+												"\n                        ¿Con qué asistentes de IA puede trabajar el sistema?\n                    "
 											]
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-faq-answer",
-											children: "Dispones de una arquitectura multi-modelo conectada a través de routers seguros: GPT-6 Luna de OpenAI, DeepSeek V3 y Reasoner R1 para razonamiento pedagógico profundo, y Google Gemini 2.5 Flash para generación ultrarrápida de actividades y criterios."
+											children: "El proyecto admite la integración de asistentes de OpenAI, DeepSeek y Google Gemini mediante servicios de servidor. Los modelos que podrás utilizar dependerán del proveedor y la configuración habilitados para esta instalación."
 										}),
 										"\n"
 									]
@@ -16553,13 +16540,13 @@ function Ds() {
 													"aria-hidden": "true",
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-sliders" })
 												}),
-												"\n                        ¿Cómo funciona el sistema de créditos y monetización automatizada?\n                    "
+												"\n                        ¿Cómo se administra el consumo de IA?\n                    "
 											]
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-faq-answer",
-											children: "La plataforma cuenta con un sistema de créditos automatizado gestionado en la nube con Supabase. No requiere procesos manuales de verificación: tus créditos de IA se recargan y acreditan de forma automática para que puedas seguir planificando sin interrupciones."
+											children: "El proyecto contempla un registro de consumo y créditos en Supabase. En esta instalación, la activación de la IA y la gestión comercial avanzada siguen pendientes de configuración; esta pantalla no realiza cobros."
 										}),
 										"\n"
 									]
@@ -16578,13 +16565,13 @@ function Ds() {
 													"aria-hidden": "true",
 													children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-shield" })
 												}),
-												"\n                        ¿Mis sesiones y datos personales están seguros?\n                    "
+												"\n                        ¿Cómo se resguarda la información de mi cuenta?\n                    "
 											]
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											className: "landing-faq-answer",
-											children: "Totalmente seguros. Tus sesiones se guardan localmente en tu propio dispositivo (LocalStorage e IndexedDB) y, si inicias sesión, se sincronizan en la nube mediante Supabase con políticas de seguridad de nivel de fila (RLS). Tu información docente nunca se comparte con terceros."
+											children: "Puedes conservar tus sesiones en el dispositivo y sincronizarlas con Supabase cuando accedes a tu cuenta. Las políticas por usuario restringen el acceso a tus registros. Si utilizas IA, el contenido necesario de la solicitud se procesa con el proveedor configurado; evita incluir información personal de estudiantes."
 										}),
 										"\n"
 									]
@@ -16607,12 +16594,12 @@ function Ds() {
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("h2", {
 									className: "landing-cta-title",
-									children: "¿Listo para Planificar tu Próxima Sesión?"
+									children: "Tu siguiente clase puede empezar hoy"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("p", {
 									className: "landing-cta-text",
-									children: "Únete a los docentes que ya optimizan su tiempo administrativo con inteligencia artificial curricular."
+									children: "Reúne tus ideas y organiza una propuesta de aprendizaje pensada para tu grupo."
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("button", {
@@ -16628,7 +16615,7 @@ function Ds() {
 											children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-sparkles" })
 										}),
 										"\n",
-										/* @__PURE__ */ (0, T.jsx)("span", { children: "Entrar al Editor y Crear mi Sesión Ahora" }),
+										/* @__PURE__ */ (0, T.jsx)("span", { children: "Abrir el planificador y comenzar" }),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("svg", {
 											className: "ui-icon",
@@ -16657,14 +16644,14 @@ function Ds() {
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("h2", {
 									className: "landing-contact-title",
-									children: "ESTABLECER ENLACE"
+									children: "CONVERSEMOS"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("div", { className: "landing-contact-divider" }),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("p", {
 									className: "landing-contact-desc",
-									children: "\n                    ¿Tienes un proyecto en mente o necesitas una solución digital? Transmite tus requerimientos por cualquiera de estos canales.\n                "
+									children: "\n                    Si buscas ayuda o quieres desarrollar una propuesta digital, comparte tu consulta mediante los canales disponibles.\n                "
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("div", {
@@ -16739,6 +16726,13 @@ function Ds() {
 				/* @__PURE__ */ (0, T.jsxs)("footer", {
 					className: "landing-footer",
 					children: [
+						/* @__PURE__ */ (0, T.jsxs)("div", {
+							className: "gp-footer-brand",
+							children: [/* @__PURE__ */ (0, T.jsx)("img", {
+								src: "assets/grafiplot-sesiones.png",
+								alt: "Logo de Sesiones GRAFIPLOT"
+							}), /* @__PURE__ */ (0, T.jsxs)("div", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Sesiones GRAFIPLOT" }), /* @__PURE__ */ (0, T.jsx)("p", { children: "Tus ideas, convertidas en experiencias para aprender." })] })]
+						}),
 						"\n",
 						/* @__PURE__ */ (0, T.jsxs)("div", {
 							className: "landing-creator-box",
@@ -16761,7 +16755,7 @@ function Ds() {
 								/* @__PURE__ */ (0, T.jsxs)("p", {
 									className: "landing-creator-text",
 									children: [
-										"\n                    SISTEMA CREADO CON ",
+										"\n                    PROYECTO ORIGINAL CREADO CON ",
 										/* @__PURE__ */ (0, T.jsx)("svg", {
 											className: "ui-icon icon-heart",
 											"aria-hidden": "true",
@@ -16802,27 +16796,27 @@ function Ds() {
 								/* @__PURE__ */ (0, T.jsx)("a", {
 									href: "descargas_landing.html",
 									className: "landing-footer-link",
-									children: "Motor Local de Word"
+									children: "Exportación de Word"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("a", {
 									href: "conexion.html",
 									className: "landing-footer-link",
-									children: "Estado de Conexión"
+									children: "Estado del servicio"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("a", {
 									href: "#",
 									id: "link-terms-footer",
 									className: "landing-footer-link",
-									children: "Términos y Privacidad"
+									children: "Condiciones y privacidad"
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("a", {
 									href: "#/app",
 									className: "landing-footer-link",
 									"data-action": "enter-app",
-									children: "Ir al Editor"
+									children: "Abrir mi espacio"
 								}),
 								"\n"
 							]
@@ -16849,15 +16843,15 @@ function Os() {
 						type: "button",
 						className: "home-brand",
 						"data-action": "view-home",
-						"aria-label": "Ir a Mi espacio",
+						"aria-label": "Ir a Mi panel",
 						children: [/* @__PURE__ */ (0, T.jsx)("span", {
 							className: "home-brand-mark",
 							children: /* @__PURE__ */ (0, T.jsx)("img", {
-								src: "assets/favicon.svg",
+								src: "assets/grafiplot-sesiones.png",
 								alt: "",
 								"aria-hidden": "true"
 							})
-						}), /* @__PURE__ */ (0, T.jsxs)("span", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Mi espacio" }), /* @__PURE__ */ (0, T.jsx)("small", { children: "Todo listo para tu próxima clase" })] })]
+						}), /* @__PURE__ */ (0, T.jsxs)("span", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Mi panel" }), /* @__PURE__ */ (0, T.jsx)("small", { children: "Tus recursos para la siguiente experiencia" })] })]
 					}),
 					/* @__PURE__ */ (0, T.jsxs)("nav", {
 						className: "home-nav",
@@ -16865,7 +16859,7 @@ function Os() {
 						children: [/* @__PURE__ */ (0, T.jsx)("a", {
 							href: "#/home",
 							className: "home-nav-link active",
-							children: "Mi espacio"
+							children: "Mi panel"
 						}), /* @__PURE__ */ (0, T.jsx)("a", {
 							href: "#/sessions",
 							className: "home-nav-link",
@@ -16952,16 +16946,16 @@ function Os() {
 							children: [
 								/* @__PURE__ */ (0, T.jsxs)("span", {
 									className: "home-eyebrow",
-									children: [/* @__PURE__ */ (0, T.jsx)("span", { className: "home-live-dot" }), "TU CENTRO DE PLANIFICACIÓN"]
+									children: [/* @__PURE__ */ (0, T.jsx)("span", { className: "home-live-dot" }), "UN LUGAR PARA ORGANIZAR TUS CLASES"]
 								}),
 								/* @__PURE__ */ (0, T.jsx)("h1", {
 									id: "home-welcome-title",
-									children: "Bienvenido a tu espacio docente"
+									children: "Tu próxima experiencia comienza aquí"
 								}),
 								/* @__PURE__ */ (0, T.jsxs)("p", { children: [
-									"Una idea para tu aula. Un espacio para darle forma.",
+									"Lo que imaginas para tus estudiantes encuentra aquí su punto de partida.",
 									/* @__PURE__ */ (0, T.jsx)("br", {}),
-									"Crea, organiza y continúa tus próximas clases."
+									"Prepara nuevas propuestas, organiza tus documentos y retoma tu trabajo."
 								] }),
 								/* @__PURE__ */ (0, T.jsxs)("div", {
 									className: "home-primary-actions",
@@ -17016,14 +17010,14 @@ function Os() {
 									children: [/* @__PURE__ */ (0, T.jsx)("span", {
 										className: "home-guide-icon",
 										children: /* @__PURE__ */ (0, T.jsx)(ma, { size: 18 })
-									}), /* @__PURE__ */ (0, T.jsxs)("div", { children: [/* @__PURE__ */ (0, T.jsx)("span", { children: "DE LA IDEA AL AULA" }), /* @__PURE__ */ (0, T.jsx)("strong", { children: "Tu próxima clase, paso a paso" })] })]
+									}), /* @__PURE__ */ (0, T.jsxs)("div", { children: [/* @__PURE__ */ (0, T.jsx)("span", { children: "DE TU PROPUESTA A LA PRÁCTICA" }), /* @__PURE__ */ (0, T.jsx)("strong", { children: "Organiza tu experiencia por etapas" })] })]
 								}),
 								/* @__PURE__ */ (0, T.jsxs)("ol", {
 									className: "home-guide-steps",
 									children: [
-										/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("span", { children: "1" }), /* @__PURE__ */ (0, T.jsxs)("p", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Completa los datos" }), "Indica nivel, área y propósito."] })] }),
-										/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("span", { children: "2" }), /* @__PURE__ */ (0, T.jsxs)("p", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Genera con IA" }), "Obtén una propuesta alineada al CNEB."] })] }),
-										/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("span", { children: "3" }), /* @__PURE__ */ (0, T.jsxs)("p", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Revisa y exporta" }), "Edita libremente y descarga tu documento."] })] })
+										/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("span", { children: "1" }), /* @__PURE__ */ (0, T.jsxs)("p", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Indica el contexto" }), "Define el nivel, el área y la intención de aprendizaje."] })] }),
+										/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("span", { children: "2" }), /* @__PURE__ */ (0, T.jsxs)("p", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Elabora con apoyo de IA" }), "Desarrolla una propuesta tomando como referencia el CNEB."] })] }),
+										/* @__PURE__ */ (0, T.jsxs)("li", { children: [/* @__PURE__ */ (0, T.jsx)("span", { children: "3" }), /* @__PURE__ */ (0, T.jsxs)("p", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Comprueba y descarga" }), "Ajusta el contenido y obtén el archivo de tu clase."] })] })
 									]
 								})
 							]
@@ -17043,10 +17037,10 @@ function Os() {
 									/* @__PURE__ */ (0, T.jsxs)("div", { children: [/* @__PURE__ */ (0, T.jsx)("strong", {
 										id: "home-session-count",
 										children: "0"
-									}), /* @__PURE__ */ (0, T.jsx)("span", { children: "Sesiones guardadas" })] }),
+									}), /* @__PURE__ */ (0, T.jsx)("span", { children: "Planificaciones conservadas" })] }),
 									/* @__PURE__ */ (0, T.jsx)("span", {
 										className: "home-stat-caption",
-										children: "Tu trabajo, a mano"
+										children: "Tus documentos a tu alcance"
 									})
 								]
 							}),
@@ -17063,7 +17057,7 @@ function Os() {
 									}), /* @__PURE__ */ (0, T.jsx)("span", { children: "Créditos de IA" })] }),
 									/* @__PURE__ */ (0, T.jsx)("span", {
 										className: "home-stat-caption",
-										children: "Para tus próximas ideas"
+										children: "Para elaborar nuevas propuestas"
 									})
 								]
 							}),
@@ -17109,7 +17103,7 @@ function Os() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("h2", {
 											id: "home-tools-title",
-											children: "¿Qué deseas preparar?"
+											children: "¿En qué trabajarás hoy?"
 										}),
 										"\n"
 									] }),
@@ -17143,9 +17137,9 @@ function Os() {
 														children: "Disponible"
 													}),
 													"\n",
-													/* @__PURE__ */ (0, T.jsx)("h3", { children: "Sesión individual" }),
+													/* @__PURE__ */ (0, T.jsx)("h3", { children: "Una sesión de aprendizaje" }),
 													"\n",
-													/* @__PURE__ */ (0, T.jsx)("p", { children: "Diseña, genera y exporta sesiones alineadas al CNEB para Inicial, Primaria y Secundaria." }),
+													/* @__PURE__ */ (0, T.jsx)("p", { children: "Organiza, desarrolla y descarga propuestas curriculares para Inicial, Primaria y Secundaria con referencia al CNEB." }),
 													"\n"
 												]
 											}),
@@ -17155,7 +17149,7 @@ function Os() {
 												className: "home-tool-action",
 												"data-home-action": "new-session",
 												children: [
-													"\n                            Crear sesión ",
+													"\n                            Preparar una clase ",
 													/* @__PURE__ */ (0, T.jsx)("svg", {
 														className: "ui-icon",
 														"aria-hidden": "true",
@@ -17170,7 +17164,7 @@ function Os() {
 									"\n",
 									/* @__PURE__ */ (0, T.jsxs)("article", {
 										className: "home-tool-card home-tool-card-active",
-										"aria-label": "Planificación articulada",
+										"aria-label": "Planificación conectada",
 										children: [
 											"\n",
 											/* @__PURE__ */ (0, T.jsx)("span", {
@@ -17191,9 +17185,9 @@ function Os() {
 														children: "Beta"
 													}),
 													"\n",
-													/* @__PURE__ */ (0, T.jsx)("h3", { children: "Planificación articulada" }),
+													/* @__PURE__ */ (0, T.jsx)("h3", { children: "Planificación conectada" }),
 													"\n",
-													/* @__PURE__ */ (0, T.jsx)("p", { children: "Experiencias, Unidades y Proyectos de aprendizaje. Construye y guarda tu mapa paso a paso." }),
+													/* @__PURE__ */ (0, T.jsx)("p", { children: "Desarrolla Experiencias, Unidades y Proyectos de aprendizaje y conserva su mapa de trabajo de manera progresiva." }),
 													"\n"
 												]
 											}),
@@ -17202,7 +17196,7 @@ function Os() {
 												type: "button",
 												className: "home-tool-action",
 												"data-open-planning": "",
-												children: "Abrir planificaciones"
+												children: "Explorar mis planificaciones"
 											}),
 											"\n"
 										]
@@ -17228,7 +17222,7 @@ function Os() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("span", {
 											className: "home-eyebrow",
-											children: "Biblioteca personal"
+											children: "Archivo de mis propuestas"
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("h2", {
@@ -17284,12 +17278,12 @@ function Os() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("h2", {
 											id: "home-plans-title",
-											children: "Conoce qué incluye cada plan"
+											children: "Revisa las características de cada alternativa"
 										}),
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("p", {
 											id: "home-plans-description",
-											children: "Conoce las diferencias antes de decidir. Los cambios de plan y los pagos todavía no están habilitados."
+											children: "Compara las opciones con calma. Por ahora, esta sección no permite modificar el plan ni efectuar pagos."
 										}),
 										"\n"
 									] }),
@@ -17342,7 +17336,7 @@ function Os() {
 											"\n",
 											/* @__PURE__ */ (0, T.jsx)("p", {
 												className: "home-plan-description",
-												children: "Lo esencial para crear y guardar tus primeras sesiones."
+												children: "Las herramientas básicas para preparar y conservar tus primeras propuestas."
 											}),
 											"\n",
 											/* @__PURE__ */ (0, T.jsxs)("p", {
@@ -17408,7 +17402,7 @@ function Os() {
 											"\n",
 											/* @__PURE__ */ (0, T.jsx)("p", {
 												className: "home-plan-description",
-												children: "Para docentes que prueban y ayudan a mejorar Space Lab."
+												children: "Pensado para quienes exploran Sesiones GRAFIPLOT y aportan a su mejora."
 											}),
 											"\n",
 											/* @__PURE__ */ (0, T.jsxs)("p", {
@@ -17474,7 +17468,7 @@ function Os() {
 											"\n",
 											/* @__PURE__ */ (0, T.jsx)("p", {
 												className: "home-plan-description",
-												children: "Más capacidad y herramientas para una planificación frecuente."
+												children: "Más recursos y capacidad para quienes planifican de manera habitual."
 											}),
 											"\n",
 											/* @__PURE__ */ (0, T.jsxs)("p", {
@@ -17540,7 +17534,7 @@ function Os() {
 											"\n",
 											/* @__PURE__ */ (0, T.jsx)("p", {
 												className: "home-plan-description",
-												children: "Para un uso intensivo y las capacidades más avanzadas."
+												children: "Pensado para una actividad frecuente con acceso a funciones de mayor alcance."
 											}),
 											"\n",
 											/* @__PURE__ */ (0, T.jsxs)("p", {
@@ -17594,7 +17588,7 @@ function Os() {
 										children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-shield" })
 									}),
 									"\n",
-									/* @__PURE__ */ (0, T.jsxs)("p", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Vista informativa." }), " No se realizará ningún cobro ni cambio de plan desde esta pantalla."] }),
+									/* @__PURE__ */ (0, T.jsxs)("p", { children: [/* @__PURE__ */ (0, T.jsx)("strong", { children: "Vista informativa." }), " Esta sección no genera cargos ni modifica tu suscripción."] }),
 									"\n"
 								]
 							}),
@@ -17635,7 +17629,7 @@ function As() {
 					className: "btn btn-ghost",
 					id: "session-mode-quick",
 					"aria-pressed": "false",
-					children: "Modo rápido · 3 pasos"
+					children: "Asistente · 3 pasos"
 				}),
 				"\n",
 				/* @__PURE__ */ (0, T.jsx)("button", {
@@ -17643,7 +17637,7 @@ function As() {
 					className: "btn btn-ghost",
 					id: "session-mode-advanced",
 					"aria-pressed": "true",
-					children: "Modo avanzado"
+					children: "Edición completa"
 				}),
 				"\n"
 			]
@@ -17769,7 +17763,7 @@ function As() {
 						/* @__PURE__ */ (0, T.jsx)("h3", {
 							id: "quick-title-3",
 							tabIndex: -1,
-							children: "Revisar y generar"
+							children: "Revisión y creación"
 						}),
 						"\n",
 						/* @__PURE__ */ (0, T.jsx)("dl", { id: "quick-review" }),
@@ -17896,8 +17890,8 @@ function js() {
 											children: [
 												"\n",
 												/* @__PURE__ */ (0, T.jsx)("img", {
-													src: "assets/favicon.svg",
-													alt: "Space Lab Icon",
+													src: "assets/grafiplot-sesiones.png",
+													alt: "Sesiones GRAFIPLOT Icon",
 													"aria-hidden": "true"
 												}),
 												"\n"
@@ -18077,12 +18071,12 @@ function js() {
 												"\n",
 												/* @__PURE__ */ (0, T.jsx)("strong", {
 													className: "step-title",
-													children: "2. Genera con IA"
+													children: "2. Elabora con apoyo de IA"
 												}),
 												"\n",
 												/* @__PURE__ */ (0, T.jsx)("span", {
 													className: "step-desc",
-													children: "Space AI estructura la situación significativa, los momentos didácticos (Inicio, Desarrollo, Cierre), criterios y evidencias."
+													children: "GRAFIPLOT IA estructura la situación significativa, los momentos didácticos (Inicio, Desarrollo, Cierre), criterios y evidencias."
 												}),
 												"\n"
 											]
@@ -19110,7 +19104,7 @@ function Ms() {
 									title: "Volver al inicio / presentación",
 									role: "button",
 									tabIndex: 0,
-									"aria-label": "Volver al inicio de Space Lab",
+									"aria-label": "Volver al inicio de Sesiones GRAFIPLOT",
 									children: [
 										"\n",
 										/* @__PURE__ */ (0, T.jsxs)("div", {
@@ -19122,8 +19116,8 @@ function Ms() {
 											children: [
 												"\n",
 												/* @__PURE__ */ (0, T.jsx)("img", {
-													src: "assets/favicon.svg",
-													alt: "Space Lab Logo",
+													src: "assets/grafiplot-sesiones.png",
+													alt: "Sesiones GRAFIPLOT Logo",
 													className: "brand-logo-img"
 												}),
 												"\n"
@@ -19134,7 +19128,7 @@ function Ms() {
 											"\n",
 											/* @__PURE__ */ (0, T.jsx)("h1", {
 												className: "brand-title",
-												children: "Space Lab"
+												children: "Sesiones GRAFIPLOT"
 											}),
 											"\n",
 											/* @__PURE__ */ (0, T.jsx)("span", {
@@ -19160,7 +19154,7 @@ function Ms() {
 										/* @__PURE__ */ (0, T.jsx)("span", {
 											id: "session-context-title",
 											className: "header-context-title",
-											children: "Nueva sesión"
+											children: "Nueva planificación"
 										}),
 										"\n"
 									]
@@ -19244,7 +19238,7 @@ function Ms() {
 								"\n",
 								/* @__PURE__ */ (0, T.jsx)("span", {
 									className: "save-text",
-									children: "Sin cambios"
+									children: "Sin modificaciones pendientes"
 								}),
 								"\n"
 							]
@@ -19286,7 +19280,7 @@ function Ms() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("span", {
 											className: "btn-label",
-											children: "Mi espacio"
+											children: "Mi panel"
 										}),
 										"\n"
 									]
@@ -19793,12 +19787,12 @@ function Ms() {
 											"\n",
 											/* @__PURE__ */ (0, T.jsx)("span", {
 												className: "sidebar-eyebrow",
-												children: "Planificador docente"
+												children: "Tu mesa de planificación"
 											}),
 											"\n",
 											/* @__PURE__ */ (0, T.jsx)("h2", {
 												className: "sidebar-title",
-												children: "Diseña tu sesión"
+												children: "Construye tu propuesta"
 											}),
 											"\n"
 										] }),
@@ -19807,12 +19801,12 @@ function Ms() {
 											id: "btn-close-sidebar",
 											type: "button",
 											className: "btn btn-ghost btn-sm",
-											"aria-label": "Volver al documento",
+											"aria-label": "Regresar al documento",
 											children: [/* @__PURE__ */ (0, T.jsx)("svg", {
 												className: "ui-icon",
 												"aria-hidden": "true",
 												children: /* @__PURE__ */ (0, T.jsx)("use", { href: "#icon-close" })
-											}), /* @__PURE__ */ (0, T.jsx)("span", { children: "Volver al documento" })]
+											}), /* @__PURE__ */ (0, T.jsx)("span", { children: "Regresar al documento" })]
 										}),
 										"\n"
 									]
@@ -19850,17 +19844,17 @@ function Ms() {
 																"\n",
 																/* @__PURE__ */ (0, T.jsx)("h3", {
 																	id: "inspector-title",
-																	children: "Configura el copiloto"
+																	children: "Prepara tu asistente"
 																}),
 																"\n",
 																/* @__PURE__ */ (0, T.jsx)("p", {
 																	id: "inspector-description",
-																	children: "Elige el modelo, la plantilla y las referencias para preparar tu sesión."
+																	children: "Selecciona las opciones de asistencia, el formato y las fuentes que orientarán tu propuesta."
 																}),
 																"\n",
 																/* @__PURE__ */ (0, T.jsx)("p", {
 																	className: "planner-scroll-help",
-																	children: "Baja para continuar. El menú te lleva directo a cada sección."
+																	children: "Continúa hacia abajo o utiliza el menú para ir a la sección que necesites."
 																}),
 																"\n"
 															]
@@ -19879,7 +19873,7 @@ function Ms() {
 																			"\n",
 																			/* @__PURE__ */ (0, T.jsx)("span", {
 																				className: "ai-model-eyebrow",
-																				children: "Copiloto Space AI"
+																				children: "Asistente GRAFIPLOT IA"
 																			}),
 																			"\n",
 																			/* @__PURE__ */ (0, T.jsx)("strong", { children: "Enrutamiento inteligente" }),
@@ -20245,7 +20239,7 @@ function Ms() {
 																}),
 																/* @__PURE__ */ (0, T.jsx)("h3", {
 																	id: "planner-title-general",
-																	children: "Completa los datos"
+																	children: "Indica el contexto"
 																}),
 																/* @__PURE__ */ (0, T.jsx)("p", { children: "Define la institución, el grado, el área y la identidad de tu sesión." })
 															]
@@ -22189,7 +22183,7 @@ function Ms() {
 																				fontSize: "0.75rem",
 																				marginBottom: "6px"
 																			},
-																			children: "Sesiones guardadas"
+																			children: "Planificaciones conservadas"
 																		}),
 																		"\n",
 																		/* @__PURE__ */ (0, T.jsxs)("ul", {
@@ -22236,12 +22230,12 @@ function Ms() {
 												"\n",
 												/* @__PURE__ */ (0, T.jsx)("h3", {
 													id: "planning-summary-title",
-													children: "Tu próxima clase"
+													children: "Tu siguiente experiencia"
 												}),
 												"\n",
 												/* @__PURE__ */ (0, T.jsx)("p", {
 													id: "planning-summary-context",
-													children: "Completa los datos de tu sesión."
+													children: "Indica el contexto de tu sesión."
 												}),
 												"\n",
 												/* @__PURE__ */ (0, T.jsx)("dl", { id: "planning-summary-facts" }),
@@ -22797,8 +22791,8 @@ function Is() {
 				/* @__PURE__ */ (0, T.jsxs)("button", {
 					id: "chatbot-bubble",
 					className: "chatbot-bubble",
-					title: "Preguntar al copiloto",
-					"aria-label": "Preguntar al copiloto",
+					title: "Consultar al asistente",
+					"aria-label": "Consultar al asistente",
 					children: [
 						"\n",
 						/* @__PURE__ */ (0, T.jsx)("svg", {
@@ -22870,7 +22864,7 @@ function Is() {
 										"\n",
 										/* @__PURE__ */ (0, T.jsx)("div", {
 											className: "message-bubble",
-											children: "\n                        ¡Hola! Soy tu asistente pedagógico de Space Lab. ¿En qué puedo ayudarte hoy con tus sesiones o\n                        el Currículo Nacional?\n                    "
+											children: "\n                        ¡Hola! Soy tu asistente pedagógico de Sesiones GRAFIPLOT. ¿En qué puedo ayudarte hoy con tus sesiones o\n                        el Currículo Nacional?\n                    "
 										}),
 										"\n"
 									]
@@ -23495,7 +23489,7 @@ function zs() {
 							children: "> Motor de Exportación Local v1.4.5"
 						}),
 						"\n",
-						/* @__PURE__ */ (0, T.jsx)("p", { children: "\n                Activa el motor de exportación local en Windows para generar PDF en A4 y documentos de Word (.docx) editables desde la web, con tablas y fórmulas matemáticas.\n            " }),
+						/* @__PURE__ */ (0, T.jsx)("p", { children: "\n                Pon en marcha el servicio de escritorio en Windows y crea desde la página archivos PDF A4 y Word (.docx) editables, con tablas y ecuaciones.\n            " }),
 						"\n",
 						"\n",
 						/* @__PURE__ */ (0, T.jsxs)("a", {
@@ -23636,7 +23630,7 @@ function zs() {
 												"\n",
 												/* @__PURE__ */ (0, T.jsx)("div", {
 													className: "step-text",
-													children: "Ejecuta el archivo. Verás iniciarse la terminal hacker de color negro profundo."
+													children: "Abre el ejecutable y espera a que aparezca la ventana de estado del servicio."
 												}),
 												"\n"
 											]
@@ -23682,10 +23676,10 @@ function zs() {
 									className: "warning-steps-list",
 									children: [
 										"\n",
-										/* @__PURE__ */ (0, T.jsx)("li", { children: "Al ser una aplicación de desarrollo independiente (no firmada digitalmente), Windows podría lanzar una advertencia." }),
+										/* @__PURE__ */ (0, T.jsx)("li", { children: "Windows puede mostrar un aviso porque se trata de un desarrollo independiente sin firma digital." }),
 										"\n",
 										/* @__PURE__ */ (0, T.jsxs)("li", { children: [
-											"Comprueba el origen y el hash de la descarga indicados abajo. Para continuar, haz clic en ",
+											"Antes de continuar, verifica la procedencia y la huella de la descarga que aparecen a continuación. Después selecciona ",
 											/* @__PURE__ */ (0, T.jsx)("strong", { children: "\"Más información\"" }),
 											"."
 										] }),
@@ -23746,7 +23740,7 @@ function zs() {
 										lineHeight: "1.6",
 										marginBottom: "12px"
 									},
-									children: "\n                    Comprueba que el SHA-256 de tu descarga coincida con el ejecutable publicado y compilado en GitHub Actions:\n                "
+									children: "\n                    Verifica que la huella SHA-256 del archivo descargado sea igual a la del ejecutable publicado desde GitHub Actions:\n                "
 								}),
 								"\n",
 								/* @__PURE__ */ (0, T.jsxs)("div", {
@@ -23955,7 +23949,7 @@ function Vs() {
 					}),
 					/* @__PURE__ */ (0, T.jsx)("h1", {
 						id: "title",
-						children: e === "connected" ? "Motor Enlazado" : "Enlazar Motor Local"
+						children: e === "connected" ? "Motor Enlazado" : "Enlazar Motor de escritorio"
 					}),
 					/* @__PURE__ */ (0, T.jsx)("p", {
 						id: "description",
@@ -23968,7 +23962,7 @@ function Vs() {
 						disabled: e === "checking" || e === "connected" || e === "error" && !i.current,
 						children: /* @__PURE__ */ (0, T.jsx)("span", {
 							id: "btn-text",
-							children: e === "checking" ? "Comprobando conexión..." : e === "connected" ? "¡Enlace Exitoso!" : "Vincular con Motor Local"
+							children: e === "checking" ? "Comprobando conexión..." : e === "connected" ? "¡Enlace Exitoso!" : "Vincular con Motor de escritorio"
 						})
 					}),
 					/* @__PURE__ */ (0, T.jsx)("div", {
@@ -24026,7 +24020,7 @@ function Ws() {
 		"#/app",
 		"#/editor",
 		"#/sessions/new"
-	].includes(location.hash) && (e.innerHTML = "<div class=\"sl-starting\" role=\"status\"><span>Space Lab</span>Preparando tu espacio de trabajo…</div>");
+	].includes(location.hash) && (e.innerHTML = "<div class=\"sl-starting\" role=\"status\"><span>Sesiones GRAFIPLOT</span>Preparando tu espacio de trabajo…</div>");
 	let t = performance.now();
 	function n() {
 		let r = window.SpaceLabReactBridge;

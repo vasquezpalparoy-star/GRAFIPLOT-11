@@ -19,7 +19,7 @@ export function TermsDialog() {
 </svg>
 {"\n"}
 <h3 style={{"fontSize": "1.2rem", "fontWeight": "800", "color": "var(--color-foreground)", "margin": "0"} as CSSProperties}>
-{"\n                        Términos, Condiciones de Uso y Políticas de Privacidad — Space Lab\n                    "}
+{"\n                        Condiciones de uso y tratamiento de la información — Sesiones GRAFIPLOT\n                    "}
 </h3>
 {"\n"}
 </div>
@@ -43,7 +43,7 @@ export function TermsDialog() {
 </strong>
 {" | Versión del Sistema: "}
 <strong>
-{"Space Lab 2.0 (Motor v1.4.1)"}
+{"Sesiones GRAFIPLOT 2.0 (Motor v1.4.1)"}
 </strong>
 <br/>
 {"\n                    Desarrollado y operado por "}
@@ -56,13 +56,13 @@ export function TermsDialog() {
 <p>
 {"Bienvenido a "}
 <strong>
-{"Space Lab"}
+{"Sesiones GRAFIPLOT"}
 </strong>
 {" ("}
 <code>
 {"sesiones.sypablitodp.site"}
 </code>
-{"). Esta plataforma de asistencia pedagógica, planificación curricular y exportación documental está diseñada para facilitar el trabajo técnico-pedagógico de los docentes de Educación Básica Regular (Inicial, Primaria y Secundaria) del Perú. Al acceder, registrarte y utilizar nuestros servicios, aceptas en su totalidad los siguientes Términos y Condiciones y la Política de Privacidad conforme a la legislación vigente de la República del Perú."}
+{"). Este espacio de apoyo pedagógico, planificación curricular y generación de documentos busca facilitar la labor de docentes de Educación Básica Regular del Perú en Inicial, Primaria y Secundaria. El acceso, registro y uso de sus servicios implica aceptar estas condiciones y la política de privacidad dentro del marco legal peruano vigente."}
 </p>
 {"\n"}
 <h4 style={{"color": "var(--accent)", "fontWeight": "700", "marginTop": "0.5rem", "display": "flex", "alignItems": "center", "gap": "0.4rem"} as CSSProperties}>
@@ -76,7 +76,7 @@ export function TermsDialog() {
 </h4>
 {"\n"}
 <p>
-{"El registro en Space Lab es de carácter personal e intransferible. El usuario es responsable de mantener la confidencialidad de sus credenciales. La plataforma utiliza infraestructura segura en la nube (Supabase Auth) con contraseñas encriptadas mediante algoritmos criptográficos robustos y políticas de seguridad a nivel de fila (Row Level Security - RLS). Cada docente tiene acceso exclusivo y privado a sus propias sesiones, perfiles y datos."}
+{"La cuenta de Sesiones GRAFIPLOT es individual y no debe transferirse. Cada persona debe proteger sus datos de acceso. La autenticación se gestiona con Supabase Auth y el acceso a los registros se limita mediante políticas por fila (RLS), de modo que cada docente consulte sus propios datos, perfil y planificaciones."}
 </p>
 {"\n"}
 <h4 style={{"color": "var(--accent)", "fontWeight": "700", "marginTop": "0.5rem", "display": "flex", "alignItems": "center", "gap": "0.4rem"} as CSSProperties}>
@@ -86,7 +86,7 @@ export function TermsDialog() {
 
 </use>
 </svg>
-{"\n                    2. ARQUITECTURA DEL MOTOR LOCAL (pablitohost.exe / pablitopyhost.exe) Y PRIVACIDAD TOTAL DE TU PC\n                "}
+{"\n                    2. FUNCIONAMIENTO DEL MOTOR DE ESCRITORIO (pablitohost.exe / pablitopyhost.exe) Y DATOS DEL EQUIPO\n                "}
 </h4>
 {"\n"}
 <div style={{"background": "var(--bg-card)", "border": "1px solid var(--border)", "borderRadius": "8px", "padding": "1rem", "display": "flex", "flexDirection": "column", "gap": "0.75rem"} as CSSProperties}>
@@ -96,9 +96,9 @@ export function TermsDialog() {
 {"¿Por qué se descarga el ejecutable local?"}
 </strong>
 <br/>
-{"\n                    Los navegadores web estándar tienen limitaciones técnicas estrictas: no pueden generar de forma nativa documentos de Microsoft Word (.docx) con estructuras complejas como tablas anidadas con anchos milimétricos del MINEDU, listas de cotejo con formato oficial de evaluación formativa y fórmulas matemáticas o científicas editables en formato OMML (Office Math Markup Language). Para lograr una calidad de impresión física 100% idéntica a la normativa de UGEL/DRE y "}
+{"\n                    La generación de documentos Word complejos desde un navegador presenta limitaciones. Para trabajar con tablas anidadas, anchos definidos, instrumentos de evaluación y fórmulas editables en OMML (Office Math Markup Language), se utiliza un motor de escritorio que busca mantener la estructura del documento y "}
 <strong>
-{"sin subir tus documentos pedagógicos a servidores o convertidores externos en la nube"}
+{"procesar tus documentos pedagógicos en el equipo, sin enviarlos a convertidores externos en la nube"}
 </strong>
 {", se desarrolló el motor local "}
 <code>
@@ -120,7 +120,7 @@ export function TermsDialog() {
 <strong>
 {"Python"}
 </strong>
-{" utilizando un servidor asíncrono ultraligero (FastAPI / Uvicorn) y bibliotecas especializadas de manipulación XML/docx. Se ejecuta de forma aislada en segundo plano en tu propia computadora escuchando únicamente en el puerto local "}
+{" mediante un servicio asíncrono ligero (FastAPI / Uvicorn) y bibliotecas para XML y docx. Permanece en segundo plano en tu computadora y atiende únicamente en el puerto local "}
 <code>
 {"http://127.0.0.1:8000"}
 </code>
@@ -132,7 +132,7 @@ export function TermsDialog() {
 {"Comunicación segura mediante Tokens Autorizados:"}
 </strong>
 <br/>
-{"\n                    La aplicación web se conecta con el motor local a través del estándar de seguridad "}
+{"\n                    La comunicación entre la página y el motor del equipo aplica el mecanismo de seguridad "}
 <strong>
 {"Private Network Access (PNA)"}
 </strong>
@@ -140,11 +140,11 @@ export function TermsDialog() {
 <strong>
 {"token criptográfico de vinculación"}
 </strong>
-{" generado al iniciar el programa. Asimismo, el motor cuenta con validación estricta de origen (CORS): únicamente procesa solicitudes emitidas desde el dominio oficial verificado ("}
+{" creado al poner en marcha el programa. Además, la validación de origen (CORS) limita las solicitudes a los dominios autorizados ("}
 <code>
 {"https://sesiones.sypablitodp.site"}
 </code>
-{") o el entorno local de desarrollo. Cualquier solicitud proveniente de páginas web no autorizadas o scripts de terceros es rechazada automáticamente."}
+{") y al entorno de desarrollo local. Las peticiones de otros sitios u orígenes sin autorización se rechazan."}
 </p>
 {"\n"}
 <p>
@@ -159,21 +159,21 @@ export function TermsDialog() {
 <strong>
 {"Sin exploración de documentos personales:"}
 </strong>
-{" El motor no busca ni recopila tus fotos, documentos o archivos personales. Utiliza sus recursos de aplicación y el contenido que el navegador le envía para exportar."}
+{" El componente no explora ni recolecta fotografías, documentos u otros archivos personales. Trabaja con sus propios recursos y con el contenido enviado desde la página para la exportación."}
 </li>
 {"\n"}
 <li>
 <strong>
 {"Cero telemetría invasiva:"}
 </strong>
-{" No monitorea la actividad de tu PC, no registra pulsaciones de teclado, ni accede a periféricos, micrófonos o cámaras."}
+{" No observa el uso de tu computadora, no guarda lo que escribes en el teclado y no utiliza cámaras, micrófonos ni otros periféricos."}
 </li>
 {"\n"}
 <li>
 <strong>
 {"Exportación local:"}
 </strong>
-{" Recibe el contenido de la sesión o planificación desde el navegador y devuelve el archivo Word o PDF. Según el formato, puede utilizar archivos temporales durante la conversión."}
+{" Toma la sesión o planificación remitida por el navegador y entrega un documento Word o PDF. El proceso de conversión puede requerir archivos temporales según el formato solicitado."}
 </li>
 {"\n"}
 </ul>
@@ -191,7 +191,7 @@ export function TermsDialog() {
 </h4>
 {"\n"}
 <p>
-{"Space Lab utiliza OpenAI, Google Gemini y DeepSeek para asistir en la redacción pedagógica. Al solicitar una función de IA, el contenido necesario de tu solicitud y, si los adjuntas, textos o imágenes, se envía mediante las funciones de Supabase al proveedor seleccionado. Estos proveedores procesan ese contenido según sus propias condiciones. Los nombres de alumnos no son necesarios para generar una sesión: evita incluir datos personales de estudiantes en instrucciones y adjuntos. Las claves de los proveedores permanecen en los secretos del servidor y no se entregan al navegador. El uso de IA se registra mediante un "}
+{"Sesiones GRAFIPLOT contempla asistentes de OpenAI, Google Gemini y DeepSeek como apoyo de redacción pedagógica. Cuando se habilita y solicita una función de IA, los datos necesarios de la petición y los adjuntos incluidos se remiten por servicios de Supabase al proveedor configurado, que los trata conforme a sus condiciones. No necesitas indicar nombres de estudiantes: evita añadir información personal en los mensajes y archivos. Las credenciales del proveedor se mantienen en el servidor y no se exponen al navegador. El consumo de IA queda reflejado en un "}
 <strong>
 {"sistema de créditos"}
 </strong>
@@ -209,11 +209,11 @@ export function TermsDialog() {
 </h4>
 {"\n"}
 <p>
-{"Todas las sesiones de aprendizaje, programaciones curriculares, fichas de aplicación, rúbricas y materiales creados o editados en la plataforma son "}
+{"Las planificaciones, sesiones, fichas, rúbricas y demás recursos que elabores o modifiques en este espacio son "}
 <strong>
 {"propiedad intelectual exclusiva del docente que los elabora"}
 </strong>
-{". Space Lab no se atribuye ningún derecho de autor sobre los contenidos pedagógicos generados por sus usuarios."}
+{". Sesiones GRAFIPLOT no reclama derechos de autor sobre el material pedagógico producido por sus usuarios."}
 </p>
 {"\n"}
 <h4 style={{"color": "var(--accent)", "fontWeight": "700", "marginTop": "0.5rem", "display": "flex", "alignItems": "center", "gap": "0.4rem"} as CSSProperties}>
@@ -227,7 +227,7 @@ export function TermsDialog() {
 </h4>
 {"\n"}
 <p>
-{"La inteligencia artificial y los asistentes de Space Lab actúan como herramientas de apoyo para agilizar la labor administrativa y brindar sugerencias curriculares basadas en el CNEB. Es responsabilidad exclusiva del docente revisar, adecuar a su contexto real y validar pedagógicamente cada sesión antes de su desarrollo en el aula o presentación formal ante la dirección de su institución educativa, UGEL o DRE."}
+{"Los asistentes de IA de Sesiones GRAFIPLOT son recursos de apoyo para reducir tareas administrativas y ofrecer propuestas curriculares con referencia al CNEB. La revisión, adaptación al contexto y validación pedagógica de cada sesión corresponde al docente antes de aplicarla en clase o presentarla ante su institución, UGEL o DRE."}
 </p>
 {"\n"}
 <h4 style={{"color": "var(--accent)", "fontWeight": "700", "marginTop": "0.5rem", "display": "flex", "alignItems": "center", "gap": "0.4rem"} as CSSProperties}>
@@ -241,7 +241,7 @@ export function TermsDialog() {
 </h4>
 {"\n"}
 <p>
-{"Supabase gestiona la autenticación y el almacenamiento de perfiles, sesiones, planificaciones y listas de alumnos que guardas en tu cuenta. El navegador conserva copias y borradores locales; en equipos compartidos, cada cuenta dispone de un espacio local separado. La información necesaria para las funciones de IA se procesa como se describe en la sección anterior. No vendemos ni alquilamos tus datos. Para solicitar acceso, rectificación, cancelación u oposición al tratamiento de tus datos, o la eliminación de tu cuenta y contenido, utiliza el canal oficial de soporte indicado a continuación. El alcance y los plazos de conservación y eliminación deben confirmarse con soporte durante la beta."}
+{"La autenticación y la conservación de los datos de cuenta, sesiones, planificaciones y padrones se realizan mediante Supabase. El navegador mantiene borradores y copias locales separados por cuenta, también en equipos de uso compartido. Las solicitudes de IA siguen el tratamiento explicado en la sección anterior. Tus datos no se venden ni se alquilan. Si deseas ejercer derechos de acceso, rectificación, cancelación u oposición, o pedir la eliminación de la cuenta y su contenido, contacta al soporte indicado más abajo. Durante la beta, confirma con soporte los plazos y el alcance de la conservación y eliminación."}
 </p>
 {"\n"}
 <h4 style={{"color": "var(--accent)", "fontWeight": "700", "marginTop": "0.5rem", "display": "flex", "alignItems": "center", "gap": "0.4rem"} as CSSProperties}>
@@ -255,7 +255,7 @@ export function TermsDialog() {
 </h4>
 {"\n"}
 <p>
-{"Para consultas técnicas, asistencia con el motor local, dudas sobre privacidad o reportes, puedes comunicarte directamente con el desarrollador:"}
+{"Si necesitas orientación técnica, ayuda con la exportación, información sobre privacidad o comunicar un incidente, utiliza el contacto del desarrollador:"}
 </p>
 {"\n"}
 <div style={{"display": "flex", "flexWrap": "wrap", "gap": "0.6rem", "fontSize": "0.82rem"} as CSSProperties}>
@@ -303,7 +303,7 @@ export function TermsDialog() {
 </h4>
 {"\n"}
 <p>
-{"Los presentes Términos y Condiciones se rigen e interpretan según las leyes de la República del Perú. Para cualquier controversia, las partes se someten voluntariamente a la competencia exclusiva de los jueces y tribunales del distrito judicial de "}
+{"Estas condiciones se interpretan y aplican de acuerdo con la legislación de la República del Perú. En caso de controversia, las partes acuerdan someterse a la competencia exclusiva de los órganos judiciales del distrito de "}
 <strong>
 {"Huánuco, Perú"}
 </strong>

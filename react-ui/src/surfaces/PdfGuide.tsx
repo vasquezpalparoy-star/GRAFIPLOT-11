@@ -32,7 +32,7 @@ export function PdfGuide() {
 
 </use>
 </svg>
-{" Motor Local Desconectado: Se usará la impresión de Windows\n            "}
+{" Motor de escritorio Desconectado: Se usará la impresión de Windows\n            "}
 </div>
 {"\n"}
 <p className="pdf-guide-subtitle">
@@ -138,7 +138,7 @@ export function PdfGuide() {
 
 </use>
 </svg>
-{" Descargar Motor Local (.exe)\n                "}
+{" Obtener motor para Windows (.exe)\n                "}
 </a>
 {"\n"}
 </div>

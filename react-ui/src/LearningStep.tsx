@@ -5,7 +5,7 @@ import {includes, type Bridge, type Snapshot} from './bridge';
 export function LearningStep({state,bridge}:{state:Snapshot;bridge:Bridge}) {
     const selected=state.profiles.filter(profile=>includes(state.fields.competencia,profile.competency.officialName));
     return <section className="sl-card sl-main-card" aria-labelledby="react-step-heading">
-        <SectionHeading icon={BookOpenCheck} eyebrow="CON INTENCIÓN PEDAGÓGICA" title="Define los aprendizajes" description="Elige qué trabajarán tus estudiantes y aporta tus ideas para la clase."/>
+        <SectionHeading icon={BookOpenCheck} eyebrow="EL APRENDIZAJE COMO EJE" title="Selecciona qué aprenderá tu grupo" description="Determina los aprendizajes esperados y añade las propuestas que quieras desarrollar."/>
         <div className="sl-form-body">
             <div className={state.profiles.length ? 'sl-inline-info' : 'sl-inline-info caution'}><TriangleAlert size={19}/><p>{state.profiles.length ? 'Referencias curriculares de perfiles piloto. Revisa su correspondencia con tu programa curricular.' : state.curriculumStatus || 'Comprobando la cobertura curricular…'}</p></div>
             <div className="sl-section-label"><h3>Competencias y capacidades</h3><span className="sl-count">{selected.length} seleccionadas</span></div>
@@ -16,19 +16,19 @@ export function LearningStep({state,bridge}:{state:Snapshot;bridge:Bridge}) {
                     {checked && <div className="sl-capacities">{profile.capacities.map((capacity,capacityIndex)=><label key={capacity.officialName}><input type="checkbox" checked={includes(state.fields.capacidad,capacity.officialName)} onChange={()=>bridge.toggleCapacity(index,capacityIndex)}/><span>{capacity.officialName}</span></label>)}</div>}
                 </div>;
             })}</div>
-            <Disclosure icon={PencilLine} title={state.profiles.length ? 'Ajustar o aportar aprendizajes manualmente' : 'Añadir aprendizajes de tu programa curricular'}>
-                <FormField name="competencia" label="Competencias" state={state} bridge={bridge} rows={3} hint="Una por línea o separadas por punto y coma."/>
+            <Disclosure icon={PencilLine} title={state.profiles.length ? 'Editar o incorporar aprendizajes propios' : 'Incorporar aprendizajes del programa curricular'}>
+                <FormField name="competencia" label="Competencias" state={state} bridge={bridge} rows={3} hint="Escribe cada una en una línea; también puedes separarlas con punto y coma."/>
                 <FormField name="capacidad" label="Capacidades" state={state} bridge={bridge} rows={3}/>
             </Disclosure>
-            <FormField name="desempeno" label="Desempeño precisado" state={state} bridge={bridge} rows={3} placeholder="¿Qué desempeño observable esperas en esta sesión?" hint="Aporta el desempeño de tu programa curricular y contextualízalo para tu aula."/>
-            {selected.length>0 && <Disclosure icon={BookOpenCheck} title="Consultar desempeños de referencia">
+            <FormField name="desempeno" label="Desempeño precisado" state={state} bridge={bridge} rows={3} placeholder="¿Qué actuación esperas observar durante la clase?" hint="Incorpora el desempeño de referencia y adáptalo al contexto de tus estudiantes."/>
+            {selected.length>0 && <Disclosure icon={BookOpenCheck} title="Revisar ejemplos de desempeños curriculares">
                 {selected.map(profile=><div className="sl-reference" key={profile.id}><strong>{profile.competency.officialName}</strong><p>{profile.provenance?.reviewNote || 'Referencia piloto sujeta a cotejo con el programa curricular del MINEDU.'}</p><ul>{(profile.performancesByGrade?.[state.fields.grado.match(/\d+/)?.[0] || ''] || []).map(item=><li key={item.description}>{item.description}</li>)}</ul></div>)}
             </Disclosure>}
-            <div className="sl-ideas-card"><div className="sl-ideas-heading"><span><Lightbulb size={21}/></span><div><h3>Tus ideas hacen la diferencia</h3><p>Propuestas editables, separadas de las referencias curriculares.</p></div><Sparkles size={19}/></div>
-                <FormField name="activities" label="Actividades que te gustaría incluir" state={state} bridge={bridge} rows={3} placeholder="Ej. Explorar precios del mercado y comparar cantidades en equipos"/>
-                <FormField name="criteria" label="Criterios de evaluación" state={state} bridge={bridge} rows={3} placeholder="¿Cómo reconocerás que están aprendiendo? Un criterio por línea."/>
-                <FormField name="evidence" label="Evidencia de aprendizaje" state={state} bridge={bridge} rows={2} placeholder="¿Qué producirán o demostrarán tus estudiantes?"/>
-                <p className="sl-small-note">Si dejas estas propuestas vacías, podrás revisar las que complete la IA al generar. No se presentarán como textos curriculares oficiales.</p>
+            <div className="sl-ideas-card"><div className="sl-ideas-heading"><span><Lightbulb size={21}/></span><div><h3>Tu experiencia enriquece la propuesta</h3><p>Estas aportaciones se pueden modificar y se distinguen de las referencias del currículo.</p></div><Sparkles size={19}/></div>
+                <FormField name="activities" label="Actividades que deseas desarrollar" state={state} bridge={bridge} rows={3} placeholder="Ej. Observar plantas de la localidad y registrar sus características en grupos"/>
+                <FormField name="criteria" label="Criterios de evaluación" state={state} bridge={bridge} rows={3} placeholder="¿Qué señales mostrarán el aprendizaje? Escribe un criterio en cada línea."/>
+                <FormField name="evidence" label="Evidencia de aprendizaje" state={state} bridge={bridge} rows={2} placeholder="¿Con qué producto o actuación evidenciarán lo aprendido?"/>
+                <p className="sl-small-note">Si no añades propuestas, podrás revisar las sugerencias de la IA al crear la sesión. Estas sugerencias no constituyen enunciados oficiales del currículo.</p>
             </div>
         </div>
     </section>;

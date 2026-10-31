@@ -22,7 +22,7 @@ const plansDialog = html.slice(
 assert.match(plansDialog, /Comparación de planes/);
 assert.equal((plansDialog.match(/data-plan-code=/g) || []).length, 4);
 assert.match(plansDialog, /30[\s\S]*100[\s\S]*150[\s\S]*400/);
-assert.match(plansDialog, /No se realizará ningún cobro ni cambio de plan/);
+assert.match(plansDialog, /Esta sección no genera cargos ni modifica tu suscripción/);
 assert.doesNotMatch(plansDialog, /Comprar|checkout|Suscribirme/i);
 
 assert.match(router, /#\/home/);

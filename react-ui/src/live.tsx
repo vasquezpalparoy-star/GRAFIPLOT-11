@@ -33,7 +33,7 @@ export function SessionCards() {
 
 export function AccountActions() {
     const state=useSyncExternalStore(account.subscribe,account.get,account.server);
-    if(!state.signedIn)return <button id="btn-login-trigger" className="btn btn-ghost btn-sm" aria-label="Iniciar sesión" onClick={state.onLogin}><Icon name="user"/><span className="auth-label">Iniciar sesión</span></button>;
+    if(!state.signedIn)return <button id="btn-login-trigger" className="btn btn-ghost btn-sm" aria-label="Acceder a mi cuenta" onClick={state.onLogin}><Icon name="user"/><span className="auth-label">Acceder a mi cuenta</span></button>;
     return <div className="user-menu-container">{state.isAdmin&&<a href="admin.html" className="btn btn-accent btn-sm"><Icon name="shield"/><span className="auth-label">Admin</span></a>}
         <button id="btn-logout" className="btn btn-ghost btn-sm" title="Cerrar sesión" onClick={state.onLogout}><Icon name="logout"/><span className="auth-label">Salir</span></button></div>;
 }

@@ -21,7 +21,7 @@ export function EngineRequired() {
 </div>
 {"\n"}
 <h3 className="pdf-guide-title">
-{"Motor Local Requerido"}
+{"Motor de escritorio Requerido"}
 </h3>
 {"\n"}
 <p className="pdf-guide-subtitle" style={{"marginBottom": "15px", "fontSize": "0.9rem"} as CSSProperties}>
@@ -45,7 +45,7 @@ export function EngineRequired() {
 
 </use>
 </svg>
-{" Descargar Motor Local (.exe)\n                "}
+{" Obtener motor para Windows (.exe)\n                "}
 </a>
 {"\n"}
 <button id="engine-modal-cancel" className="btn btn-ghost" style={{"padding": "8px"} as CSSProperties}>

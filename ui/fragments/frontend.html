@@ -1,5 +1,5 @@
 <!-- Generated from React: FrontendShell. Edit react-ui/src/, then npm run build:public. -->
-<div id="frontend-root"><link rel="preload" as="image" href="assets/favicon.svg"/><div id="react-preview-root"></div><a class="skip-link" href="#session-form">Ir al formulario de sesión</a> <svg class="ui-icon-sprite" aria-hidden="true" style="display:none !important;position:absolute;width:0;height:0">
+<div id="frontend-root"><link rel="preload" as="image" href="assets/grafiplot-sesiones.png"/><div id="react-preview-root"></div><a class="skip-link" href="#session-form">Ir al formulario de sesión</a> <svg class="ui-icon-sprite" aria-hidden="true" style="display:none !important;position:absolute;width:0;height:0">
 <symbol id="icon-edit" viewBox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></symbol>
 <symbol id="icon-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle></symbol>
 <symbol id="icon-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></symbol>
@@ -63,28 +63,24 @@
 <!-- -->
 <div style="margin-bottom:1.5rem;display:flex;justify-content:center">
 <div style="background:#090a0f;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm)">
-<svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0px 0px 8px rgba(0, 210, 255, 0.5))">
-<rect x="2" y="2" width="96" height="96" rx="28" fill="#0d0e12" stroke="#1f2937" stroke-width="2"></rect>
-<path d="M55 22C42.5 22 36.5 30 36.5 35C36.5 37.5 38.5 39.5 41 39.5C43.5 39.5 45 37.5 45.5 35.5C46.2 33 49 28.5 54.5 28.5C60.5 28.5 63 32.5 63 36.5C63 42.5 56.5 44.5 51 46.5L42.5 49.5C36.5 51.5 34.5 57.5 34.5 63.5C34.5 72.5 43.5 78 54 78C66.5 78 72 70 72 65C72 62.5 70 60.5 67.5 60.5C65 60.5 63.5 62.5 63 64.5C62.3 67 59.5 71.5 54 71.5C47.5 71.5 45 67.5 45 63.5C45 57.5 51.5 55.5 57 53.5L65.5 50.5C71.5 48.5 73.5 42.5 73.5 36.5C73.5 27.5 65.5 22 55 22Z" fill="#ffffff"></path>
-<path d="M56 25L38 52H48L44 75L62 48H52L56 25Z" fill="#ffffff"></path>
-</svg>
+<img src="assets/grafiplot-sesiones.png" alt="Sesiones GRAFIPLOT" class="gp-auth-logo"/>
 </div>
 </div>
 <!-- -->
 <div class="auth-tabs">
 <button type="button" id="auth-tab-login" class="auth-tab active">Ingresar</button>
-<button type="button" id="auth-tab-register" class="auth-tab">Crear cuenta</button>
+<button type="button" id="auth-tab-register" class="auth-tab">Registrarme</button>
 </div>
 <!-- -->
 <div class="load-modal-header" style="display:none">
-<h3 id="auth-title">Iniciar Sesión</h3>
+<h3 id="auth-title">Acceder a mi cuenta</h3>
 </div>
 <p id="auth-subtitle" style="display:none"></p>
 <form id="auth-form" autoComplete="off">
 <p id="auth-recovery-description" class="hidden" role="status"></p>
 <!-- -->
 <div id="auth-group-username" class="form-group hidden" style="text-align:left;margin-bottom:1rem">
-<input type="text" id="auth-username" class="auth-field" placeholder="Apodo único (sin espacios)"/>
+<input type="text" id="auth-username" class="auth-field" placeholder="Nombre de usuario sin espacios"/>
 </div>
 <!-- -->
 <div class="form-group" style="text-align:left;margin-bottom:1rem">
@@ -96,7 +92,7 @@
 </div>
 <!-- -->
 <div id="auth-group-confirm-password" class="form-group hidden" style="text-align:left;margin-bottom:1rem">
-<input type="password" id="auth-confirm-password" class="auth-field" placeholder="Confirmar contraseña"/>
+<input type="password" id="auth-confirm-password" class="auth-field" placeholder="Repite tu contraseña"/>
 </div>
 <!-- -->
 <div id="auth-group-terms" class="form-group hidden" style="text-align:left;margin-bottom:1.5rem;display:flex;align-items:center;gap:8px">
@@ -108,13 +104,13 @@
 </div>
 <!-- -->
 <button type="submit" id="btn-submit-auth" class="auth-submit-btn">
-                    Iniciar Sesión
+                    Acceder a mi cuenta
                 </button>
-<button type="button" id="btn-forgot-password" class="btn btn-ghost">Olvidé mi contraseña</button>
+<button type="button" id="btn-forgot-password" class="btn btn-ghost">Recuperar mi acceso</button>
 </form>
 <!-- -->
 <div style="display:none">
-<span id="auth-toggle-text">¿No tienes una cuenta?</span>
+<span id="auth-toggle-text">¿Es tu primera visita?</span>
 <a href="#" id="auth-toggle-mode">Créala aquí</a>
 </div>
 <!-- -->
@@ -131,65 +127,65 @@
 <div style="display:flex;align-items:center;gap:0.6rem">
 <svg class="ui-icon" style="color:var(--accent);width:22px;height:22px" aria-hidden="true"><use href="#icon-shield"></use></svg>
 <h3 style="font-size:1.2rem;font-weight:800;color:var(--color-foreground);margin:0">
-                        Términos, Condiciones de Uso y Políticas de Privacidad — Space Lab
+                        Condiciones de uso y tratamiento de la información — Sesiones GRAFIPLOT
                     </h3>
 </div>
 <button id="btn-close-terms" class="btn btn-ghost btn-sm" style="font-size:1.1rem;padding:4px 8px" aria-label="Cerrar"><svg class="ui-icon" aria-hidden="true"><use href="#icon-close"></use></svg></button>
 </div>
 <div style="font-size:0.85rem;line-height:1.6;color:var(--text-primary);display:flex;flex-direction:column;gap:1.1rem">
 <div style="background:rgba(0, 210, 255, 0.06);border:1px solid rgba(0, 210, 255, 0.2);border-radius:8px;padding:0.85rem 1rem;font-size:0.82rem">
-<strong>Última actualización: Octubre de 2026</strong> | Versión del Sistema: <strong>Space Lab 2.0 (Motor v1.4.1)</strong><br/>
+<strong>Última actualización: Octubre de 2026</strong> | Versión del Sistema: <strong>Sesiones GRAFIPLOT 2.0 (Motor v1.4.1)</strong><br/>
                     Desarrollado y operado por <strong>Samuel Y. Pablo Claudio (pablitodp)</strong> — Huánuco, Perú.
                 </div>
-<p>Bienvenido a <strong>Space Lab</strong> (<code>sesiones.sypablitodp.site</code>). Esta plataforma de asistencia pedagógica, planificación curricular y exportación documental está diseñada para facilitar el trabajo técnico-pedagógico de los docentes de Educación Básica Regular (Inicial, Primaria y Secundaria) del Perú. Al acceder, registrarte y utilizar nuestros servicios, aceptas en su totalidad los siguientes Términos y Condiciones y la Política de Privacidad conforme a la legislación vigente de la República del Perú.</p>
+<p>Bienvenido a <strong>Sesiones GRAFIPLOT</strong> (<code>sesiones.sypablitodp.site</code>). Este espacio de apoyo pedagógico, planificación curricular y generación de documentos busca facilitar la labor de docentes de Educación Básica Regular del Perú en Inicial, Primaria y Secundaria. El acceso, registro y uso de sus servicios implica aceptar estas condiciones y la política de privacidad dentro del marco legal peruano vigente.</p>
 <h4 style="color:var(--accent);font-weight:700;margin-top:0.5rem;display:flex;align-items:center;gap:0.4rem">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-user"></use></svg>
                     1. REGISTRO, SEGURIDAD Y AUTENTICACIÓN
                 </h4>
-<p>El registro en Space Lab es de carácter personal e intransferible. El usuario es responsable de mantener la confidencialidad de sus credenciales. La plataforma utiliza infraestructura segura en la nube (Supabase Auth) con contraseñas encriptadas mediante algoritmos criptográficos robustos y políticas de seguridad a nivel de fila (Row Level Security - RLS). Cada docente tiene acceso exclusivo y privado a sus propias sesiones, perfiles y datos.</p>
+<p>La cuenta de Sesiones GRAFIPLOT es individual y no debe transferirse. Cada persona debe proteger sus datos de acceso. La autenticación se gestiona con Supabase Auth y el acceso a los registros se limita mediante políticas por fila (RLS), de modo que cada docente consulte sus propios datos, perfil y planificaciones.</p>
 <h4 style="color:var(--accent);font-weight:700;margin-top:0.5rem;display:flex;align-items:center;gap:0.4rem">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-download"></use></svg>
-                    2. ARQUITECTURA DEL MOTOR LOCAL (pablitohost.exe / pablitopyhost.exe) Y PRIVACIDAD TOTAL DE TU PC
+                    2. FUNCIONAMIENTO DEL MOTOR DE ESCRITORIO (pablitohost.exe / pablitopyhost.exe) Y DATOS DEL EQUIPO
                 </h4>
 <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1rem;display:flex;flex-direction:column;gap:0.75rem">
 <p><strong>¿Por qué se descarga el ejecutable local?</strong><br/>
-                    Los navegadores web estándar tienen limitaciones técnicas estrictas: no pueden generar de forma nativa documentos de Microsoft Word (.docx) con estructuras complejas como tablas anidadas con anchos milimétricos del MINEDU, listas de cotejo con formato oficial de evaluación formativa y fórmulas matemáticas o científicas editables en formato OMML (Office Math Markup Language). Para lograr una calidad de impresión física 100% idéntica a la normativa de UGEL/DRE y <strong>sin subir tus documentos pedagógicos a servidores o convertidores externos en la nube</strong>, se desarrolló el motor local <code>pablitohost.exe</code> (también denominado <code>pablitopyhost.exe</code>).</p>
+                    La generación de documentos Word complejos desde un navegador presenta limitaciones. Para trabajar con tablas anidadas, anchos definidos, instrumentos de evaluación y fórmulas editables en OMML (Office Math Markup Language), se utiliza un motor de escritorio que busca mantener la estructura del documento y <strong>procesar tus documentos pedagógicos en el equipo, sin enviarlos a convertidores externos en la nube</strong>, se desarrolló el motor local <code>pablitohost.exe</code> (también denominado <code>pablitopyhost.exe</code>).</p>
 <p><strong>Arquitectura técnica en Python:</strong><br/>
-                    El motor es un micro-servicio local programado íntegramente en <strong>Python</strong> utilizando un servidor asíncrono ultraligero (FastAPI / Uvicorn) y bibliotecas especializadas de manipulación XML/docx. Se ejecuta de forma aislada en segundo plano en tu propia computadora escuchando únicamente en el puerto local <code>http://127.0.0.1:8000</code>.</p>
+                    El motor es un micro-servicio local programado íntegramente en <strong>Python</strong> mediante un servicio asíncrono ligero (FastAPI / Uvicorn) y bibliotecas para XML y docx. Permanece en segundo plano en tu computadora y atiende únicamente en el puerto local <code>http://127.0.0.1:8000</code>.</p>
 <p><strong>Comunicación segura mediante Tokens Autorizados:</strong><br/>
-                    La aplicación web se conecta con el motor local a través del estándar de seguridad <strong>Private Network Access (PNA)</strong>. Toda petición requiere obligatoriamente un <strong>token criptográfico de vinculación</strong> generado al iniciar el programa. Asimismo, el motor cuenta con validación estricta de origen (CORS): únicamente procesa solicitudes emitidas desde el dominio oficial verificado (<code>https://sesiones.sypablitodp.site</code>) o el entorno local de desarrollo. Cualquier solicitud proveniente de páginas web no autorizadas o scripts de terceros es rechazada automáticamente.</p>
+                    La comunicación entre la página y el motor del equipo aplica el mecanismo de seguridad <strong>Private Network Access (PNA)</strong>. Toda petición requiere obligatoriamente un <strong>token criptográfico de vinculación</strong> creado al poner en marcha el programa. Además, la validación de origen (CORS) limita las solicitudes a los dominios autorizados (<code>https://sesiones.sypablitodp.site</code>) y al entorno de desarrollo local. Las peticiones de otros sitios u orígenes sin autorización se rechazan.</p>
 <p><strong>Garantía de Privacidad y Aislamiento (No intrusión en tu sistema):</strong></p>
 <ul style="margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:0.4rem">
-<li><strong>Sin exploración de documentos personales:</strong> El motor no busca ni recopila tus fotos, documentos o archivos personales. Utiliza sus recursos de aplicación y el contenido que el navegador le envía para exportar.</li>
-<li><strong>Cero telemetría invasiva:</strong> No monitorea la actividad de tu PC, no registra pulsaciones de teclado, ni accede a periféricos, micrófonos o cámaras.</li>
-<li><strong>Exportación local:</strong> Recibe el contenido de la sesión o planificación desde el navegador y devuelve el archivo Word o PDF. Según el formato, puede utilizar archivos temporales durante la conversión.</li>
+<li><strong>Sin exploración de documentos personales:</strong> El componente no explora ni recolecta fotografías, documentos u otros archivos personales. Trabaja con sus propios recursos y con el contenido enviado desde la página para la exportación.</li>
+<li><strong>Cero telemetría invasiva:</strong> No observa el uso de tu computadora, no guarda lo que escribes en el teclado y no utiliza cámaras, micrófonos ni otros periféricos.</li>
+<li><strong>Exportación local:</strong> Toma la sesión o planificación remitida por el navegador y entrega un documento Word o PDF. El proceso de conversión puede requerir archivos temporales según el formato solicitado.</li>
 </ul>
 </div>
 <h4 style="color:var(--accent);font-weight:700;margin-top:0.5rem;display:flex;align-items:center;gap:0.4rem">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
                     3. ASISTENCIA PEDAGÓGICA CON INTELIGENCIA ARTIFICIAL Y CRÉDITOS
                 </h4>
-<p>Space Lab utiliza OpenAI, Google Gemini y DeepSeek para asistir en la redacción pedagógica. Al solicitar una función de IA, el contenido necesario de tu solicitud y, si los adjuntas, textos o imágenes, se envía mediante las funciones de Supabase al proveedor seleccionado. Estos proveedores procesan ese contenido según sus propias condiciones. Los nombres de alumnos no son necesarios para generar una sesión: evita incluir datos personales de estudiantes en instrucciones y adjuntos. Las claves de los proveedores permanecen en los secretos del servidor y no se entregan al navegador. El uso de IA se registra mediante un <strong>sistema de créditos</strong>.</p>
+<p>Sesiones GRAFIPLOT contempla asistentes de OpenAI, Google Gemini y DeepSeek como apoyo de redacción pedagógica. Cuando se habilita y solicita una función de IA, los datos necesarios de la petición y los adjuntos incluidos se remiten por servicios de Supabase al proveedor configurado, que los trata conforme a sus condiciones. No necesitas indicar nombres de estudiantes: evita añadir información personal en los mensajes y archivos. Las credenciales del proveedor se mantienen en el servidor y no se exponen al navegador. El consumo de IA queda reflejado en un <strong>sistema de créditos</strong>.</p>
 <h4 style="color:var(--accent);font-weight:700;margin-top:0.5rem;display:flex;align-items:center;gap:0.4rem">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-file"></use></svg>
                     4. PROPIEDAD INTELECTUAL Y TITULARIDAD DOCENTE
                 </h4>
-<p>Todas las sesiones de aprendizaje, programaciones curriculares, fichas de aplicación, rúbricas y materiales creados o editados en la plataforma son <strong>propiedad intelectual exclusiva del docente que los elabora</strong>. Space Lab no se atribuye ningún derecho de autor sobre los contenidos pedagógicos generados por sus usuarios.</p>
+<p>Las planificaciones, sesiones, fichas, rúbricas y demás recursos que elabores o modifiques en este espacio son <strong>propiedad intelectual exclusiva del docente que los elabora</strong>. Sesiones GRAFIPLOT no reclama derechos de autor sobre el material pedagógico producido por sus usuarios.</p>
 <h4 style="color:var(--accent);font-weight:700;margin-top:0.5rem;display:flex;align-items:center;gap:0.4rem">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-target"></use></svg>
                     5. RESPONSABILIDAD Y AUTONOMÍA PEDAGÓGICA
                 </h4>
-<p>La inteligencia artificial y los asistentes de Space Lab actúan como herramientas de apoyo para agilizar la labor administrativa y brindar sugerencias curriculares basadas en el CNEB. Es responsabilidad exclusiva del docente revisar, adecuar a su contexto real y validar pedagógicamente cada sesión antes de su desarrollo en el aula o presentación formal ante la dirección de su institución educativa, UGEL o DRE.</p>
+<p>Los asistentes de IA de Sesiones GRAFIPLOT son recursos de apoyo para reducir tareas administrativas y ofrecer propuestas curriculares con referencia al CNEB. La revisión, adaptación al contexto y validación pedagógica de cada sesión corresponde al docente antes de aplicarla en clase o presentarla ante su institución, UGEL o DRE.</p>
 <h4 style="color:var(--accent);font-weight:700;margin-top:0.5rem;display:flex;align-items:center;gap:0.4rem">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
                     6. PROTECCIÓN DE DATOS PERSONALES (LEY N° 29733) Y DERECHOS ARCO
                 </h4>
-<p>Supabase gestiona la autenticación y el almacenamiento de perfiles, sesiones, planificaciones y listas de alumnos que guardas en tu cuenta. El navegador conserva copias y borradores locales; en equipos compartidos, cada cuenta dispone de un espacio local separado. La información necesaria para las funciones de IA se procesa como se describe en la sección anterior. No vendemos ni alquilamos tus datos. Para solicitar acceso, rectificación, cancelación u oposición al tratamiento de tus datos, o la eliminación de tu cuenta y contenido, utiliza el canal oficial de soporte indicado a continuación. El alcance y los plazos de conservación y eliminación deben confirmarse con soporte durante la beta.</p>
+<p>La autenticación y la conservación de los datos de cuenta, sesiones, planificaciones y padrones se realizan mediante Supabase. El navegador mantiene borradores y copias locales separados por cuenta, también en equipos de uso compartido. Las solicitudes de IA siguen el tratamiento explicado en la sección anterior. Tus datos no se venden ni se alquilan. Si deseas ejercer derechos de acceso, rectificación, cancelación u oposición, o pedir la eliminación de la cuenta y su contenido, contacta al soporte indicado más abajo. Durante la beta, confirma con soporte los plazos y el alcance de la conservación y eliminación.</p>
 <h4 style="color:var(--accent);font-weight:700;margin-top:0.5rem;display:flex;align-items:center;gap:0.4rem">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
                     7. CANALES DE CONTACTO Y SOPORTE OFICIAL
                 </h4>
-<p>Para consultas técnicas, asistencia con el motor local, dudas sobre privacidad o reportes, puedes comunicarte directamente con el desarrollador:</p>
+<p>Si necesitas orientación técnica, ayuda con la exportación, información sobre privacidad o comunicar un incidente, utiliza el contacto del desarrollador:</p>
 <div style="display:flex;flex-wrap:wrap;gap:0.6rem;font-size:0.82rem">
 <a href="mailto:pabloclsa87@gmail.com" style="display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;color:var(--color-foreground);text-decoration:none">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-mail"></use></svg> pabloclsa87@gmail.com
@@ -205,7 +201,7 @@
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-building"></use></svg>
                     8. LEGISLACIÓN APLICABLE Y JURISDICCIÓN
                 </h4>
-<p>Los presentes Términos y Condiciones se rigen e interpretan según las leyes de la República del Perú. Para cualquier controversia, las partes se someten voluntariamente a la competencia exclusiva de los jueces y tribunales del distrito judicial de <strong>Huánuco, Perú</strong>.</p>
+<p>Estas condiciones se interpretan y aplican de acuerdo con la legislación de la República del Perú. En caso de controversia, las partes acuerdan someterse a la competencia exclusiva de los órganos judiciales del distrito de <strong>Huánuco, Perú</strong>.</p>
 </div>
 <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:0.75rem">
 <button id="btn-accept-terms-modal" class="btn btn-primary" style="padding:0.6rem 1.4rem;font-weight:600;display:inline-flex;align-items:center;gap:0.4rem">
@@ -236,7 +232,7 @@
 <h3 class="pdf-guide-title">Exportar Sesión como PDF</h3>
 <!-- -->
 <div class="pdf-guide-warning-badge" style="background:rgba(245, 158, 11, 0.1);border:1px solid rgba(245, 158, 11, 0.25);color:#eab308;padding:8px 12px;border-radius:8px;font-size:0.82rem;font-weight:600;margin-bottom:12px;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px">
-<svg class="ui-icon" aria-hidden="true"><use href="#icon-alert"></use></svg> Motor Local Desconectado: Se usará la impresión de Windows
+<svg class="ui-icon" aria-hidden="true"><use href="#icon-alert"></use></svg> Motor de escritorio Desconectado: Se usará la impresión de Windows
             </div>
 <p class="pdf-guide-subtitle">Para obtener un PDF de calidad con el navegador, sigue estos pasos:</p>
 <div class="pdf-guide-steps">
@@ -271,7 +267,7 @@
                     Para descargas automáticas inmediatas con paginado físico A4 perfecto y archivos Word (.docx) nativos editables de Office, descarga e inicia el motor.
                 </p>
 <a href="https://descargas.sypablitodp.site" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display:inline-flex;align-items:center;justify-content:center;width:100%;font-size:0.85rem;font-weight:600;text-decoration:none;padding:8px 14px">
-<svg class="ui-icon" aria-hidden="true"><use href="#icon-download"></use></svg> Descargar Motor Local (.exe)
+<svg class="ui-icon" aria-hidden="true"><use href="#icon-download"></use></svg> Obtener motor para Windows (.exe)
                 </a>
 </div>
 <div class="pdf-guide-actions">
@@ -288,7 +284,7 @@
 <div class="pdf-guide-card glass-card" style="max-width:420px">
 <button id="engine-modal-close" class="pdf-guide-close" title="Cerrar" aria-label="Cerrar">×</button>
 <div class="pdf-guide-icon" style="color:#f59e0b;margin-bottom:10px"><svg class="ui-icon" aria-hidden="true"><use href="#icon-alert"></use></svg></div>
-<h3 class="pdf-guide-title">Motor Local Requerido</h3>
+<h3 class="pdf-guide-title">Motor de escritorio Requerido</h3>
 <p class="pdf-guide-subtitle" style="margin-bottom:15px;font-size:0.9rem">
                 La exportación nativa a **Microsoft Word (.docx)** con formato premium no está disponible sin vincular el motor local.
             </p>
@@ -297,7 +293,7 @@
             </div>
 <div style="display:flex;flex-direction:column;gap:8px">
 <a href="https://descargas.sypablitodp.site" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-decoration:none;padding:10px;text-align:center">
-<svg class="ui-icon" aria-hidden="true"><use href="#icon-download"></use></svg> Descargar Motor Local (.exe)
+<svg class="ui-icon" aria-hidden="true"><use href="#icon-download"></use></svg> Obtener motor para Windows (.exe)
                 </a>
 <button id="engine-modal-cancel" class="btn btn-ghost" style="padding:8px">Cancelar</button>
 </div>
@@ -310,20 +306,20 @@
 <div id="landing-view" class="landing-view">
 <!-- -->
 <header class="landing-navbar">
-<a href="#/" class="landing-brand" aria-label="Space Lab - Inicio">
+<a href="#/" class="landing-brand" aria-label="Sesiones GRAFIPLOT - Inicio">
 <div class="landing-brand-logo">
-<img src="assets/favicon.svg" alt="Space Lab Logo"/>
+<img src="assets/grafiplot-sesiones.png" alt="Sesiones GRAFIPLOT Logo"/>
 </div>
 <div class="landing-brand-text">
-<span class="landing-brand-title">Space Lab</span>
-<span class="landing-brand-badge">MINEDU 2026 · CNEB</span>
+<span class="landing-brand-title">Sesiones GRAFIPLOT</span>
+<span class="landing-brand-badge">PLANIFICACIÓN DOCENTE · PERÚ</span>
 </div>
 </a>
 <ul class="landing-nav-links">
-<li><a href="#como-funciona" class="landing-nav-link">¿Cómo Funciona?</a></li>
-<li><a href="#motor-local" class="landing-nav-link">Motor Local</a></li>
-<li><a href="#modelos-ia" class="landing-nav-link">Modelos IA</a></li>
-<li><a href="#preguntas-frecuentes" class="landing-nav-link">Preguntas Frecuentes</a></li>
+<li><a href="#como-funciona" class="landing-nav-link">Cómo empezar</a></li>
+<li><a href="#motor-local" class="landing-nav-link">Motor de escritorio</a></li>
+<li><a href="#modelos-ia" class="landing-nav-link">Asistentes de IA</a></li>
+<li><a href="#preguntas-frecuentes" class="landing-nav-link">Dudas habituales</a></li>
 <li><a href="#contacto" class="landing-nav-link">Contacto</a></li>
 <li><a href="descargas_landing.html" class="landing-nav-link">Descargas</a></li>
 </ul>
@@ -337,13 +333,13 @@
 <option value="dark">Oscuro</option>
 </select>
 </label>
-<button type="button" class="btn btn-ghost btn-sm" data-action="open-login" aria-label="Iniciar sesión con tu cuenta">
+<button type="button" class="btn btn-ghost btn-sm" data-action="open-login" aria-label="Acceder a tu cuenta">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-user"></use></svg>
-<span>Iniciar Sesión</span>
+<span>Acceder a mi cuenta</span>
 </button>
 <button type="button" class="btn btn-primary btn-sm" data-action="enter-app" aria-label="Abrir editor de sesiones de aprendizaje">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
-<span>Ir al Editor</span>
+<span>Abrir mi espacio</span>
 </button>
 </div>
 </header>
@@ -352,134 +348,134 @@
 <div class="landing-hero-copy">
 <div class="landing-pill-badge">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
-<span>Plataforma Inteligente MINEDU 2026 · CNEB Perú</span>
+<span>DA FORMA A TU PRÓXIMA CLASE</span>
 </div>
 <h1 class="landing-hero-title">
-                    Menos tiempo planificando.<br/><span class="highlight">Más tiempo enseñando.</span>
+                    Una enseñanza que inspira<br/><span class="highlight">nace de una buena planificación.</span>
 </h1>
 <p class="landing-hero-subtitle">
-                    Prepara tu próxima clase para <strong>Inicial, Primaria o Secundaria</strong>. Elige los aprendizajes, construye tu sesión con ayuda de la IA y dale tu toque antes de exportarla a <strong>Word o PDF</strong>.
+                    Organiza experiencias de aprendizaje para <strong>Inicial, Primaria o Secundaria</strong>. Selecciona los aprendizajes, desarrolla tu propuesta con apoyo de la IA y personalízala antes de descargarla en <strong>Word o PDF</strong>.
                 </p>
 <div class="landing-hero-actions">
 <button type="button" class="landing-btn-lg landing-btn-primary" data-action="enter-app" aria-label="Comenzar a planificar sesión de aprendizaje gratis">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
-<span>Crear mi sesión</span>
+<span>Empezar mi planificación</span>
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
 </button>
 <a href="#como-funciona" class="landing-btn-lg landing-btn-ghost" aria-label="Ver cómo funciona la plataforma">
-<span>Ver Cómo Funciona</span>
+<span>Conocer el proceso</span>
 </a>
 </div>
 <div class="landing-badges-row">
 <div class="landing-badge-item">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
-<span>CNEB 2026 Oficial</span>
+<span>Alineado al CNEB</span>
 </div>
 <div class="landing-badge-item">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
-<span>GPT-6 Luna &amp; DeepSeek R1</span>
+<span>Asistencia pedagógica con IA</span>
 </div>
 <div class="landing-badge-item">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-file"></use></svg>
-<span>Motor Word (.docx) Nativo</span>
+<span>Documentos Word editables</span>
 </div>
 <div class="landing-badge-item">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
-<span>Privado y Seguro</span>
+<span>Tu trabajo bajo tu control</span>
 </div>
 </div>
 </div>
 <!-- -->
 <div class="landing-hero-preview landing-lesson-visual" role="img" aria-label="Ejemplo de planificación: elegir competencias y capacidades, revisar la sesión y llevarla a Word o PDF.">
-<div class="lesson-scene" aria-hidden="true">
+<div class="gp-studio-heading" aria-hidden="true"><span class="gp-studio-brand"><img src="assets/grafiplot-sesiones.png" alt=""/><span>Sesiones <strong>GRAFIPLOT</strong></span></span><span class="gp-studio-label">TU TALLER DE APRENDIZAJE</span></div><div class="lesson-scene" aria-hidden="true">
 <div class="lesson-dot-grid"></div>
 <div class="lesson-mini-app">
-<div class="lesson-mini-top"><span><svg class="ui-icon"><use href="#icon-folder"></use></svg> Tu próxima clase</span><span class="lesson-mini-saved"><i></i> Guardado</span></div>
+<div class="lesson-mini-top"><span><svg class="ui-icon"><use href="#icon-folder"></use></svg> Tu siguiente experiencia</span><span class="lesson-mini-saved"><i></i> Guardado</span></div>
 <div class="lesson-mini-body">
 <div class="lesson-mini-steps"><span><svg class="ui-icon"><use href="#icon-check"></use></svg> Datos</span><strong>2 Aprendizajes</strong><span>3 Revisión</span></div>
 <span class="lesson-mini-context">MATEMÁTICA · 2.° DE SECUNDARIA</span>
-<h2>Aprender también<br/>empieza con elegir.</h2>
-<p>¿Qué trabajarán tus estudiantes?</p>
-<div class="lesson-mini-option selected"><span class="lesson-mini-check"><svg class="ui-icon"><use href="#icon-check"></use></svg></span><span>Resuelve problemas de cantidad<small>4 capacidades disponibles</small></span></div>
+<h2>Todo aprendizaje<br/>comienza con una elección.</h2>
+<p>¿Qué aprenderá tu grupo?</p>
+<div class="lesson-mini-option selected"><span class="lesson-mini-check"><svg class="ui-icon"><use href="#icon-check"></use></svg></span><span>Resuelve problemas de cantidad<small>4 capacidades para seleccionar</small></span></div>
 <div class="lesson-mini-option"><span class="lesson-mini-box"></span><span>Resuelve problemas de regularidad,<br/>equivalencia y cambio</span></div>
 <div class="lesson-mini-capacity"><svg class="ui-icon"><use href="#icon-check"></use></svg> Traduce cantidades a expresiones numéricas</div>
 <div class="lesson-mini-capacity"><svg class="ui-icon"><use href="#icon-check"></use></svg> Argumenta sus procedimientos</div>
-<div class="lesson-mini-bottom">Tu sesión va tomando forma</div>
+<div class="lesson-mini-bottom">Tu propuesta ya está en marcha</div>
 </div>
 </div>
-<div class="lesson-floating-paper"><span class="lesson-paper-label"><svg class="ui-icon"><use href="#icon-file"></use></svg> TU SESIÓN, LISTA PARA EL AULA</span><div class="lesson-paper-lines"><i></i><i></i><i></i></div><div class="lesson-paper-table"><span>Inicio</span><i></i><span>Desarrollo</span><i></i><span>Cierre</span><i></i></div><div class="lesson-paper-formats">WORD <span>·</span> PDF <svg class="ui-icon"><use href="#icon-check"></use></svg></div></div>
-<div class="lesson-teacher-note"><svg class="ui-icon"><use href="#icon-sparkles"></use></svg><span>La IA propone.<br/><strong>Tú le das tu toque.</strong></span></div>
+<div class="lesson-floating-paper"><span class="lesson-paper-label"><svg class="ui-icon"><use href="#icon-file"></use></svg> DE LA PLANIFICACIÓN AL AULA</span><div class="lesson-paper-lines"><i></i><i></i><i></i></div><div class="lesson-paper-table"><span>Inicio</span><i></i><span>Desarrollo</span><i></i><span>Cierre</span><i></i></div><div class="lesson-paper-formats">WORD <span>·</span> PDF <svg class="ui-icon"><use href="#icon-check"></use></svg></div></div>
+<div class="lesson-teacher-note"><svg class="ui-icon"><use href="#icon-sparkles"></use></svg><span>La IA aporta una propuesta.<br/><strong>Tú decides cómo enseñarla.</strong></span></div>
 </div>
 </div>
 </section>
 <!-- -->
 <section id="como-funciona" class="landing-section">
 <div class="landing-section-header">
-<span class="landing-section-eyebrow">Flujo Pedagógico</span>
-<h2 class="landing-section-title">¿Cómo Funciona en 3 Simples Pasos?</h2>
-<p class="landing-section-desc">Diseñado para ahorrarte horas de trabajo administrativo y enfocarte en la enseñanza.</p>
+<span class="landing-section-eyebrow">Tu ruta de trabajo</span>
+<h2 class="landing-section-title">Tu planificación, en tres momentos</h2>
+<p class="landing-section-desc">Dedica menos tiempo a las tareas administrativas y más a acompañar el aprendizaje de tu grupo.</p>
 </div>
 <div class="landing-steps-grid">
 <div class="landing-step-card">
 <span class="landing-step-number">1</span>
-<h3 class="landing-step-title">Configuración Curricular CNEB</h3>
-<p class="landing-step-text">Elige tu nivel educativo (Inicial, Primaria o Secundaria), área, grado, competencias y capacidades precargadas del CNEB de forma automática.</p>
+<h3 class="landing-step-title">Organiza el marco curricular</h3>
+<p class="landing-step-text">Indica el nivel, el grado y el área de tu clase; después selecciona las competencias y capacidades del CNEB disponibles para ese contexto.</p>
 </div>
 <div class="landing-step-card">
 <span class="landing-step-number">2</span>
-<h3 class="landing-step-title">Generación Pedagógica con IA</h3>
-<p class="landing-step-text">Los modelos de IA (GPT-6 Luna, DeepSeek R1 o Gemini) redactan situaciones significativas, la secuencia didáctica completa (Inicio, Desarrollo, Cierre) y los criterios de evaluación.</p>
+<h3 class="landing-step-title">Desarrolla tu propuesta con IA</h3>
+<p class="landing-step-text">Los asistentes de IA pueden ayudarte a redactar la situación significativa, organizar el inicio, desarrollo y cierre, y formular criterios de evaluación. Su uso requiere la configuración del servicio.</p>
 </div>
 <div class="landing-step-card">
 <span class="landing-step-number">3</span>
-<h3 class="landing-step-title">Compilación Nativa con Motor Local</h3>
-<p class="landing-step-text">Descarga el motor de escritorio para compilar Word (.docx) nativo con tablas CNEB perfectas, fórmulas matemáticas OMML editables y membretes oficiales sin descuadres.</p>
+<h3 class="landing-step-title">Convierte tu trabajo en un documento</h3>
+<p class="landing-step-text">Utiliza el motor de escritorio para producir archivos Word (.docx) con tablas curriculares, ecuaciones OMML editables y encabezados institucionales.</p>
 </div>
 </div>
 </section>
 <!-- -->
 <section id="motor-local" class="landing-section">
 <div class="landing-section-header">
-<span class="landing-section-eyebrow">Arquitectura Híbrida</span>
-<h2 class="landing-section-title">¿Por qué Space Lab Incluye un Motor Local?</h2>
-<p class="landing-section-desc">Unificamos la flexibilidad de la web con la potencia del compilador nativo de escritorio para documentos Word (.docx) de máxima fidelidad.</p>
+<span class="landing-section-eyebrow">Web y escritorio, conectados</span>
+<h2 class="landing-section-title">¿Para qué sirve el motor de escritorio?</h2>
+<p class="landing-section-desc">La plataforma combina la comodidad del navegador con el procesamiento de escritorio para conservar la estructura de tus documentos Word (.docx).</p>
 </div>
 <div class="motor-local-card">
 <div class="motor-local-info">
 <div class="motor-local-badge">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
-<span>Fidelidad Documental 100%</span>
+<span>Estructura documental cuidada</span>
 </div>
-<h3 class="motor-local-title">Motor Local de Exportación para Windows</h3>
+<h3 class="motor-local-title">Generación de documentos desde Windows</h3>
 <p class="motor-local-desc">
-                        Los navegadores web no pueden crear de forma nativa documentos de Microsoft Word con tablas anidadas multinivel, márgenes físicos A4 de imprenta ni fórmulas matemáticas editables (OMML). Por eso creamos <strong>pablitopyhost.exe</strong>: un motor ultraligero que corre en tu PC y se comunica de forma transparente y segura con esta aplicación web a través de <code>localhost:8000</code>.
+                        Para conservar tablas anidadas, márgenes A4 y ecuaciones OMML editables en Word, el proyecto utiliza un componente de escritorio llamado <strong>pablitopyhost.exe</strong>: un servicio ligero que se ejecuta en tu equipo y se enlaza con esta página mediante <code>localhost:8000</code>.
                     </p>
 <div class="motor-local-features">
 <div class="motor-feature-item">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
-<span>Tablas CNEB oficiales sin celdas descuadradas</span>
+<span>Tablas curriculares con una distribución consistente</span>
 </div>
 <div class="motor-feature-item">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
-<span>Ecuaciones matemáticas editables en formato OMML</span>
+<span>Fórmulas en OMML que puedes seguir editando</span>
 </div>
 <div class="motor-feature-item">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
-<span>Membretes institucionales de DRE y UGEL</span>
+<span>Encabezados con los datos de tu institución, DRE y UGEL</span>
 </div>
 <div class="motor-feature-item">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
-<span>Exportación instantánea sin límites de memoria web</span>
+<span>Procesamiento local independiente de la memoria del navegador</span>
 </div>
 </div>
 <div class="motor-local-actions">
 <a href="descargas_landing.html" class="landing-btn-lg landing-btn-primary" aria-label="Ir a la página de descarga del motor local">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-download"></use></svg>
-<span>Descargar Motor Local (.exe)</span>
+<span>Obtener motor para Windows (.exe)</span>
 </a>
 <a href="conexion.html" class="landing-btn-lg landing-btn-ghost" aria-label="Ver estado de conexión del motor">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-refresh"></use></svg>
-<span>Verificar Estado de Conexión</span>
+<span>Comprobar la conexión</span>
 </a>
 </div>
 </div>
@@ -488,9 +484,9 @@
 <!-- -->
 <section id="modelos-ia" class="landing-section">
 <div class="landing-section-header">
-<span class="landing-section-eyebrow">Tecnología de Vanguardia</span>
-<h2 class="landing-section-title">Impulsado por los Mejores Modelos de IA</h2>
-<p class="landing-section-desc">Elige el motor de inteligencia artificial que mejor se adapte a tu estilo pedagógico.</p>
+<span class="landing-section-eyebrow">Herramientas para tu práctica docente</span>
+<h2 class="landing-section-title">Distintas capacidades de IA para tu aula</h2>
+<p class="landing-section-desc">Selecciona la alternativa de inteligencia artificial que responda a las necesidades de tu planificación.</p>
 </div>
 <div class="landing-models-grid">
 <div class="landing-model-card">
@@ -500,7 +496,7 @@
 </div>
 <h3 class="landing-model-title">GPT-6 Luna</h3>
 <span class="landing-model-provider">OpenAI Router</span>
-<p class="landing-model-desc">Máxima agilidad y creatividad en el planteamiento de situaciones significativas contextualizadas a la realidad y coyuntura peruana.</p>
+<p class="landing-model-desc">Apoyo ágil para proponer situaciones significativas y creativas vinculadas al contexto peruano.</p>
 </div>
 <div class="landing-model-card">
 <span class="landing-model-badge" style="background:rgba(123, 97, 255, 0.15);color:#7b61ff;border-color:rgba(123, 97, 255, 0.3)">Recomendado</span>
@@ -509,7 +505,7 @@
 </div>
 <h3 class="landing-model-title">DeepSeek R1 / V3</h3>
 <span class="landing-model-provider">DeepSeek Router</span>
-<p class="landing-model-desc">Razonamiento pedagógico profundo, coherencia estricta en la alineación de propósitos y diseño de instrumentos de evaluación formativa.</p>
+<p class="landing-model-desc">Asistencia para relacionar los propósitos de aprendizaje y construir instrumentos de evaluación formativa con coherencia pedagógica.</p>
 </div>
 <div class="landing-model-card">
 <span class="landing-model-badge" style="background:rgba(16, 185, 129, 0.15);color:#10b981;border-color:rgba(16, 185, 129, 0.3)">Rápido</span>
@@ -518,70 +514,70 @@
 </div>
 <h3 class="landing-model-title">Gemini 2.5 Flash</h3>
 <span class="landing-model-provider">Google DeepMind</span>
-<p class="landing-model-desc">Velocidad instantánea para actividades prácticas de inicio, desarrollo y cierre, fichas de trabajo y adaptación a distintos ritmos de aprendizaje.</p>
+<p class="landing-model-desc">Ayuda para preparar actividades de cada momento de la clase, elaborar fichas y ajustar las propuestas a diferentes ritmos de aprendizaje.</p>
 </div>
 </div>
 </section>
 <!-- -->
 <section id="preguntas-frecuentes" class="landing-section">
 <div class="landing-section-header">
-<span class="landing-section-eyebrow">Respuestas Claras</span>
-<h2 class="landing-section-title">Preguntas Frecuentes para Docentes</h2>
-<p class="landing-section-desc">Todo lo que necesitas saber sobre la plataforma, el motor local y el currículo.</p>
+<span class="landing-section-eyebrow">Resolvemos tus consultas</span>
+<h2 class="landing-section-title">Lo que necesitas conocer antes de empezar</h2>
+<p class="landing-section-desc">Consulta las dudas habituales sobre el espacio de trabajo, la exportación y las referencias curriculares.</p>
 </div>
 <div class="landing-faq-container">
 <div class="landing-faq-item">
 <h3 class="landing-faq-question">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-download"></use></svg>
-                        ¿Qué es el Motor Local y por qué debo descargarlo?
+                        ¿Qué hace el motor de escritorio y cuándo lo necesito?
                     </h3>
-<p class="landing-faq-answer">Para que tus sesiones se descarguen en Microsoft Word (.docx) con las tablas oficiales del MINEDU, márgenes exactos, listas de cotejo y fórmulas matemáticas editables (OMML) sin que se mueva ninguna celda, desarrollamos un motor nativo (<code>pablitopyhost.exe</code>). Se ejecuta en segundo plano en tu computadora y procesa el documento con máxima fidelidad.</p>
+<p class="landing-faq-answer">El componente de escritorio permite preparar documentos Word (.docx) con tablas curriculares, márgenes definidos, instrumentos de evaluación y ecuaciones OMML editables. Este motor (<code>pablitopyhost.exe</code>) funciona en segundo plano dentro de tu equipo y procesa el archivo para conservar su estructura.</p>
 </div>
 <div class="landing-faq-item">
 <h3 class="landing-faq-question">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
-                        ¿Puedo usar la plataforma sin descargar el motor local?
+                        ¿Se puede trabajar únicamente desde el navegador?
                     </h3>
-<p class="landing-faq-answer">Sí. Puedes diseñar, redactar, editar, guardar en la nube o localmente, y utilizar todos los modelos de Inteligencia Artificial directamente en tu navegador. El motor local solo es necesario cuando deseas compilar y descargar tus sesiones en formato Word (.docx) editable de alta fidelidad.</p>
+<p class="landing-faq-answer">Sí. El navegador permite planificar, escribir, editar y conservar tu trabajo en el dispositivo o en tu cuenta. La asistencia de IA requiere su servicio configurado. Para las exportaciones que utilizan el motor nativo, debes tenerlo instalado y en ejecución.</p>
 </div>
 <div class="landing-faq-item">
 <h3 class="landing-faq-question">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-target"></use></svg>
-                        ¿Cómo se alinea al Currículo Nacional de la Educación Básica (CNEB)?
+                        ¿Qué relación tiene la plataforma con el CNEB?
                     </h3>
-<p class="landing-faq-answer">Toda la base de datos de competencias, capacidades, desempeños por grado y ciclo (Inicial, Primaria y Secundaria), enfoques transversales e instrumentos de evaluación está completamente estructurada según las directivas curriculares vigentes del Ministerio de Educación del Perú (MINEDU).</p>
+<p class="landing-faq-answer">Las referencias de competencias, capacidades, desempeños y enfoques se organizan tomando como base el Currículo Nacional del MINEDU. La cobertura disponible depende del nivel, área y grado; contrasta siempre las referencias con tu programa curricular.</p>
 </div>
 <div class="landing-faq-item">
 <h3 class="landing-faq-question">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
-                        ¿Qué modelos de Inteligencia Artificial están disponibles?
+                        ¿Con qué asistentes de IA puede trabajar el sistema?
                     </h3>
-<p class="landing-faq-answer">Dispones de una arquitectura multi-modelo conectada a través de routers seguros: GPT-6 Luna de OpenAI, DeepSeek V3 y Reasoner R1 para razonamiento pedagógico profundo, y Google Gemini 2.5 Flash para generación ultrarrápida de actividades y criterios.</p>
+<p class="landing-faq-answer">El proyecto admite la integración de asistentes de OpenAI, DeepSeek y Google Gemini mediante servicios de servidor. Los modelos que podrás utilizar dependerán del proveedor y la configuración habilitados para esta instalación.</p>
 </div>
 <div class="landing-faq-item">
 <h3 class="landing-faq-question">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-sliders"></use></svg>
-                        ¿Cómo funciona el sistema de créditos y monetización automatizada?
+                        ¿Cómo se administra el consumo de IA?
                     </h3>
-<p class="landing-faq-answer">La plataforma cuenta con un sistema de créditos automatizado gestionado en la nube con Supabase. No requiere procesos manuales de verificación: tus créditos de IA se recargan y acreditan de forma automática para que puedas seguir planificando sin interrupciones.</p>
+<p class="landing-faq-answer">El proyecto contempla un registro de consumo y créditos en Supabase. En esta instalación, la activación de la IA y la gestión comercial avanzada siguen pendientes de configuración; esta pantalla no realiza cobros.</p>
 </div>
 <div class="landing-faq-item">
 <h3 class="landing-faq-question">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
-                        ¿Mis sesiones y datos personales están seguros?
+                        ¿Cómo se resguarda la información de mi cuenta?
                     </h3>
-<p class="landing-faq-answer">Totalmente seguros. Tus sesiones se guardan localmente en tu propio dispositivo (LocalStorage e IndexedDB) y, si inicias sesión, se sincronizan en la nube mediante Supabase con políticas de seguridad de nivel de fila (RLS). Tu información docente nunca se comparte con terceros.</p>
+<p class="landing-faq-answer">Puedes conservar tus sesiones en el dispositivo y sincronizarlas con Supabase cuando accedes a tu cuenta. Las políticas por usuario restringen el acceso a tus registros. Si utilizas IA, el contenido necesario de la solicitud se procesa con el proveedor configurado; evita incluir información personal de estudiantes.</p>
 </div>
 </div>
 </section>
 <!-- -->
 <section class="landing-cta-banner">
 <div class="landing-cta-card">
-<h2 class="landing-cta-title">¿Listo para Planificar tu Próxima Sesión?</h2>
-<p class="landing-cta-text">Únete a los docentes que ya optimizan su tiempo administrativo con inteligencia artificial curricular.</p>
+<h2 class="landing-cta-title">Tu siguiente clase puede empezar hoy</h2>
+<p class="landing-cta-text">Reúne tus ideas y organiza una propuesta de aprendizaje pensada para tu grupo.</p>
 <button type="button" class="landing-btn-lg landing-btn-primary" data-action="enter-app" aria-label="Entrar al editor y planificar sesión ahora">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
-<span>Entrar al Editor y Crear mi Sesión Ahora</span>
+<span>Abrir el planificador y comenzar</span>
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
 </button>
 </div>
@@ -589,10 +585,10 @@
 <!-- -->
 <section id="contacto" class="landing-contact-section">
 <div class="landing-contact-content">
-<h2 class="landing-contact-title">ESTABLECER ENLACE</h2>
+<h2 class="landing-contact-title">CONVERSEMOS</h2>
 <div class="landing-contact-divider"></div>
 <p class="landing-contact-desc">
-                    ¿Tienes un proyecto en mente o necesitas una solución digital? Transmite tus requerimientos por cualquiera de estos canales.
+                    Si buscas ayuda o quieres desarrollar una propuesta digital, comparte tu consulta mediante los canales disponibles.
                 </p>
 <div class="landing-contact-buttons">
 <a href="https://wa.me/51918165428" target="_blank" rel="noopener noreferrer" class="contact-btn contact-btn-whatsapp" aria-label="Contactar por WhatsApp al 918165428">
@@ -611,30 +607,30 @@
 </div>
 </section>
 <!-- -->
-<footer class="landing-footer">
+<footer class="landing-footer"><div class="gp-footer-brand"><img src="assets/grafiplot-sesiones.png" alt="Logo de Sesiones GRAFIPLOT"/><div><strong>Sesiones GRAFIPLOT</strong><p>Tus ideas, convertidas en experiencias para aprender.</p></div></div>
 <div class="landing-creator-box">
 <div class="landing-creator-icon" aria-hidden="true">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
 </div>
 <p class="landing-creator-text">
-                    SISTEMA CREADO CON <svg class="ui-icon icon-heart" aria-hidden="true"><use href="#icon-heart"></use></svg> POR <a href="https://space.sypablitodp.site" target="_blank" rel="noopener noreferrer" class="creator-highlight">SAMUEL PABLO CLAUDIO</a>
+                    PROYECTO ORIGINAL CREADO CON <svg class="ui-icon icon-heart" aria-hidden="true"><use href="#icon-heart"></use></svg> POR <a href="https://space.sypablitodp.site" target="_blank" rel="noopener noreferrer" class="creator-highlight">SAMUEL PABLO CLAUDIO</a>
 </p>
 <span class="landing-classified-tag">© 2026 PABLITO_DP — ACCESO CLASIFICADO</span>
 </div>
 <div class="landing-footer-links">
 <a href="https://space.sypablitodp.site" target="_blank" rel="noopener noreferrer" class="landing-footer-link">space.sypablitodp.site</a>
-<a href="descargas_landing.html" class="landing-footer-link">Motor Local de Word</a>
-<a href="conexion.html" class="landing-footer-link">Estado de Conexión</a>
-<a href="#" id="link-terms-footer" class="landing-footer-link">Términos y Privacidad</a>
-<a href="#/app" class="landing-footer-link" data-action="enter-app">Ir al Editor</a>
+<a href="descargas_landing.html" class="landing-footer-link">Exportación de Word</a>
+<a href="conexion.html" class="landing-footer-link">Estado del servicio</a>
+<a href="#" id="link-terms-footer" class="landing-footer-link">Condiciones y privacidad</a>
+<a href="#/app" class="landing-footer-link" data-action="enter-app">Abrir mi espacio</a>
 </div>
 </footer>
 </div>
-<div id="home-view" class="home-view hidden"><header class="home-header"><button type="button" class="home-brand" data-action="view-home" aria-label="Ir a Mi espacio"><span class="home-brand-mark"><img src="assets/favicon.svg" alt="" aria-hidden="true"/></span><span><strong>Mi espacio</strong><small>Todo listo para tu próxima clase</small></span></button><nav class="home-nav" aria-label="Navegación del espacio"><a href="#/home" class="home-nav-link active">Mi espacio</a><a href="#/sessions" class="home-nav-link">Mis sesiones</a></nav><div class="home-account"><a class="home-support" href="mailto:pabloclsa87@gmail.com" aria-label="Contactar con soporte"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-question-mark lucide-help-circle lucide-circle-help" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg><span>Soporte</span></a><label class="theme-picker" title="Tema de la aplicación"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg><span class="sr-only">Tema de la aplicación</span><select data-theme-selector="" aria-label="Tema de la aplicación"><option value="system">Sistema</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label><div class="home-account-copy"><strong id="home-account-name">Docente</strong><span id="home-account-plan">Plan docente</span></div><span id="home-account-avatar" class="home-account-avatar" aria-hidden="true">D</span><button type="button" id="home-logout" class="btn btn-ghost btn-sm" aria-label="Cerrar sesión"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out" aria-hidden="true"><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path></svg><span>Salir</span></button></div></header><main class="home-main" id="home-main"><section class="home-welcome" aria-labelledby="home-welcome-title"><div class="home-welcome-copy"><span class="home-eyebrow"><span class="home-live-dot"></span>TU CENTRO DE PLANIFICACIÓN</span><h1 id="home-welcome-title">Bienvenido a tu espacio docente</h1><p>Una idea para tu aula. Un espacio para darle forma.<br/>Crea, organiza y continúa tus próximas clases.</p><div class="home-primary-actions"><button type="button" class="btn btn-primary home-primary-button" data-home-action="new-session"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Crear nueva sesión<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></button><button type="button" id="home-continue-session" class="btn btn-ghost home-secondary-button hidden" data-home-action="continue-session"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>Continuar último borrador<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></div><span class="home-welcome-note"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Tus ideas, tus decisiones. La IA te acompaña.</span></div><aside class="home-guide" aria-label="Guía para comenzar"><div class="home-guide-art" aria-hidden="true"><span class="home-orbit orbit-one"></span><span class="home-orbit orbit-two"></span><span class="home-guide-spark"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wand-sparkles lucide-wand-2" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg></span><span class="home-orbit-star"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles lucide-stars" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></span></div><div class="home-guide-heading"><span class="home-guide-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles lucide-stars" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></span><div><span>DE LA IDEA AL AULA</span><strong>Tu próxima clase, paso a paso</strong></div></div><ol class="home-guide-steps"><li><span>1</span><p><strong>Completa los datos</strong>Indica nivel, área y propósito.</p></li><li><span>2</span><p><strong>Genera con IA</strong>Obtén una propuesta alineada al CNEB.</p></li><li><span>3</span><p><strong>Revisa y exporta</strong>Edita libremente y descarga tu documento.</p></li></ol></aside></section><section class="home-summary" aria-label="Resumen de la cuenta"><article class="home-summary-card"><span class="home-summary-icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span><div><strong id="home-session-count">0</strong><span>Sesiones guardadas</span></div><span class="home-stat-caption">Tu trabajo, a mano</span></article><article class="home-summary-card"><span class="home-summary-icon accent-purple"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles lucide-stars" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></span><div><strong id="home-credit-count">--</strong><span>Créditos de IA</span></div><span class="home-stat-caption">Para tus próximas ideas</span></article><article class="home-summary-card home-plan-summary"><span class="home-summary-icon accent-green"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span><div class="home-plan-summary-copy"><strong id="home-plan-name">Docente</strong><span>Plan actual</span></div><button type="button" class="home-plan-link" data-home-action="view-plans">Ver planes<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></article></section><section class="home-section" aria-labelledby="home-tools-title">
+<div id="home-view" class="home-view hidden"><header class="home-header"><button type="button" class="home-brand" data-action="view-home" aria-label="Ir a Mi panel"><span class="home-brand-mark"><img src="assets/grafiplot-sesiones.png" alt="" aria-hidden="true"/></span><span><strong>Mi panel</strong><small>Tus recursos para la siguiente experiencia</small></span></button><nav class="home-nav" aria-label="Navegación del espacio"><a href="#/home" class="home-nav-link active">Mi panel</a><a href="#/sessions" class="home-nav-link">Mis sesiones</a></nav><div class="home-account"><a class="home-support" href="mailto:pabloclsa87@gmail.com" aria-label="Contactar con soporte"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-question-mark lucide-help-circle lucide-circle-help" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg><span>Soporte</span></a><label class="theme-picker" title="Tema de la aplicación"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg><span class="sr-only">Tema de la aplicación</span><select data-theme-selector="" aria-label="Tema de la aplicación"><option value="system">Sistema</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label><div class="home-account-copy"><strong id="home-account-name">Docente</strong><span id="home-account-plan">Plan docente</span></div><span id="home-account-avatar" class="home-account-avatar" aria-hidden="true">D</span><button type="button" id="home-logout" class="btn btn-ghost btn-sm" aria-label="Cerrar sesión"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out" aria-hidden="true"><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path></svg><span>Salir</span></button></div></header><main class="home-main" id="home-main"><section class="home-welcome" aria-labelledby="home-welcome-title"><div class="home-welcome-copy"><span class="home-eyebrow"><span class="home-live-dot"></span>UN LUGAR PARA ORGANIZAR TUS CLASES</span><h1 id="home-welcome-title">Tu próxima experiencia comienza aquí</h1><p>Lo que imaginas para tus estudiantes encuentra aquí su punto de partida.<br/>Prepara nuevas propuestas, organiza tus documentos y retoma tu trabajo.</p><div class="home-primary-actions"><button type="button" class="btn btn-primary home-primary-button" data-home-action="new-session"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Crear nueva sesión<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></button><button type="button" id="home-continue-session" class="btn btn-ghost home-secondary-button hidden" data-home-action="continue-session"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>Continuar último borrador<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></div><span class="home-welcome-note"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Tus ideas, tus decisiones. La IA te acompaña.</span></div><aside class="home-guide" aria-label="Guía para comenzar"><div class="home-guide-art" aria-hidden="true"><span class="home-orbit orbit-one"></span><span class="home-orbit orbit-two"></span><span class="home-guide-spark"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wand-sparkles lucide-wand-2" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg></span><span class="home-orbit-star"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles lucide-stars" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></span></div><div class="home-guide-heading"><span class="home-guide-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles lucide-stars" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></span><div><span>DE TU PROPUESTA A LA PRÁCTICA</span><strong>Organiza tu experiencia por etapas</strong></div></div><ol class="home-guide-steps"><li><span>1</span><p><strong>Indica el contexto</strong>Define el nivel, el área y la intención de aprendizaje.</p></li><li><span>2</span><p><strong>Elabora con apoyo de IA</strong>Desarrolla una propuesta tomando como referencia el CNEB.</p></li><li><span>3</span><p><strong>Comprueba y descarga</strong>Ajusta el contenido y obtén el archivo de tu clase.</p></li></ol></aside></section><section class="home-summary" aria-label="Resumen de la cuenta"><article class="home-summary-card"><span class="home-summary-icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span><div><strong id="home-session-count">0</strong><span>Planificaciones conservadas</span></div><span class="home-stat-caption">Tus documentos a tu alcance</span></article><article class="home-summary-card"><span class="home-summary-icon accent-purple"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles lucide-stars" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></span><div><strong id="home-credit-count">--</strong><span>Créditos de IA</span></div><span class="home-stat-caption">Para elaborar nuevas propuestas</span></article><article class="home-summary-card home-plan-summary"><span class="home-summary-icon accent-green"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span><div class="home-plan-summary-copy"><strong id="home-plan-name">Docente</strong><span>Plan actual</span></div><button type="button" class="home-plan-link" data-home-action="view-plans">Ver planes<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></article></section><section class="home-section" aria-labelledby="home-tools-title">
 <div class="home-section-heading">
 <div>
 <span class="home-eyebrow">Herramientas</span>
-<h2 id="home-tools-title">¿Qué deseas preparar?</h2>
+<h2 id="home-tools-title">¿En qué trabajarás hoy?</h2>
 </div>
 </div>
 <div class="home-tool-grid">
@@ -642,28 +638,28 @@
 <span class="home-tool-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-file"></use></svg></span>
 <div class="home-tool-copy">
 <span class="home-tool-status">Disponible</span>
-<h3>Sesión individual</h3>
-<p>Diseña, genera y exporta sesiones alineadas al CNEB para Inicial, Primaria y Secundaria.</p>
+<h3>Una sesión de aprendizaje</h3>
+<p>Organiza, desarrolla y descarga propuestas curriculares para Inicial, Primaria y Secundaria con referencia al CNEB.</p>
 </div>
 <button type="button" class="home-tool-action" data-home-action="new-session">
-                            Crear sesión <svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+                            Preparar una clase <svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
 </button>
 </article>
-<article class="home-tool-card home-tool-card-active" aria-label="Planificación articulada">
+<article class="home-tool-card home-tool-card-active" aria-label="Planificación conectada">
 <span class="home-tool-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-folder"></use></svg></span>
 <div class="home-tool-copy">
 <span class="home-tool-status">Beta</span>
-<h3>Planificación articulada</h3>
-<p>Experiencias, Unidades y Proyectos de aprendizaje. Construye y guarda tu mapa paso a paso.</p>
+<h3>Planificación conectada</h3>
+<p>Desarrolla Experiencias, Unidades y Proyectos de aprendizaje y conserva su mapa de trabajo de manera progresiva.</p>
 </div>
-<button type="button" class="home-tool-action" data-open-planning="">Abrir planificaciones</button>
+<button type="button" class="home-tool-action" data-open-planning="">Explorar mis planificaciones</button>
 </article>
 </div>
 </section>
 <section id="home-sessions-section" class="home-section home-sessions-section" aria-labelledby="home-sessions-title">
 <div class="home-section-heading">
 <div>
-<span class="home-eyebrow">Biblioteca personal</span>
+<span class="home-eyebrow">Archivo de mis propuestas</span>
 <h2 id="home-sessions-title">Mis sesiones</h2>
 </div>
 <button type="button" id="home-toggle-all-sessions" class="btn btn-ghost btn-sm hidden">Ver todas</button>
@@ -675,8 +671,8 @@
 <header class="home-plans-header">
 <div>
 <span class="home-eyebrow">Comparación de planes</span>
-<h2 id="home-plans-title">Conoce qué incluye cada plan</h2>
-<p id="home-plans-description">Conoce las diferencias antes de decidir. Los cambios de plan y los pagos todavía no están habilitados.</p>
+<h2 id="home-plans-title">Revisa las características de cada alternativa</h2>
+<p id="home-plans-description">Compara las opciones con calma. Por ahora, esta sección no permite modificar el plan ni efectuar pagos.</p>
 </div>
 <button type="button" class="home-plans-close" data-home-action="close-plans" aria-label="Cerrar comparación de planes">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-close"></use></svg>
@@ -688,7 +684,7 @@
 <div><span class="home-plan-kicker">Para comenzar</span><h3>Gratuito</h3></div>
 <span class="home-plan-current-badge" hidden="">Tu plan actual</span>
 </div>
-<p class="home-plan-description">Lo esencial para crear y guardar tus primeras sesiones.</p>
+<p class="home-plan-description">Las herramientas básicas para preparar y conservar tus primeras propuestas.</p>
 <p class="home-plan-credits"><strong>30</strong><span>créditos de IA por ciclo</span></p>
 <ul class="home-plan-benefits">
 <li><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>Crear sesiones con IA</li>
@@ -702,7 +698,7 @@
 <div><span class="home-plan-kicker">Acceso anticipado</span><h3>Docente Beta</h3></div>
 <span class="home-plan-current-badge" hidden="">Tu plan actual</span>
 </div>
-<p class="home-plan-description">Para docentes que prueban y ayudan a mejorar Space Lab.</p>
+<p class="home-plan-description">Pensado para quienes exploran Sesiones GRAFIPLOT y aportan a su mejora.</p>
 <p class="home-plan-credits"><strong>100</strong><span>créditos de IA por ciclo</span></p>
 <ul class="home-plan-benefits">
 <li><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>Todo lo incluido en Gratuito</li>
@@ -716,7 +712,7 @@
 <div><span class="home-plan-kicker">Para el día a día</span><h3>Docente Plus</h3></div>
 <span class="home-plan-current-badge" hidden="">Tu plan actual</span>
 </div>
-<p class="home-plan-description">Más capacidad y herramientas para una planificación frecuente.</p>
+<p class="home-plan-description">Más recursos y capacidad para quienes planifican de manera habitual.</p>
 <p class="home-plan-credits"><strong>150</strong><span>créditos de IA por ciclo</span></p>
 <ul class="home-plan-benefits">
 <li><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>Todo lo incluido en Gratuito</li>
@@ -730,7 +726,7 @@
 <div><span class="home-plan-kicker">Máxima capacidad</span><h3>Docente Pro</h3></div>
 <span class="home-plan-current-badge" hidden="">Tu plan actual</span>
 </div>
-<p class="home-plan-description">Para un uso intensivo y las capacidades más avanzadas.</p>
+<p class="home-plan-description">Pensado para una actividad frecuente con acceso a funciones de mayor alcance.</p>
 <p class="home-plan-credits"><strong>400</strong><span>créditos de IA por ciclo</span></p>
 <ul class="home-plan-benefits">
 <li><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg>Todo lo incluido en Plus</li>
@@ -742,7 +738,7 @@
 </div>
 <footer class="home-plans-footer">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
-<p><strong>Vista informativa.</strong> No se realizará ningún cobro ni cambio de plan desde esta pantalla.</p>
+<p><strong>Vista informativa.</strong> Esta sección no genera cargos ni modifica tu suscripción.</p>
 </footer>
 </div>
 </dialog>
@@ -753,18 +749,18 @@
 <!-- -->
 <header class="app-header glass-card">
 <div class="header-leading">
-<div class="header-brand" data-action="view-landing" style="cursor:pointer" title="Volver al inicio / presentación" role="button" tabindex="0" aria-label="Volver al inicio de Space Lab">
+<div class="header-brand" data-action="view-landing" style="cursor:pointer" title="Volver al inicio / presentación" role="button" tabindex="0" aria-label="Volver al inicio de Sesiones GRAFIPLOT">
 <div class="brand-icon" style="background:linear-gradient(135deg, rgba(0,212,255,0.2) 0%, rgba(123,97,255,0.2) 100%);border-color:rgba(0,212,255,0.35)">
-<img src="assets/favicon.svg" alt="Space Lab Logo" class="brand-logo-img"/>
+<img src="assets/grafiplot-sesiones.png" alt="Sesiones GRAFIPLOT Logo" class="brand-logo-img"/>
 </div>
 <div>
-<h1 class="brand-title">Space Lab</h1>
+<h1 class="brand-title">Sesiones GRAFIPLOT</h1>
 <span class="brand-subtitle">Sesiones Educativas</span>
 </div>
 </div>
 <div class="header-context" aria-label="Contexto de la sesión">
 <span class="header-context-label">Editor de sesión</span>
-<span id="session-context-title" class="header-context-title">Nueva sesión</span>
+<span id="session-context-title" class="header-context-title">Nueva planificación</span>
 </div>
 <!-- -->
 <div id="header-user-badge" class="header-user-badge" role="region" aria-label="Perfil y créditos del docente" hidden="">
@@ -783,14 +779,14 @@
 </div>
 <div class="save-indicator" id="save-indicator" role="status" aria-live="polite">
 <span class="save-dot"></span>
-<span class="save-text">Sin cambios</span>
+<span class="save-text">Sin modificaciones pendientes</span>
 </div>
 <nav class="header-actions">
 <a href="mailto:pabloclsa87@gmail.com" class="btn btn-ghost btn-sm" aria-label="Contactar con soporte por correo">Soporte</a>
 <span id="ai-credit-indicator" class="ai-credit-indicator" role="status" aria-live="polite" hidden="">IA · -- créditos</span>
 <button id="btn-home-nav" type="button" class="btn btn-ghost btn-sm" data-action="view-home" hidden="">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-folder"></use></svg>
-<span class="btn-label">Mi espacio</span>
+<span class="btn-label">Mi panel</span>
 </button>
 <label class="theme-picker" title="Tema de la aplicación">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-theme"></use></svg>
@@ -832,7 +828,7 @@
 </a>
 </div>
 </details>
-<div id="auth-header-container" class="auth-header-container"><button id="btn-login-trigger" class="btn btn-ghost btn-sm" aria-label="Iniciar sesión"><svg class="ui-icon" aria-hidden="true"><use href="#icon-user"></use></svg><span class="auth-label">Iniciar sesión</span></button></div>
+<div id="auth-header-container" class="auth-header-container"><button id="btn-login-trigger" class="btn btn-ghost btn-sm" aria-label="Acceder a mi cuenta"><svg class="ui-icon" aria-hidden="true"><use href="#icon-user"></use></svg><span class="auth-label">Acceder a mi cuenta</span></button></div>
 <button id="btn-menu-mobile" class="btn btn-ghost btn-icon mobile-only" title="Abrir planificación" aria-label="Abrir planificación" aria-expanded="false" aria-controls="sidebar">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
 <span class="btn-label">Planificar</span>
@@ -884,16 +880,16 @@
 <aside id="sidebar" class="sidebar glass-card">
 <div class="sidebar-header">
 <div>
-<span class="sidebar-eyebrow">Planificador docente</span>
-<h2 class="sidebar-title">Diseña tu sesión</h2>
+<span class="sidebar-eyebrow">Tu mesa de planificación</span>
+<h2 class="sidebar-title">Construye tu propuesta</h2>
 </div>
-<button id="btn-close-sidebar" type="button" class="btn btn-ghost btn-sm" aria-label="Volver al documento"><svg class="ui-icon" aria-hidden="true"><use href="#icon-close"></use></svg><span>Volver al documento</span></button>
+<button id="btn-close-sidebar" type="button" class="btn btn-ghost btn-sm" aria-label="Regresar al documento"><svg class="ui-icon" aria-hidden="true"><use href="#icon-close"></use></svg><span>Regresar al documento</span></button>
 </div>
 <div class="sidebar-workflow">
 <form id="session-form" class="session-form" autoComplete="off">
 <!-- --> <div class="session-mode-switch" role="group" aria-label="Modo del generador">
-<button type="button" class="btn btn-ghost" id="session-mode-quick" aria-pressed="false">Modo rápido · 3 pasos</button>
-<button type="button" class="btn btn-ghost" id="session-mode-advanced" aria-pressed="true">Modo avanzado</button>
+<button type="button" class="btn btn-ghost" id="session-mode-quick" aria-pressed="false">Asistente · 3 pasos</button>
+<button type="button" class="btn btn-ghost" id="session-mode-advanced" aria-pressed="true">Edición completa</button>
 </div>
 <section id="quick-session" hidden="" aria-label="Asistente rápido de sesiones">
 <nav class="quick-steps" aria-label="Pasos del modo rápido">
@@ -918,7 +914,7 @@
 <div id="quick-proposal-fields"></div>
 </section>
 <section data-quick-panel="3" hidden="" aria-labelledby="quick-title-3">
-<h3 id="quick-title-3" tabindex="-1">Revisar y generar</h3>
+<h3 id="quick-title-3" tabindex="-1">Revisión y creación</h3>
 <dl id="quick-review"></dl>
 <h4>Coherencia curricular y advertencias</h4>
 <ul id="quick-warnings" class="quick-notice"></ul>
@@ -938,15 +934,15 @@
 <div id="tab-ai" class="tab-pane active" role="region" aria-labelledby="inspector-title">
 <div class="inspector-heading planner-section-heading">
 <span id="inspector-step" class="inspector-step">Paso 01 de 06</span>
-<h3 id="inspector-title">Configura el copiloto</h3>
-<p id="inspector-description">Elige el modelo, la plantilla y las referencias para preparar tu sesión.</p>
-<p class="planner-scroll-help">Baja para continuar. El menú te lleva directo a cada sección.</p>
+<h3 id="inspector-title">Prepara tu asistente</h3>
+<p id="inspector-description">Selecciona las opciones de asistencia, el formato y las fuentes que orientarán tu propuesta.</p>
+<p class="planner-scroll-help">Continúa hacia abajo o utiliza el menú para ir a la sección que necesites.</p>
 </div>
 <!-- -->
 <div class="form-group ai-model-card">
 <div class="ai-model-header">
 <div>
-<span class="ai-model-eyebrow">Copiloto Space AI</span>
+<span class="ai-model-eyebrow">Asistente GRAFIPLOT IA</span>
 <strong>Enrutamiento inteligente</strong>
 </div>
 <span class="ai-model-status" id="ai-availability-status">Disponibilidad por verificar</span>
@@ -1030,7 +1026,7 @@
 </div>
 <!-- -->
 <div id="tab-general" class="tab-pane" role="region" aria-labelledby="planner-title-general">
-<header class="planner-section-heading"><span class="planner-section-step">Paso 02 de 06</span><h3 id="planner-title-general">Completa los datos</h3><p>Define la institución, el grado, el área y la identidad de tu sesión.</p></header>
+<header class="planner-section-heading"><span class="planner-section-step">Paso 02 de 06</span><h3 id="planner-title-general">Indica el contexto</h3><p>Define la institución, el grado, el área y la identidad de tu sesión.</p></header>
 <!-- -->
 <div class="form-card">
 <div class="form-card-title">
@@ -1427,7 +1423,7 @@
 </div>
 <!-- -->
 <div class="saved-sessions" style="margin-top:1rem">
-<h3 class="saved-title" style="font-size:0.75rem;margin-bottom:6px">Sesiones guardadas</h3>
+<h3 class="saved-title" style="font-size:0.75rem;margin-bottom:6px">Planificaciones conservadas</h3>
 <ul id="saved-list" class="saved-list">
 <li class="saved-empty">No hay sesiones guardadas</li>
 </ul>
@@ -1438,8 +1434,8 @@
 <aside class="session-planning-summary" aria-labelledby="planning-summary-heading">
 <span class="sidebar-eyebrow" id="planning-summary-heading">Tu sesión, de un vistazo</span>
 <svg class="ui-icon planning-summary-icon" aria-hidden="true"><use href="#icon-file"></use></svg>
-<h3 id="planning-summary-title">Tu próxima clase</h3>
-<p id="planning-summary-context">Completa los datos de tu sesión.</p>
+<h3 id="planning-summary-title">Tu siguiente experiencia</h3>
+<p id="planning-summary-context">Indica el contexto de tu sesión.</p>
 <dl id="planning-summary-facts"></dl>
 <div class="planning-summary-note"><svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg><p>Inicio, desarrollo y cierre. Una estructura para acompañarte en el aula.</p></div>
 </aside>
@@ -1463,7 +1459,7 @@
 </div>
 <div class="empty-brand-row">
 <div class="empty-brand-mark" style="background:linear-gradient(135deg, rgba(0,212,255,0.2) 0%, rgba(123,97,255,0.2) 100%);border-radius:12px;padding:10px;display:inline-flex;box-shadow:0 0 20px rgba(0,212,255,0.25)">
-<img src="assets/favicon.svg" alt="Space Lab Icon" aria-hidden="true"/>
+<img src="assets/grafiplot-sesiones.png" alt="Sesiones GRAFIPLOT Icon" aria-hidden="true"/>
 </div>
 <span class="empty-eyebrow">Workspace Curricular Inteligente</span>
 </div>
@@ -1506,8 +1502,8 @@
 <div class="step-item">
 <span class="step-num">2</span>
 <div class="step-content">
-<strong class="step-title">2. Genera con IA</strong>
-<span class="step-desc">Space AI estructura la situación significativa, los momentos didácticos (Inicio, Desarrollo, Cierre), criterios y evidencias.</span>
+<strong class="step-title">2. Elabora con apoyo de IA</strong>
+<span class="step-desc">GRAFIPLOT IA estructura la situación significativa, los momentos didácticos (Inicio, Desarrollo, Cierre), criterios y evidencias.</span>
 </div>
 </div>
 <div class="step-item">
@@ -1695,7 +1691,7 @@
 <!-- --> <!-- -->
 <div id="chatbot-container" class="chatbot-container no-print">
 <!-- -->
-<button id="chatbot-bubble" class="chatbot-bubble" title="Preguntar al copiloto" aria-label="Preguntar al copiloto">
+<button id="chatbot-bubble" class="chatbot-bubble" title="Consultar al asistente" aria-label="Consultar al asistente">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-chat"></use></svg>
 <span class="pulse-ring"></span>
 </button>
@@ -1714,7 +1710,7 @@
 <div id="chatbot-messages" class="chatbot-messages">
 <div class="chat-message bot">
 <div class="message-bubble">
-                        ¡Hola! Soy tu asistente pedagógico de Space Lab. ¿En qué puedo ayudarte hoy con tus sesiones o
+                        ¡Hola! Soy tu asistente pedagógico de Sesiones GRAFIPLOT. ¿En qué puedo ayudarte hoy con tus sesiones o
                         el Currículo Nacional?
                     </div>
 </div>

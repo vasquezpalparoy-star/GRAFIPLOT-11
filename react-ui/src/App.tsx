@@ -8,7 +8,7 @@ import {LearningStep} from './LearningStep';
 import {ReviewStep} from './ReviewStep';
 import {SessionSummary} from './SessionSummary';
 
-const steps=[{title:'Datos',description:'El contexto de tu clase',Icon:GraduationCap},{title:'Aprendizajes',description:'Qué y cómo aprenderán',Icon:BookOpen},{title:'Revisar y generar',description:'Tu último vistazo',Icon:Sparkles}];
+const steps=[{title:'Datos',description:'El grupo de aprendizaje y su contexto',Icon:GraduationCap},{title:'Aprendizajes',description:'El aprendizaje y su camino',Icon:BookOpen},{title:'Revisión y creación',description:'Comprueba los detalles',Icon:Sparkles}];
 
 export function App({bridge}:{bridge:Bridge}) {
     const state=useSyncExternalStore(bridge.subscribe,bridge.getSnapshot);
@@ -56,29 +56,29 @@ export function App({bridge}:{bridge:Bridge}) {
     const legacy=state.view==='legacy';
     return <><WorkspaceNavigation bridge={bridge} state={state}/>{legacy ? (
         ['home','library','landing'].includes(state.legacyDestination) ? null :
-        <div className="sl-return-bar"><span><BrandLogo/>Space Lab</span><button type="button" onClick={()=>bridge.prepare()}><ArrowLeft size={17}/>Volver al generador</button></div>
+        <div className="sl-return-bar"><span><BrandLogo/>Sesiones GRAFIPLOT</span><button type="button" onClick={()=>bridge.prepare()}><ArrowLeft size={17}/>Regresar al planificador</button></div>
     ) : <div className="sl-app">
         <a className="sl-skip" href={planning ? '#planning-title' : '#react-step-heading'} onClick={event=>{event.preventDefault();document.getElementById(planning ? 'planning-title' : 'react-step-heading')?.focus();}}>Ir al generador</a>
         <div className="sl-workspace">
             <header className="sl-topbar">
-                <span className="sl-mobile-brand"><BrandLogo/>Space<span>Lab</span></span>
-                <div className="sl-breadcrumb"><span>Planificador</span><ChevronRight size={14}/><strong>{planning ? 'Unidades y experiencias' : state.linked ? 'Sesión vinculada' : 'Nueva sesión'}</strong></div>
+                <span className="sl-mobile-brand"><BrandLogo/>Sesiones <span>GRAFIPLOT</span></span>
+                <div className="sl-breadcrumb"><span>Planificador</span><ChevronRight size={14}/><strong>{planning ? 'Unidades y experiencias' : state.linked ? 'Sesión vinculada' : 'Nueva planificación'}</strong></div>
                 <div className="sl-topbar-actions"><a className="sl-icon-button" href="mailto:pabloclsa87@gmail.com" aria-label="Contactar con soporte por correo"><CircleHelp size={19}/></a><span className="sl-beta-tag">BETA</span><button type="button" className="sl-icon-button" aria-label={state.theme==='dark' ? 'Usar tema claro' : 'Usar tema oscuro'} onClick={()=>bridge.toggleTheme()}>{state.theme==='dark' ? <Sun size={19}/> : <Moon size={19}/>}</button>
                     <Help/>
                     <button type="button" className="sl-account" onClick={()=>state.account.signedIn ? bridge.showLegacy('home') : bridge.signIn()}>{state.account.signedIn ? <span className="sl-avatar">{state.account.name.slice(0,2).toUpperCase()}</span> : <LogIn size={18}/>}<span>{state.account.name}</span></button>
                 </div>
             </header>
             {planning ? <PlanningSurface/> : <><main className="sl-main" ref={scroll}>
-                <div className="sl-page-width"><div className="sl-page-heading"><div><span className="sl-page-eyebrow"><span/>MENOS PAPELEO, MÁS APRENDIZAJE</span><h1>Tu próxima gran clase empieza aquí<span>.</span></h1><p>Trae una idea. Dale propósito. Conviértela en una sesión para tu aula.</p></div><button className="sl-advanced-link" type="button" onClick={()=>bridge.showLegacy('advanced')}><SlidersHorizontal size={17}/><span>Modo avanzado</span><ArrowUpRight size={15}/></button></div>
+                <div className="sl-page-width"><div className="sl-page-heading"><div><span className="sl-page-eyebrow"><span/>TU TIEMPO, PARA LO QUE IMPORTA</span><h1>Dale forma a tu siguiente experiencia<span>.</span></h1><p>Parte de una idea, define su intención y construye una propuesta para tus estudiantes.</p></div><button className="sl-advanced-link" type="button" onClick={()=>bridge.showLegacy('advanced')}><SlidersHorizontal size={17}/><span>Edición completa</span><ArrowUpRight size={15}/></button></div>
                     <nav className="sl-stepper" aria-label="Pasos del generador">{steps.map(({title,description,Icon},index)=><button type="button" key={title} className={`sl-step ${step===index ? 'current' : index<step ? 'done' : ''}`} aria-current={step===index ? 'step' : undefined} onClick={()=>goTo(index)}><span className="sl-step-number">{index<step ? <Check size={18}/> : index+1}</span><span><strong>{title}</strong><small>{description}</small></span><Icon size={21} className="sl-step-icon"/></button>)}</nav>
                     {notice && <div className="sl-notice" role="alert">{notice}</div>}
                     <div className="sl-content-grid"><div className="sl-step-content">
                         {step===0 ? <DataStep state={state} bridge={bridge} errors={errors}/> : step===1 ? <LearningStep state={state} bridge={bridge}/> : <ReviewStep state={state} bridge={bridge}/>}
-                        <div className="sl-trust-line"><FileText size={15}/><span>{state.hasDocument ? 'Tus cambios se guardan con el documento.' : 'Podrás guardar y exportar tu sesión cuando esté generada.'}</span></div>
+                        <div className="sl-trust-line"><FileText size={15}/><span>{state.hasDocument ? 'Las modificaciones se conservan junto con tu documento.' : 'Cuando la sesión esté creada, podrás conservarla y descargar su documento.'}</span></div>
                     </div><SessionSummary state={state}/></div>
                 </div>
             </main>
-            <footer className="sl-footer"><div><button type="button" className="sl-back-button" onClick={()=>goTo(step-1)} disabled={step===0 || state.busy}><ArrowLeft size={18}/>Anterior</button><span className="sl-footer-status"><span>PASO {step+1} DE 3</span><strong>{state.busy ? 'Preparando tu sesión…' : steps[step].title}</strong></span><button type="button" className="sl-primary-button" disabled={state.busy} onClick={()=>step===2 ? void generate() : goTo(step+1)}>{state.busy ? <><LoaderCircle size={19} className="sl-spin"/>Generando…</> : step===2 ? <><Sparkles size={19}/>Generar mi sesión</> : <>Continuar<ArrowRight size={19}/></>}</button></div></footer></>}
+            <footer className="sl-footer"><div><button type="button" className="sl-back-button" onClick={()=>goTo(step-1)} disabled={step===0 || state.busy}><ArrowLeft size={18}/>Anterior</button><span className="sl-footer-status"><span>PASO {step+1} DE 3</span><strong>{state.busy ? 'Organizando tu propuesta…' : steps[step].title}</strong></span><button type="button" className="sl-primary-button" disabled={state.busy} onClick={()=>step===2 ? void generate() : goTo(step+1)}>{state.busy ? <><LoaderCircle size={19} className="sl-spin"/>Elaborando…</> : step===2 ? <><Sparkles size={19}/>Crear mi propuesta</> : <>Continuar<ArrowRight size={19}/></>}</button></div></footer></>}
         </div>
     </div>}</>;
 }
@@ -101,11 +101,11 @@ function PlanningSurface() {
 }
 
 function BrandLogo() {
-    return <img className="sl-brand-logo" src="assets/favicon.svg" alt="" width={40} height={40}/>;
+    return <img className="sl-brand-logo" src="assets/grafiplot-sesiones.png" alt="" width={40} height={40}/>;
 }
 
 function Help() {
     return <Dialog.Root><Dialog.Trigger asChild><button className="sl-icon-button" type="button" aria-label="Ayuda del generador"><CircleHelp size={20}/></button></Dialog.Trigger>
-        <Dialog.Portal container={document.getElementById('react-preview-root')}><Dialog.Overlay className="sl-dialog-overlay"/><Dialog.Content className="sl-help-dialog"><Dialog.Close className="sl-drawer-close" aria-label="Cerrar ayuda"><X size={21}/></Dialog.Close><span className="sl-help-symbol"><Sparkles size={29}/></span><Dialog.Title>De tu idea a tu próxima clase.</Dialog.Title><Dialog.Description>El generador te acompaña en tres pasos. Tú mantienes las decisiones pedagógicas.</Dialog.Description><ol><li><strong>Datos.</strong> Define grupo, tema y tiempo.</li><li><strong>Aprendizajes.</strong> Revisa las referencias y aporta tus propuestas.</li><li><strong>Revisar y generar.</strong> Ajusta las opciones y crea la sesión con tu cuenta.</li></ol><p>La disponibilidad curricular varía por nivel. La generación requiere una cuenta y créditos; revisa siempre el resultado antes de compartirlo.</p><Dialog.Close asChild><button className="sl-primary-button" type="button">Vamos a crear<ArrowRight size={18}/></button></Dialog.Close></Dialog.Content></Dialog.Portal>
+        <Dialog.Portal container={document.getElementById('react-preview-root')}><Dialog.Overlay className="sl-dialog-overlay"/><Dialog.Content className="sl-help-dialog"><Dialog.Close className="sl-drawer-close" aria-label="Cerrar ayuda"><X size={21}/></Dialog.Close><span className="sl-help-symbol"><Sparkles size={29}/></span><Dialog.Title>Convierte tu idea en una experiencia de aula.</Dialog.Title><Dialog.Description>Organiza tu propuesta en tres etapas y conserva el control de cada decisión pedagógica.</Dialog.Description><ol><li><strong>Datos.</strong> Define grupo, tema y tiempo.</li><li><strong>Aprendizajes.</strong> Revisa las referencias y aporta tus propuestas.</li><li><strong>Revisión y creación.</strong> Ajusta las opciones y crea la sesión con tu cuenta.</li></ol><p>La disponibilidad curricular varía por nivel. La generación requiere una cuenta y créditos; revisa siempre el resultado antes de compartirlo.</p><Dialog.Close asChild><button className="sl-primary-button" type="button">Comenzar a preparar<ArrowRight size={18}/></button></Dialog.Close></Dialog.Content></Dialog.Portal>
     </Dialog.Root>;
 }

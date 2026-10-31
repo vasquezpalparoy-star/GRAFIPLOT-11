@@ -119,7 +119,7 @@ function App() {
  const controls=(detail?.controls||{}) as Row,subscription=(detail?.subscription||{}) as Row;
  const expired=!!controls.expires_at&&new Date(String(controls.expires_at)).getTime()<=Date.now();
  return <div className="ac-layout">
-  <aside className={open?'ac-sidebar is-open':'ac-sidebar'}><a className="ac-brand" href="index.html"><img src="assets/favicon.svg" alt=""/><span>Space<span>Lab</span><small>CENTRO DE ADMINISTRACIÓN</small></span></a>
+  <aside className={open?'ac-sidebar is-open':'ac-sidebar'}><a className="ac-brand" href="index.html"><img src="assets/grafiplot-sesiones.png" alt=""/><span>Sesiones<span>GRAFIPLOT</span><small>CENTRO DE ADMINISTRACIÓN</small></span></a>
    <a className="ac-back" href="index.html#/home"><ArrowLeft size={16}/>Volver a mi espacio</a><p className="ac-overline">OPERACIÓN</p>
    <nav aria-label="Administración">{sections.filter(s=>can(s.permission)).map(s=><a key={s.id} href={'#'+s.id} aria-current={route===s.id?'page':undefined}><s.icon size={18}/>{s.label}</a>)}</nav>
    <p className="ac-overline">PRÓXIMOS MÓDULOS</p><nav aria-label="Próximos módulos">{pending.map(label=><a key={label} href={'#'+encodeURIComponent(label)}><Clock3 size={15}/>{label}<small>Pendiente</small></a>)}</nav>
@@ -129,7 +129,7 @@ function App() {
    <label className="ac-theme"><SunMoon size={17}/><select aria-label="Tema" data-theme-selector defaultValue={themePreference()} onChange={e=>(window as unknown as {SpaceLabTheme?:{setPreference:(p:string)=>void}}).SpaceLabTheme?.setPreference(e.target.value)}><option value="system">Sistema</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label>
    {access&&<button onClick={async()=>{try{const result=await client?.auth.signOut();if(result?.error)throw result.error;}catch(e){setError(friendly(e));}}}><LogOut size={16}/>Salir</button>}
   </div></header>
-  <main id="admin-main"><div className="ac-heading"><div><p className="ac-eyebrow">SPACE LAB · OPERACIONES</p><h1>{access?title:'Centro de administración'}</h1><p className="ac-muted">Controla tu plataforma con datos verificables y cambios registrados.</p></div>{access&&<button onClick={()=>{setRefresh(v=>v+1);if(detail)void showUser(String(detail.id));}} disabled={loading}><RefreshCw size={16}/>Actualizar</button>}</div>
+  <main id="admin-main"><div className="ac-heading"><div><p className="ac-eyebrow">GRAFIPLOT · OPERACIONES</p><h1>{access?title:'Centro de administración'}</h1><p className="ac-muted">Controla tu plataforma con datos verificables y cambios registrados.</p></div>{access&&<button onClick={()=>{setRefresh(v=>v+1);if(detail)void showUser(String(detail.id));}} disabled={loading}><RefreshCw size={16}/>Actualizar</button>}</div>
   {!access?<section className="ac-card ac-gate"><ShieldCheck size={32}/><h2>Acceso protegido</h2><p role="status">{gate}</p><a className="ac-primary" href="index.html#/home">Ir a iniciar sesión</a></section>:<>
    <Mfa client={client!} active={access.mfa} onVerified={async()=>{const owner=account.current;const ctx=await context(client!);if(owner===account.current){setAccess(ctx);setNotice('Segundo factor verificado.');}}}/>
    {notice&&<div className="ac-notice" role="status">{notice}<button aria-label="Cerrar aviso" onClick={()=>setNotice('')}>×</button></div>}
@@ -166,7 +166,7 @@ function App() {
    {data&&['users','credits','generations','audit'].includes(route)&&<div className="ac-pagination"><span>{page?.total||0} registros · página {offset/25+1}</span><button disabled={offset===0||loading} onClick={()=>setOffset(v=>Math.max(0,v-25))}>Anterior</button><button disabled={loading||offset+25>=(page?.total||0)} onClick={()=>setOffset(v=>v+25)}>Siguiente</button></div>}
    </>}
   </>}
-  </main><footer className="ac-footer">Space Lab · Centro de administración · Los módulos pendientes no ejecutan operaciones.</footer></div>
+  </main><footer className="ac-footer">Sesiones GRAFIPLOT · Centro de administración · Los módulos pendientes no ejecutan operaciones.</footer></div>
   {proposal&&<Confirmation proposal={proposal} busy={busy} error={modalError} submit={commit} cancel={()=>{if(!busy)setProposal(null);}}/>}
  </div>;
 }

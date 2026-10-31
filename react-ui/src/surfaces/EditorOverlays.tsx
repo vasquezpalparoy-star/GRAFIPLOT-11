@@ -10,7 +10,7 @@ export function EditorOverlays() {
 <div id="chatbot-container" className="chatbot-container no-print">
 {"\n"}
 {"\n"}
-<button id="chatbot-bubble" className="chatbot-bubble" title="Preguntar al copiloto" aria-label="Preguntar al copiloto">
+<button id="chatbot-bubble" className="chatbot-bubble" title="Consultar al asistente" aria-label="Consultar al asistente">
 {"\n"}
 <svg className="ui-icon" aria-hidden="true">
 <use href="#icon-chat">
@@ -64,7 +64,7 @@ export function EditorOverlays() {
 <div className="chat-message bot">
 {"\n"}
 <div className="message-bubble">
-{"\n                        ¡Hola! Soy tu asistente pedagógico de Space Lab. ¿En qué puedo ayudarte hoy con tus sesiones o\n                        el Currículo Nacional?\n                    "}
+{"\n                        ¡Hola! Soy tu asistente pedagógico de Sesiones GRAFIPLOT. ¿En qué puedo ayudarte hoy con tus sesiones o\n                        el Currículo Nacional?\n                    "}
 </div>
 {"\n"}
 </div>

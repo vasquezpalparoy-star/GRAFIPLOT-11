@@ -14,7 +14,7 @@ function start() {
     if (!host) return;
     if (new URLSearchParams(location.search).get('ui') === 'legacy') return;
     if (['#/app','#/editor','#/sessions/new'].includes(location.hash)) {
-        host.innerHTML='<div class="sl-starting" role="status"><span>Space Lab</span>Preparando tu espacio de trabajo…</div>';
+        host.innerHTML='<div class="sl-starting" role="status"><span>Sesiones GRAFIPLOT</span>Preparando tu espacio de trabajo…</div>';
     }
     const started=performance.now();
     function mount() {

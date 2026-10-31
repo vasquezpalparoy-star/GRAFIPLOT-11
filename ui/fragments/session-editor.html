@@ -1,21 +1,21 @@
 <!-- Generated from React: SessionEditor. Edit react-ui/src/, then npm run build:public. -->
-<link rel="preload" as="image" href="assets/favicon.svg"/> <!-- -->
+<link rel="preload" as="image" href="assets/grafiplot-sesiones.png"/> <!-- -->
 <div id="app-view" class="app-wrapper hidden">
 <!-- -->
 <header class="app-header glass-card">
 <div class="header-leading">
-<div class="header-brand" data-action="view-landing" style="cursor:pointer" title="Volver al inicio / presentación" role="button" tabindex="0" aria-label="Volver al inicio de Space Lab">
+<div class="header-brand" data-action="view-landing" style="cursor:pointer" title="Volver al inicio / presentación" role="button" tabindex="0" aria-label="Volver al inicio de Sesiones GRAFIPLOT">
 <div class="brand-icon" style="background:linear-gradient(135deg, rgba(0,212,255,0.2) 0%, rgba(123,97,255,0.2) 100%);border-color:rgba(0,212,255,0.35)">
-<img src="assets/favicon.svg" alt="Space Lab Logo" class="brand-logo-img"/>
+<img src="assets/grafiplot-sesiones.png" alt="Sesiones GRAFIPLOT Logo" class="brand-logo-img"/>
 </div>
 <div>
-<h1 class="brand-title">Space Lab</h1>
+<h1 class="brand-title">Sesiones GRAFIPLOT</h1>
 <span class="brand-subtitle">Sesiones Educativas</span>
 </div>
 </div>
 <div class="header-context" aria-label="Contexto de la sesión">
 <span class="header-context-label">Editor de sesión</span>
-<span id="session-context-title" class="header-context-title">Nueva sesión</span>
+<span id="session-context-title" class="header-context-title">Nueva planificación</span>
 </div>
 <!-- -->
 <div id="header-user-badge" class="header-user-badge" role="region" aria-label="Perfil y créditos del docente" hidden="">
@@ -34,14 +34,14 @@
 </div>
 <div class="save-indicator" id="save-indicator" role="status" aria-live="polite">
 <span class="save-dot"></span>
-<span class="save-text">Sin cambios</span>
+<span class="save-text">Sin modificaciones pendientes</span>
 </div>
 <nav class="header-actions">
 <a href="mailto:pabloclsa87@gmail.com" class="btn btn-ghost btn-sm" aria-label="Contactar con soporte por correo">Soporte</a>
 <span id="ai-credit-indicator" class="ai-credit-indicator" role="status" aria-live="polite" hidden="">IA · -- créditos</span>
 <button id="btn-home-nav" type="button" class="btn btn-ghost btn-sm" data-action="view-home" hidden="">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-folder"></use></svg>
-<span class="btn-label">Mi espacio</span>
+<span class="btn-label">Mi panel</span>
 </button>
 <label class="theme-picker" title="Tema de la aplicación">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-theme"></use></svg>
@@ -83,7 +83,7 @@
 </a>
 </div>
 </details>
-<div id="auth-header-container" class="auth-header-container"><button id="btn-login-trigger" class="btn btn-ghost btn-sm" aria-label="Iniciar sesión"><svg class="ui-icon" aria-hidden="true"><use href="#icon-user"></use></svg><span class="auth-label">Iniciar sesión</span></button></div>
+<div id="auth-header-container" class="auth-header-container"><button id="btn-login-trigger" class="btn btn-ghost btn-sm" aria-label="Acceder a mi cuenta"><svg class="ui-icon" aria-hidden="true"><use href="#icon-user"></use></svg><span class="auth-label">Acceder a mi cuenta</span></button></div>
 <button id="btn-menu-mobile" class="btn btn-ghost btn-icon mobile-only" title="Abrir planificación" aria-label="Abrir planificación" aria-expanded="false" aria-controls="sidebar">
 <svg class="ui-icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
 <span class="btn-label">Planificar</span>
@@ -135,16 +135,16 @@
 <aside id="sidebar" class="sidebar glass-card">
 <div class="sidebar-header">
 <div>
-<span class="sidebar-eyebrow">Planificador docente</span>
-<h2 class="sidebar-title">Diseña tu sesión</h2>
+<span class="sidebar-eyebrow">Tu mesa de planificación</span>
+<h2 class="sidebar-title">Construye tu propuesta</h2>
 </div>
-<button id="btn-close-sidebar" type="button" class="btn btn-ghost btn-sm" aria-label="Volver al documento"><svg class="ui-icon" aria-hidden="true"><use href="#icon-close"></use></svg><span>Volver al documento</span></button>
+<button id="btn-close-sidebar" type="button" class="btn btn-ghost btn-sm" aria-label="Regresar al documento"><svg class="ui-icon" aria-hidden="true"><use href="#icon-close"></use></svg><span>Regresar al documento</span></button>
 </div>
 <div class="sidebar-workflow">
 <form id="session-form" class="session-form" autoComplete="off">
 <!-- --> <div class="session-mode-switch" role="group" aria-label="Modo del generador">
-<button type="button" class="btn btn-ghost" id="session-mode-quick" aria-pressed="false">Modo rápido · 3 pasos</button>
-<button type="button" class="btn btn-ghost" id="session-mode-advanced" aria-pressed="true">Modo avanzado</button>
+<button type="button" class="btn btn-ghost" id="session-mode-quick" aria-pressed="false">Asistente · 3 pasos</button>
+<button type="button" class="btn btn-ghost" id="session-mode-advanced" aria-pressed="true">Edición completa</button>
 </div>
 <section id="quick-session" hidden="" aria-label="Asistente rápido de sesiones">
 <nav class="quick-steps" aria-label="Pasos del modo rápido">
@@ -169,7 +169,7 @@
 <div id="quick-proposal-fields"></div>
 </section>
 <section data-quick-panel="3" hidden="" aria-labelledby="quick-title-3">
-<h3 id="quick-title-3" tabindex="-1">Revisar y generar</h3>
+<h3 id="quick-title-3" tabindex="-1">Revisión y creación</h3>
 <dl id="quick-review"></dl>
 <h4>Coherencia curricular y advertencias</h4>
 <ul id="quick-warnings" class="quick-notice"></ul>
@@ -189,15 +189,15 @@
 <div id="tab-ai" class="tab-pane active" role="region" aria-labelledby="inspector-title">
 <div class="inspector-heading planner-section-heading">
 <span id="inspector-step" class="inspector-step">Paso 01 de 06</span>
-<h3 id="inspector-title">Configura el copiloto</h3>
-<p id="inspector-description">Elige el modelo, la plantilla y las referencias para preparar tu sesión.</p>
-<p class="planner-scroll-help">Baja para continuar. El menú te lleva directo a cada sección.</p>
+<h3 id="inspector-title">Prepara tu asistente</h3>
+<p id="inspector-description">Selecciona las opciones de asistencia, el formato y las fuentes que orientarán tu propuesta.</p>
+<p class="planner-scroll-help">Continúa hacia abajo o utiliza el menú para ir a la sección que necesites.</p>
 </div>
 <!-- -->
 <div class="form-group ai-model-card">
 <div class="ai-model-header">
 <div>
-<span class="ai-model-eyebrow">Copiloto Space AI</span>
+<span class="ai-model-eyebrow">Asistente GRAFIPLOT IA</span>
 <strong>Enrutamiento inteligente</strong>
 </div>
 <span class="ai-model-status" id="ai-availability-status">Disponibilidad por verificar</span>
@@ -281,7 +281,7 @@
 </div>
 <!-- -->
 <div id="tab-general" class="tab-pane" role="region" aria-labelledby="planner-title-general">
-<header class="planner-section-heading"><span class="planner-section-step">Paso 02 de 06</span><h3 id="planner-title-general">Completa los datos</h3><p>Define la institución, el grado, el área y la identidad de tu sesión.</p></header>
+<header class="planner-section-heading"><span class="planner-section-step">Paso 02 de 06</span><h3 id="planner-title-general">Indica el contexto</h3><p>Define la institución, el grado, el área y la identidad de tu sesión.</p></header>
 <!-- -->
 <div class="form-card">
 <div class="form-card-title">
@@ -678,7 +678,7 @@
 </div>
 <!-- -->
 <div class="saved-sessions" style="margin-top:1rem">
-<h3 class="saved-title" style="font-size:0.75rem;margin-bottom:6px">Sesiones guardadas</h3>
+<h3 class="saved-title" style="font-size:0.75rem;margin-bottom:6px">Planificaciones conservadas</h3>
 <ul id="saved-list" class="saved-list">
 <li class="saved-empty">No hay sesiones guardadas</li>
 </ul>
@@ -689,8 +689,8 @@
 <aside class="session-planning-summary" aria-labelledby="planning-summary-heading">
 <span class="sidebar-eyebrow" id="planning-summary-heading">Tu sesión, de un vistazo</span>
 <svg class="ui-icon planning-summary-icon" aria-hidden="true"><use href="#icon-file"></use></svg>
-<h3 id="planning-summary-title">Tu próxima clase</h3>
-<p id="planning-summary-context">Completa los datos de tu sesión.</p>
+<h3 id="planning-summary-title">Tu siguiente experiencia</h3>
+<p id="planning-summary-context">Indica el contexto de tu sesión.</p>
 <dl id="planning-summary-facts"></dl>
 <div class="planning-summary-note"><svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg><p>Inicio, desarrollo y cierre. Una estructura para acompañarte en el aula.</p></div>
 </aside>
@@ -714,7 +714,7 @@
 </div>
 <div class="empty-brand-row">
 <div class="empty-brand-mark" style="background:linear-gradient(135deg, rgba(0,212,255,0.2) 0%, rgba(123,97,255,0.2) 100%);border-radius:12px;padding:10px;display:inline-flex;box-shadow:0 0 20px rgba(0,212,255,0.25)">
-<img src="assets/favicon.svg" alt="Space Lab Icon" aria-hidden="true"/>
+<img src="assets/grafiplot-sesiones.png" alt="Sesiones GRAFIPLOT Icon" aria-hidden="true"/>
 </div>
 <span class="empty-eyebrow">Workspace Curricular Inteligente</span>
 </div>
@@ -757,8 +757,8 @@
 <div class="step-item">
 <span class="step-num">2</span>
 <div class="step-content">
-<strong class="step-title">2. Genera con IA</strong>
-<span class="step-desc">Space AI estructura la situación significativa, los momentos didácticos (Inicio, Desarrollo, Cierre), criterios y evidencias.</span>
+<strong class="step-title">2. Elabora con apoyo de IA</strong>
+<span class="step-desc">GRAFIPLOT IA estructura la situación significativa, los momentos didácticos (Inicio, Desarrollo, Cierre), criterios y evidencias.</span>
 </div>
 </div>
 <div class="step-item">

@@ -9758,11 +9758,11 @@ function Qe() {
 						className: "ac-brand",
 						href: "index.html",
 						children: [/* @__PURE__ */ (0, A.jsx)("img", {
-							src: "assets/favicon.svg",
+							src: "assets/grafiplot-sesiones.png",
 							alt: ""
 						}), /* @__PURE__ */ (0, A.jsxs)("span", { children: [
-							"Space",
-							/* @__PURE__ */ (0, A.jsx)("span", { children: "Lab" }),
+							"Sesiones",
+							/* @__PURE__ */ (0, A.jsx)("span", { children: "GRAFIPLOT" }),
 							/* @__PURE__ */ (0, A.jsx)("small", { children: "CENTRO DE ADMINISTRACIÓN" })
 						] })]
 					}),
@@ -9870,7 +9870,7 @@ function Qe() {
 							children: [/* @__PURE__ */ (0, A.jsxs)("div", { children: [
 								/* @__PURE__ */ (0, A.jsx)("p", {
 									className: "ac-eyebrow",
-									children: "SPACE LAB · OPERACIONES"
+									children: "GRAFIPLOT · OPERACIONES"
 								}),
 								/* @__PURE__ */ (0, A.jsx)("h1", { children: t ? Ee : "Centro de administración" }),
 								/* @__PURE__ */ (0, A.jsx)("p", {
@@ -10481,7 +10481,7 @@ function Qe() {
 					}),
 					/* @__PURE__ */ (0, A.jsx)("footer", {
 						className: "ac-footer",
-						children: "Space Lab · Centro de administración · Los módulos pendientes no ejecutan operaciones."
+						children: "Sesiones GRAFIPLOT · Centro de administración · Los módulos pendientes no ejecutan operaciones."
 					})
 				]
 			}),

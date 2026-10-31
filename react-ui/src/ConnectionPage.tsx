@@ -54,10 +54,10 @@ export function ConnectionPage() {
             <div className="node node-left" title="Navegador web"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg></div>
             <div className="connection-beam"><div className="connection-pulse"/></div>
             <div className="node node-right" title="Motor local"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5M8 17h3"/></svg></div>
-        </div><h1 id="title">{phase==='connected'?'Motor Enlazado':'Enlazar Motor Local'}</h1>
+        </div><h1 id="title">{phase==='connected'?'Motor Enlazado':'Enlazar Motor de escritorio'}</h1>
         <p id="description">{phase==='connected'?'El motor de exportación local en Python ha sido vinculado correctamente. Redirigiéndote al editor...':'Detectamos una solicitud de conexión segura para activar la exportación premium (PDF impecable y Word nativo).'}</p>
         <button id="btn-connect" className={`btn-connect${phase==='connected'?' btn-success':''}`} onClick={()=>void connect()} disabled={phase==='checking'||phase==='connected'||(phase==='error'&&!token.current)}>
-            <span id="btn-text">{phase==='checking'?'Comprobando conexión...':phase==='connected'?'¡Enlace Exitoso!':'Vincular con Motor Local'}</span></button>
+            <span id="btn-text">{phase==='checking'?'Comprobando conexión...':phase==='connected'?'¡Enlace Exitoso!':'Vincular con Motor de escritorio'}</span></button>
         <div id="status-message" className={message?'status-alert alert-error':'status-alert'} role="status" style={message?{display:'block'}:undefined}>{message}</div>
         <div className="footer-info">Desarrollado por Samuel Pablo | <a href="./">Ir al Panel de Control</a></div>
     </div></div></>;

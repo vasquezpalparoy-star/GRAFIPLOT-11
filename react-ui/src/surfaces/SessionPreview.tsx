@@ -29,7 +29,7 @@ export function SessionPreview() {
 {"\n"}
 <div className="empty-brand-mark" style={{"background": "linear-gradient(135deg, rgba(0,212,255,0.2) 0%, rgba(123,97,255,0.2) 100%)", "borderRadius": "12px", "padding": "10px", "display": "inline-flex", "boxShadow": "0 0 20px rgba(0,212,255,0.25)"} as CSSProperties}>
 {"\n"}
-<img src="assets/favicon.svg" alt="Space Lab Icon" aria-hidden="true"/>
+<img src="assets/grafiplot-sesiones.png" alt="Sesiones GRAFIPLOT Icon" aria-hidden="true"/>
 {"\n"}
 </div>
 {"\n"}
@@ -172,11 +172,11 @@ export function SessionPreview() {
 <div className="step-content">
 {"\n"}
 <strong className="step-title">
-{"2. Genera con IA"}
+{"2. Elabora con apoyo de IA"}
 </strong>
 {"\n"}
 <span className="step-desc">
-{"Space AI estructura la situación significativa, los momentos didácticos (Inicio, Desarrollo, Cierre), criterios y evidencias."}
+{"GRAFIPLOT IA estructura la situación significativa, los momentos didácticos (Inicio, Desarrollo, Cierre), criterios y evidencias."}
 </span>
 {"\n"}
 </div>

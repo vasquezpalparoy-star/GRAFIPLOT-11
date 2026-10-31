@@ -5,11 +5,11 @@ export function Home() {
     return <>
 <div id="home-view" className="home-view hidden">
     <header className="home-header">
-        <button type="button" className="home-brand" data-action="view-home" aria-label="Ir a Mi espacio">
-            <span className="home-brand-mark"><img src="assets/favicon.svg" alt="" aria-hidden="true"/></span>
-            <span><strong>Mi espacio</strong><small>Todo listo para tu próxima clase</small></span>
+        <button type="button" className="home-brand" data-action="view-home" aria-label="Ir a Mi panel">
+            <span className="home-brand-mark"><img src="assets/grafiplot-sesiones.png" alt="" aria-hidden="true"/></span>
+            <span><strong>Mi panel</strong><small>Tus recursos para la siguiente experiencia</small></span>
         </button>
-        <nav className="home-nav" aria-label="Navegación del espacio"><a href="#/home" className="home-nav-link active">Mi espacio</a><a href="#/sessions" className="home-nav-link">Mis sesiones</a></nav>
+        <nav className="home-nav" aria-label="Navegación del espacio"><a href="#/home" className="home-nav-link active">Mi panel</a><a href="#/sessions" className="home-nav-link">Mis sesiones</a></nav>
         <div className="home-account">
             <a className="home-support" href="mailto:pabloclsa87@gmail.com" aria-label="Contactar con soporte"><CircleHelp size={18}/><span>Soporte</span></a>
             <label className="theme-picker" title="Tema de la aplicación"><Monitor size={16} aria-hidden="true"/><span className="sr-only">Tema de la aplicación</span><select data-theme-selector="" aria-label="Tema de la aplicación"><option value="system">Sistema</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label>
@@ -21,9 +21,9 @@ export function Home() {
     <main className="home-main" id="home-main">
         <section className="home-welcome" aria-labelledby="home-welcome-title">
             <div className="home-welcome-copy">
-                <span className="home-eyebrow"><span className="home-live-dot"/>TU CENTRO DE PLANIFICACIÓN</span>
-                <h1 id="home-welcome-title">Bienvenido a tu espacio docente</h1>
-                <p>Una idea para tu aula. Un espacio para darle forma.<br/>Crea, organiza y continúa tus próximas clases.</p>
+                <span className="home-eyebrow"><span className="home-live-dot"/>UN LUGAR PARA ORGANIZAR TUS CLASES</span>
+                <h1 id="home-welcome-title">Tu próxima experiencia comienza aquí</h1>
+                <p>Lo que imaginas para tus estudiantes encuentra aquí su punto de partida.<br/>Prepara nuevas propuestas, organiza tus documentos y retoma tu trabajo.</p>
                 <div className="home-primary-actions">
                     <button type="button" className="btn btn-primary home-primary-button" data-home-action="new-session"><Plus size={19}/>Crear nueva sesión<ArrowUpRight size={17}/></button>
                     <button type="button" id="home-continue-session" className="btn btn-ghost home-secondary-button hidden" data-home-action="continue-session"><BookOpen size={17}/>Continuar último borrador<ArrowRight size={16}/></button>
@@ -32,13 +32,13 @@ export function Home() {
             </div>
             <aside className="home-guide" aria-label="Guía para comenzar">
                 <div className="home-guide-art" aria-hidden="true"><span className="home-orbit orbit-one"/><span className="home-orbit orbit-two"/><span className="home-guide-spark"><WandSparkles size={32}/></span><span className="home-orbit-star"><Sparkles size={18}/></span></div>
-                <div className="home-guide-heading"><span className="home-guide-icon"><Sparkles size={18}/></span><div><span>DE LA IDEA AL AULA</span><strong>Tu próxima clase, paso a paso</strong></div></div>
-                <ol className="home-guide-steps"><li><span>1</span><p><strong>Completa los datos</strong>Indica nivel, área y propósito.</p></li><li><span>2</span><p><strong>Genera con IA</strong>Obtén una propuesta alineada al CNEB.</p></li><li><span>3</span><p><strong>Revisa y exporta</strong>Edita libremente y descarga tu documento.</p></li></ol>
+                <div className="home-guide-heading"><span className="home-guide-icon"><Sparkles size={18}/></span><div><span>DE TU PROPUESTA A LA PRÁCTICA</span><strong>Organiza tu experiencia por etapas</strong></div></div>
+                <ol className="home-guide-steps"><li><span>1</span><p><strong>Indica el contexto</strong>Define el nivel, el área y la intención de aprendizaje.</p></li><li><span>2</span><p><strong>Elabora con apoyo de IA</strong>Desarrolla una propuesta tomando como referencia el CNEB.</p></li><li><span>3</span><p><strong>Comprueba y descarga</strong>Ajusta el contenido y obtén el archivo de tu clase.</p></li></ol>
             </aside>
         </section>
         <section className="home-summary" aria-label="Resumen de la cuenta">
-            <article className="home-summary-card"><span className="home-summary-icon"><FileText size={21}/></span><div><strong id="home-session-count">0</strong><span>Sesiones guardadas</span></div><span className="home-stat-caption">Tu trabajo, a mano</span></article>
-            <article className="home-summary-card"><span className="home-summary-icon accent-purple"><Sparkles size={21}/></span><div><strong id="home-credit-count">--</strong><span>Créditos de IA</span></div><span className="home-stat-caption">Para tus próximas ideas</span></article>
+            <article className="home-summary-card"><span className="home-summary-icon"><FileText size={21}/></span><div><strong id="home-session-count">0</strong><span>Planificaciones conservadas</span></div><span className="home-stat-caption">Tus documentos a tu alcance</span></article>
+            <article className="home-summary-card"><span className="home-summary-icon accent-purple"><Sparkles size={21}/></span><div><strong id="home-credit-count">--</strong><span>Créditos de IA</span></div><span className="home-stat-caption">Para elaborar nuevas propuestas</span></article>
             <article className="home-summary-card home-plan-summary"><span className="home-summary-icon accent-green"><ShieldCheck size={21}/></span><div className="home-plan-summary-copy"><strong id="home-plan-name">Docente</strong><span>Plan actual</span></div><button type="button" className="home-plan-link" data-home-action="view-plans">Ver planes<ArrowRight size={15}/></button></article>
         </section>
 <section className="home-section" aria-labelledby="home-tools-title">
@@ -52,7 +52,7 @@ export function Home() {
 </span>
 {"\n"}
 <h2 id="home-tools-title">
-{"¿Qué deseas preparar?"}
+{"¿En qué trabajarás hoy?"}
 </h2>
 {"\n"}
 </div>
@@ -78,17 +78,17 @@ export function Home() {
 </span>
 {"\n"}
 <h3>
-{"Sesión individual"}
+{"Una sesión de aprendizaje"}
 </h3>
 {"\n"}
 <p>
-{"Diseña, genera y exporta sesiones alineadas al CNEB para Inicial, Primaria y Secundaria."}
+{"Organiza, desarrolla y descarga propuestas curriculares para Inicial, Primaria y Secundaria con referencia al CNEB."}
 </p>
 {"\n"}
 </div>
 {"\n"}
 <button type="button" className="home-tool-action" data-home-action="new-session">
-{"\n                            Crear sesión "}
+{"\n                            Preparar una clase "}
 <svg className="ui-icon" aria-hidden="true">
 <use href="#icon-arrow-right">
 
@@ -99,7 +99,7 @@ export function Home() {
 {"\n"}
 </article>
 {"\n"}
-<article className="home-tool-card home-tool-card-active" aria-label="Planificación articulada">
+<article className="home-tool-card home-tool-card-active" aria-label="Planificación conectada">
 {"\n"}
 <span className="home-tool-icon">
 <svg className="ui-icon" aria-hidden="true">
@@ -116,17 +116,17 @@ export function Home() {
 </span>
 {"\n"}
 <h3>
-{"Planificación articulada"}
+{"Planificación conectada"}
 </h3>
 {"\n"}
 <p>
-{"Experiencias, Unidades y Proyectos de aprendizaje. Construye y guarda tu mapa paso a paso."}
+{"Desarrolla Experiencias, Unidades y Proyectos de aprendizaje y conserva su mapa de trabajo de manera progresiva."}
 </p>
 {"\n"}
 </div>
 {"\n"}
 <button type="button" className="home-tool-action" data-open-planning="">
-{"Abrir planificaciones"}
+{"Explorar mis planificaciones"}
 </button>
 {"\n"}
 </article>
@@ -142,7 +142,7 @@ export function Home() {
 <div>
 {"\n"}
 <span className="home-eyebrow">
-{"Biblioteca personal"}
+{"Archivo de mis propuestas"}
 </span>
 {"\n"}
 <h2 id="home-sessions-title">
@@ -175,11 +175,11 @@ export function Home() {
 </span>
 {"\n"}
 <h2 id="home-plans-title">
-{"Conoce qué incluye cada plan"}
+{"Revisa las características de cada alternativa"}
 </h2>
 {"\n"}
 <p id="home-plans-description">
-{"Conoce las diferencias antes de decidir. Los cambios de plan y los pagos todavía no están habilitados."}
+{"Compara las opciones con calma. Por ahora, esta sección no permite modificar el plan ni efectuar pagos."}
 </p>
 {"\n"}
 </div>
@@ -218,7 +218,7 @@ export function Home() {
 </div>
 {"\n"}
 <p className="home-plan-description">
-{"Lo esencial para crear y guardar tus primeras sesiones."}
+{"Las herramientas básicas para preparar y conservar tus primeras propuestas."}
 </p>
 {"\n"}
 <p className="home-plan-credits">
@@ -287,7 +287,7 @@ export function Home() {
 </div>
 {"\n"}
 <p className="home-plan-description">
-{"Para docentes que prueban y ayudan a mejorar Space Lab."}
+{"Pensado para quienes exploran Sesiones GRAFIPLOT y aportan a su mejora."}
 </p>
 {"\n"}
 <p className="home-plan-credits">
@@ -356,7 +356,7 @@ export function Home() {
 </div>
 {"\n"}
 <p className="home-plan-description">
-{"Más capacidad y herramientas para una planificación frecuente."}
+{"Más recursos y capacidad para quienes planifican de manera habitual."}
 </p>
 {"\n"}
 <p className="home-plan-credits">
@@ -425,7 +425,7 @@ export function Home() {
 </div>
 {"\n"}
 <p className="home-plan-description">
-{"Para un uso intensivo y las capacidades más avanzadas."}
+{"Pensado para una actividad frecuente con acceso a funciones de mayor alcance."}
 </p>
 {"\n"}
 <p className="home-plan-credits">
@@ -488,7 +488,7 @@ export function Home() {
 <strong>
 {"Vista informativa."}
 </strong>
-{" No se realizará ningún cobro ni cambio de plan desde esta pantalla."}
+{" Esta sección no genera cargos ni modifica tu suscripción."}
 </p>
 {"\n"}
 </footer>

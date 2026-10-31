@@ -54,7 +54,7 @@ export function Downloads(){return <>
 </div>
 {"\n"}
 <p>
-{"\n                Activa el motor de exportación local en Windows para generar PDF en A4 y documentos de Word (.docx) editables desde la web, con tablas y fórmulas matemáticas.\n            "}
+{"\n                Pon en marcha el servicio de escritorio en Windows y crea desde la página archivos PDF A4 y Word (.docx) editables, con tablas y ecuaciones.\n            "}
 </p>
 {"\n"}
 {"\n"}
@@ -166,7 +166,7 @@ export function Downloads(){return <>
 </div>
 {"\n"}
 <div className="step-text">
-{"Ejecuta el archivo. Verás iniciarse la terminal hacker de color negro profundo."}
+{"Abre el ejecutable y espera a que aparezca la ventana de estado del servicio."}
 </div>
 {"\n"}
 </div>
@@ -200,11 +200,11 @@ export function Downloads(){return <>
 <ul className="warning-steps-list">
 {"\n"}
 <li>
-{"Al ser una aplicación de desarrollo independiente (no firmada digitalmente), Windows podría lanzar una advertencia."}
+{"Windows puede mostrar un aviso porque se trata de un desarrollo independiente sin firma digital."}
 </li>
 {"\n"}
 <li>
-{"Comprueba el origen y el hash de la descarga indicados abajo. Para continuar, haz clic en "}
+{"Antes de continuar, verifica la procedencia y la huella de la descarga que aparecen a continuación. Después selecciona "}
 <strong>
 {"\"Más información\""}
 </strong>
@@ -239,7 +239,7 @@ export function Downloads(){return <>
 </div>
 {"\n"}
 <div style={{"fontSize": "0.88rem", "color": "#cbd5e1", "lineHeight": "1.6", "marginBottom": "12px"} as CSSProperties}>
-{"\n                    Comprueba que el SHA-256 de tu descarga coincida con el ejecutable publicado y compilado en GitHub Actions:\n                "}
+{"\n                    Verifica que la huella SHA-256 del archivo descargado sea igual a la del ejecutable publicado desde GitHub Actions:\n                "}
 </div>
 {"\n"}
 <div style={{"background": "rgba(0,0,0,0.5)", "padding": "12px", "borderRadius": "8px", "fontFamily": "'Fira Code', monospace", "fontSize": "0.78rem", "wordBreak": "break-all", "color": "#a5f3fc", "border": "1px solid rgba(6, 182, 212, 0.2)", "marginBottom": "14px"} as CSSProperties}>

@@ -174,7 +174,7 @@ window.AuthUi = (() => {
             if (authTitle) authTitle.textContent = 'Iniciar Sesión';
             if (authSubtitle) authSubtitle.textContent = 'Ingresa a tu cuenta Space Lab para gestionar tus créditos de IA y sincronizar tus sesiones.';
             btnSubmit.textContent = 'INICIAR SESIÓN';
-            if (toggleText) toggleText.textContent = '¿No tienes una cuenta?';
+            if (toggleText) toggleText.textContent = '¿Es tu primera visita?';
             if (btnToggle) btnToggle.textContent = 'Créala aquí';
 
             groupUsername.classList.add('hidden');

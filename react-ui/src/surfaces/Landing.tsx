@@ -9,22 +9,22 @@ export function Landing() {
 {"\n"}
 <header className="landing-navbar">
 {"\n"}
-<a href="#/" className="landing-brand" aria-label="Space Lab - Inicio">
+<a href="#/" className="landing-brand" aria-label="Sesiones GRAFIPLOT - Inicio">
 {"\n"}
 <div className="landing-brand-logo">
 {"\n"}
-<img src="assets/favicon.svg" alt="Space Lab Logo"/>
+<img src="assets/grafiplot-sesiones.png" alt="Sesiones GRAFIPLOT Logo"/>
 {"\n"}
 </div>
 {"\n"}
 <div className="landing-brand-text">
 {"\n"}
 <span className="landing-brand-title">
-{"Space Lab"}
+{"Sesiones GRAFIPLOT"}
 </span>
 {"\n"}
 <span className="landing-brand-badge">
-{"MINEDU 2026 · CNEB"}
+{"PLANIFICACIÓN DOCENTE · PERÚ"}
 </span>
 {"\n"}
 </div>
@@ -35,25 +35,25 @@ export function Landing() {
 {"\n"}
 <li>
 <a href="#como-funciona" className="landing-nav-link">
-{"¿Cómo Funciona?"}
+{"Cómo empezar"}
 </a>
 </li>
 {"\n"}
 <li>
 <a href="#motor-local" className="landing-nav-link">
-{"Motor Local"}
+{"Motor de escritorio"}
 </a>
 </li>
 {"\n"}
 <li>
 <a href="#modelos-ia" className="landing-nav-link">
-{"Modelos IA"}
+{"Asistentes de IA"}
 </a>
 </li>
 {"\n"}
 <li>
 <a href="#preguntas-frecuentes" className="landing-nav-link">
-{"Preguntas Frecuentes"}
+{"Dudas habituales"}
 </a>
 </li>
 {"\n"}
@@ -103,7 +103,7 @@ export function Landing() {
 {"\n"}
 </label>
 {"\n"}
-<button type="button" className="btn btn-ghost btn-sm" data-action="open-login" aria-label="Iniciar sesión con tu cuenta">
+<button type="button" className="btn btn-ghost btn-sm" data-action="open-login" aria-label="Acceder a tu cuenta">
 {"\n"}
 <svg className="ui-icon" aria-hidden="true">
 <use href="#icon-user">
@@ -112,7 +112,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Iniciar Sesión"}
+{"Acceder a mi cuenta"}
 </span>
 {"\n"}
 </button>
@@ -126,7 +126,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Ir al Editor"}
+{"Abrir mi espacio"}
 </span>
 {"\n"}
 </button>
@@ -149,26 +149,26 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Plataforma Inteligente MINEDU 2026 · CNEB Perú"}
+{"DA FORMA A TU PRÓXIMA CLASE"}
 </span>
 {"\n"}
 </div>
 {"\n"}
 <h1 className="landing-hero-title">
-{"\n                    Menos tiempo planificando."}
+{"\n                    Una enseñanza que inspira"}
 <br/>
 <span className="highlight">
-{"Más tiempo enseñando."}
+{"nace de una buena planificación."}
 </span>
 {"\n"}
 </h1>
 {"\n"}
 <p className="landing-hero-subtitle">
-{"\n                    Prepara tu próxima clase para "}
+{"\n                    Organiza experiencias de aprendizaje para "}
 <strong>
 {"Inicial, Primaria o Secundaria"}
 </strong>
-{". Elige los aprendizajes, construye tu sesión con ayuda de la IA y dale tu toque antes de exportarla a "}
+{". Selecciona los aprendizajes, desarrolla tu propuesta con apoyo de la IA y personalízala antes de descargarla en "}
 <strong>
 {"Word o PDF"}
 </strong>
@@ -186,7 +186,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Crear mi sesión"}
+{"Empezar mi planificación"}
 </span>
 {"\n"}
 <svg className="ui-icon" aria-hidden="true">
@@ -200,7 +200,7 @@ export function Landing() {
 <a href="#como-funciona" className="landing-btn-lg landing-btn-ghost" aria-label="Ver cómo funciona la plataforma">
 {"\n"}
 <span>
-{"Ver Cómo Funciona"}
+{"Conocer el proceso"}
 </span>
 {"\n"}
 </a>
@@ -218,7 +218,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"CNEB 2026 Oficial"}
+{"Alineado al CNEB"}
 </span>
 {"\n"}
 </div>
@@ -232,7 +232,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"GPT-6 Luna & DeepSeek R1"}
+{"Asistencia pedagógica con IA"}
 </span>
 {"\n"}
 </div>
@@ -246,7 +246,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Motor Word (.docx) Nativo"}
+{"Documentos Word editables"}
 </span>
 {"\n"}
 </div>
@@ -260,7 +260,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Privado y Seguro"}
+{"Tu trabajo bajo tu control"}
 </span>
 {"\n"}
 </div>
@@ -272,6 +272,7 @@ export function Landing() {
 {"\n"}
 <div className="landing-hero-preview landing-lesson-visual" role="img" aria-label="Ejemplo de planificación: elegir competencias y capacidades, revisar la sesión y llevarla a Word o PDF.">
 {"\n"}
+<div className="gp-studio-heading" aria-hidden="true"><span className="gp-studio-brand"><img src="assets/grafiplot-sesiones.png" alt=""/><span>Sesiones <strong>GRAFIPLOT</strong></span></span><span className="gp-studio-label">TU TALLER DE APRENDIZAJE</span></div>
 <div className="lesson-scene" aria-hidden="true">
 {"\n"}
 <div className="lesson-dot-grid">
@@ -287,7 +288,7 @@ export function Landing() {
 
 </use>
 </svg>
-{" Tu próxima clase"}
+{" Tu siguiente experiencia"}
 </span>
 <span className="lesson-mini-saved">
 <i>
@@ -321,13 +322,13 @@ export function Landing() {
 </span>
 {"\n"}
 <h2>
-{"Aprender también"}
+{"Todo aprendizaje"}
 <br/>
-{"empieza con elegir."}
+{"comienza con una elección."}
 </h2>
 {"\n"}
 <p>
-{"¿Qué trabajarán tus estudiantes?"}
+{"¿Qué aprenderá tu grupo?"}
 </p>
 {"\n"}
 <div className="lesson-mini-option selected">
@@ -341,7 +342,7 @@ export function Landing() {
 <span>
 {"Resuelve problemas de cantidad"}
 <small>
-{"4 capacidades disponibles"}
+{"4 capacidades para seleccionar"}
 </small>
 </span>
 </div>
@@ -376,7 +377,7 @@ export function Landing() {
 </div>
 {"\n"}
 <div className="lesson-mini-bottom">
-{"Tu sesión va tomando forma"}
+{"Tu propuesta ya está en marcha"}
 </div>
 {"\n"}
 </div>
@@ -390,7 +391,7 @@ export function Landing() {
 
 </use>
 </svg>
-{" TU SESIÓN, LISTA PARA EL AULA"}
+{" DE LA PLANIFICACIÓN AL AULA"}
 </span>
 <div className="lesson-paper-lines">
 <i>
@@ -444,10 +445,10 @@ export function Landing() {
 </use>
 </svg>
 <span>
-{"La IA propone."}
+{"La IA aporta una propuesta."}
 <br/>
 <strong>
-{"Tú le das tu toque."}
+{"Tú decides cómo enseñarla."}
 </strong>
 </span>
 </div>
@@ -464,15 +465,15 @@ export function Landing() {
 <div className="landing-section-header">
 {"\n"}
 <span className="landing-section-eyebrow">
-{"Flujo Pedagógico"}
+{"Tu ruta de trabajo"}
 </span>
 {"\n"}
 <h2 className="landing-section-title">
-{"¿Cómo Funciona en 3 Simples Pasos?"}
+{"Tu planificación, en tres momentos"}
 </h2>
 {"\n"}
 <p className="landing-section-desc">
-{"Diseñado para ahorrarte horas de trabajo administrativo y enfocarte en la enseñanza."}
+{"Dedica menos tiempo a las tareas administrativas y más a acompañar el aprendizaje de tu grupo."}
 </p>
 {"\n"}
 </div>
@@ -486,11 +487,11 @@ export function Landing() {
 </span>
 {"\n"}
 <h3 className="landing-step-title">
-{"Configuración Curricular CNEB"}
+{"Organiza el marco curricular"}
 </h3>
 {"\n"}
 <p className="landing-step-text">
-{"Elige tu nivel educativo (Inicial, Primaria o Secundaria), área, grado, competencias y capacidades precargadas del CNEB de forma automática."}
+{"Indica el nivel, el grado y el área de tu clase; después selecciona las competencias y capacidades del CNEB disponibles para ese contexto."}
 </p>
 {"\n"}
 </div>
@@ -502,11 +503,11 @@ export function Landing() {
 </span>
 {"\n"}
 <h3 className="landing-step-title">
-{"Generación Pedagógica con IA"}
+{"Desarrolla tu propuesta con IA"}
 </h3>
 {"\n"}
 <p className="landing-step-text">
-{"Los modelos de IA (GPT-6 Luna, DeepSeek R1 o Gemini) redactan situaciones significativas, la secuencia didáctica completa (Inicio, Desarrollo, Cierre) y los criterios de evaluación."}
+{"Los asistentes de IA pueden ayudarte a redactar la situación significativa, organizar el inicio, desarrollo y cierre, y formular criterios de evaluación. Su uso requiere la configuración del servicio."}
 </p>
 {"\n"}
 </div>
@@ -518,11 +519,11 @@ export function Landing() {
 </span>
 {"\n"}
 <h3 className="landing-step-title">
-{"Compilación Nativa con Motor Local"}
+{"Convierte tu trabajo en un documento"}
 </h3>
 {"\n"}
 <p className="landing-step-text">
-{"Descarga el motor de escritorio para compilar Word (.docx) nativo con tablas CNEB perfectas, fórmulas matemáticas OMML editables y membretes oficiales sin descuadres."}
+{"Utiliza el motor de escritorio para producir archivos Word (.docx) con tablas curriculares, ecuaciones OMML editables y encabezados institucionales."}
 </p>
 {"\n"}
 </div>
@@ -537,15 +538,15 @@ export function Landing() {
 <div className="landing-section-header">
 {"\n"}
 <span className="landing-section-eyebrow">
-{"Arquitectura Híbrida"}
+{"Web y escritorio, conectados"}
 </span>
 {"\n"}
 <h2 className="landing-section-title">
-{"¿Por qué Space Lab Incluye un Motor Local?"}
+{"¿Para qué sirve el motor de escritorio?"}
 </h2>
 {"\n"}
 <p className="landing-section-desc">
-{"Unificamos la flexibilidad de la web con la potencia del compilador nativo de escritorio para documentos Word (.docx) de máxima fidelidad."}
+{"La plataforma combina la comodidad del navegador con el procesamiento de escritorio para conservar la estructura de tus documentos Word (.docx)."}
 </p>
 {"\n"}
 </div>
@@ -563,21 +564,21 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Fidelidad Documental 100%"}
+{"Estructura documental cuidada"}
 </span>
 {"\n"}
 </div>
 {"\n"}
 <h3 className="motor-local-title">
-{"Motor Local de Exportación para Windows"}
+{"Generación de documentos desde Windows"}
 </h3>
 {"\n"}
 <p className="motor-local-desc">
-{"\n                        Los navegadores web no pueden crear de forma nativa documentos de Microsoft Word con tablas anidadas multinivel, márgenes físicos A4 de imprenta ni fórmulas matemáticas editables (OMML). Por eso creamos "}
+{"\n                        Para conservar tablas anidadas, márgenes A4 y ecuaciones OMML editables en Word, el proyecto utiliza un componente de escritorio llamado "}
 <strong>
 {"pablitopyhost.exe"}
 </strong>
-{": un motor ultraligero que corre en tu PC y se comunica de forma transparente y segura con esta aplicación web a través de "}
+{": un servicio ligero que se ejecuta en tu equipo y se enlaza con esta página mediante "}
 <code>
 {"localhost:8000"}
 </code>
@@ -595,7 +596,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Tablas CNEB oficiales sin celdas descuadradas"}
+{"Tablas curriculares con una distribución consistente"}
 </span>
 {"\n"}
 </div>
@@ -609,7 +610,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Ecuaciones matemáticas editables en formato OMML"}
+{"Fórmulas en OMML que puedes seguir editando"}
 </span>
 {"\n"}
 </div>
@@ -623,7 +624,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Membretes institucionales de DRE y UGEL"}
+{"Encabezados con los datos de tu institución, DRE y UGEL"}
 </span>
 {"\n"}
 </div>
@@ -637,7 +638,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Exportación instantánea sin límites de memoria web"}
+{"Procesamiento local independiente de la memoria del navegador"}
 </span>
 {"\n"}
 </div>
@@ -655,7 +656,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Descargar Motor Local (.exe)"}
+{"Obtener motor para Windows (.exe)"}
 </span>
 {"\n"}
 </a>
@@ -669,7 +670,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Verificar Estado de Conexión"}
+{"Comprobar la conexión"}
 </span>
 {"\n"}
 </a>
@@ -688,15 +689,15 @@ export function Landing() {
 <div className="landing-section-header">
 {"\n"}
 <span className="landing-section-eyebrow">
-{"Tecnología de Vanguardia"}
+{"Herramientas para tu práctica docente"}
 </span>
 {"\n"}
 <h2 className="landing-section-title">
-{"Impulsado por los Mejores Modelos de IA"}
+{"Distintas capacidades de IA para tu aula"}
 </h2>
 {"\n"}
 <p className="landing-section-desc">
-{"Elige el motor de inteligencia artificial que mejor se adapte a tu estilo pedagógico."}
+{"Selecciona la alternativa de inteligencia artificial que responda a las necesidades de tu planificación."}
 </p>
 {"\n"}
 </div>
@@ -728,7 +729,7 @@ export function Landing() {
 </span>
 {"\n"}
 <p className="landing-model-desc">
-{"Máxima agilidad y creatividad en el planteamiento de situaciones significativas contextualizadas a la realidad y coyuntura peruana."}
+{"Apoyo ágil para proponer situaciones significativas y creativas vinculadas al contexto peruano."}
 </p>
 {"\n"}
 </div>
@@ -758,7 +759,7 @@ export function Landing() {
 </span>
 {"\n"}
 <p className="landing-model-desc">
-{"Razonamiento pedagógico profundo, coherencia estricta en la alineación de propósitos y diseño de instrumentos de evaluación formativa."}
+{"Asistencia para relacionar los propósitos de aprendizaje y construir instrumentos de evaluación formativa con coherencia pedagógica."}
 </p>
 {"\n"}
 </div>
@@ -788,7 +789,7 @@ export function Landing() {
 </span>
 {"\n"}
 <p className="landing-model-desc">
-{"Velocidad instantánea para actividades prácticas de inicio, desarrollo y cierre, fichas de trabajo y adaptación a distintos ritmos de aprendizaje."}
+{"Ayuda para preparar actividades de cada momento de la clase, elaborar fichas y ajustar las propuestas a diferentes ritmos de aprendizaje."}
 </p>
 {"\n"}
 </div>
@@ -803,15 +804,15 @@ export function Landing() {
 <div className="landing-section-header">
 {"\n"}
 <span className="landing-section-eyebrow">
-{"Respuestas Claras"}
+{"Resolvemos tus consultas"}
 </span>
 {"\n"}
 <h2 className="landing-section-title">
-{"Preguntas Frecuentes para Docentes"}
+{"Lo que necesitas conocer antes de empezar"}
 </h2>
 {"\n"}
 <p className="landing-section-desc">
-{"Todo lo que necesitas saber sobre la plataforma, el motor local y el currículo."}
+{"Consulta las dudas habituales sobre el espacio de trabajo, la exportación y las referencias curriculares."}
 </p>
 {"\n"}
 </div>
@@ -827,15 +828,15 @@ export function Landing() {
 
 </use>
 </svg>
-{"\n                        ¿Qué es el Motor Local y por qué debo descargarlo?\n                    "}
+{"\n                        ¿Qué hace el motor de escritorio y cuándo lo necesito?\n                    "}
 </h3>
 {"\n"}
 <p className="landing-faq-answer">
-{"Para que tus sesiones se descarguen en Microsoft Word (.docx) con las tablas oficiales del MINEDU, márgenes exactos, listas de cotejo y fórmulas matemáticas editables (OMML) sin que se mueva ninguna celda, desarrollamos un motor nativo ("}
+{"El componente de escritorio permite preparar documentos Word (.docx) con tablas curriculares, márgenes definidos, instrumentos de evaluación y ecuaciones OMML editables. Este motor ("}
 <code>
 {"pablitopyhost.exe"}
 </code>
-{"). Se ejecuta en segundo plano en tu computadora y procesa el documento con máxima fidelidad."}
+{") funciona en segundo plano dentro de tu equipo y procesa el archivo para conservar su estructura."}
 </p>
 {"\n"}
 </div>
@@ -849,11 +850,11 @@ export function Landing() {
 
 </use>
 </svg>
-{"\n                        ¿Puedo usar la plataforma sin descargar el motor local?\n                    "}
+{"\n                        ¿Se puede trabajar únicamente desde el navegador?\n                    "}
 </h3>
 {"\n"}
 <p className="landing-faq-answer">
-{"Sí. Puedes diseñar, redactar, editar, guardar en la nube o localmente, y utilizar todos los modelos de Inteligencia Artificial directamente en tu navegador. El motor local solo es necesario cuando deseas compilar y descargar tus sesiones en formato Word (.docx) editable de alta fidelidad."}
+{"Sí. El navegador permite planificar, escribir, editar y conservar tu trabajo en el dispositivo o en tu cuenta. La asistencia de IA requiere su servicio configurado. Para las exportaciones que utilizan el motor nativo, debes tenerlo instalado y en ejecución."}
 </p>
 {"\n"}
 </div>
@@ -867,11 +868,11 @@ export function Landing() {
 
 </use>
 </svg>
-{"\n                        ¿Cómo se alinea al Currículo Nacional de la Educación Básica (CNEB)?\n                    "}
+{"\n                        ¿Qué relación tiene la plataforma con el CNEB?\n                    "}
 </h3>
 {"\n"}
 <p className="landing-faq-answer">
-{"Toda la base de datos de competencias, capacidades, desempeños por grado y ciclo (Inicial, Primaria y Secundaria), enfoques transversales e instrumentos de evaluación está completamente estructurada según las directivas curriculares vigentes del Ministerio de Educación del Perú (MINEDU)."}
+{"Las referencias de competencias, capacidades, desempeños y enfoques se organizan tomando como base el Currículo Nacional del MINEDU. La cobertura disponible depende del nivel, área y grado; contrasta siempre las referencias con tu programa curricular."}
 </p>
 {"\n"}
 </div>
@@ -885,11 +886,11 @@ export function Landing() {
 
 </use>
 </svg>
-{"\n                        ¿Qué modelos de Inteligencia Artificial están disponibles?\n                    "}
+{"\n                        ¿Con qué asistentes de IA puede trabajar el sistema?\n                    "}
 </h3>
 {"\n"}
 <p className="landing-faq-answer">
-{"Dispones de una arquitectura multi-modelo conectada a través de routers seguros: GPT-6 Luna de OpenAI, DeepSeek V3 y Reasoner R1 para razonamiento pedagógico profundo, y Google Gemini 2.5 Flash para generación ultrarrápida de actividades y criterios."}
+{"El proyecto admite la integración de asistentes de OpenAI, DeepSeek y Google Gemini mediante servicios de servidor. Los modelos que podrás utilizar dependerán del proveedor y la configuración habilitados para esta instalación."}
 </p>
 {"\n"}
 </div>
@@ -903,11 +904,11 @@ export function Landing() {
 
 </use>
 </svg>
-{"\n                        ¿Cómo funciona el sistema de créditos y monetización automatizada?\n                    "}
+{"\n                        ¿Cómo se administra el consumo de IA?\n                    "}
 </h3>
 {"\n"}
 <p className="landing-faq-answer">
-{"La plataforma cuenta con un sistema de créditos automatizado gestionado en la nube con Supabase. No requiere procesos manuales de verificación: tus créditos de IA se recargan y acreditan de forma automática para que puedas seguir planificando sin interrupciones."}
+{"El proyecto contempla un registro de consumo y créditos en Supabase. En esta instalación, la activación de la IA y la gestión comercial avanzada siguen pendientes de configuración; esta pantalla no realiza cobros."}
 </p>
 {"\n"}
 </div>
@@ -921,11 +922,11 @@ export function Landing() {
 
 </use>
 </svg>
-{"\n                        ¿Mis sesiones y datos personales están seguros?\n                    "}
+{"\n                        ¿Cómo se resguarda la información de mi cuenta?\n                    "}
 </h3>
 {"\n"}
 <p className="landing-faq-answer">
-{"Totalmente seguros. Tus sesiones se guardan localmente en tu propio dispositivo (LocalStorage e IndexedDB) y, si inicias sesión, se sincronizan en la nube mediante Supabase con políticas de seguridad de nivel de fila (RLS). Tu información docente nunca se comparte con terceros."}
+{"Puedes conservar tus sesiones en el dispositivo y sincronizarlas con Supabase cuando accedes a tu cuenta. Las políticas por usuario restringen el acceso a tus registros. Si utilizas IA, el contenido necesario de la solicitud se procesa con el proveedor configurado; evita incluir información personal de estudiantes."}
 </p>
 {"\n"}
 </div>
@@ -940,11 +941,11 @@ export function Landing() {
 <div className="landing-cta-card">
 {"\n"}
 <h2 className="landing-cta-title">
-{"¿Listo para Planificar tu Próxima Sesión?"}
+{"Tu siguiente clase puede empezar hoy"}
 </h2>
 {"\n"}
 <p className="landing-cta-text">
-{"Únete a los docentes que ya optimizan su tiempo administrativo con inteligencia artificial curricular."}
+{"Reúne tus ideas y organiza una propuesta de aprendizaje pensada para tu grupo."}
 </p>
 {"\n"}
 <button type="button" className="landing-btn-lg landing-btn-primary" data-action="enter-app" aria-label="Entrar al editor y planificar sesión ahora">
@@ -956,7 +957,7 @@ export function Landing() {
 </svg>
 {"\n"}
 <span>
-{"Entrar al Editor y Crear mi Sesión Ahora"}
+{"Abrir el planificador y comenzar"}
 </span>
 {"\n"}
 <svg className="ui-icon" aria-hidden="true">
@@ -977,7 +978,7 @@ export function Landing() {
 <div className="landing-contact-content">
 {"\n"}
 <h2 className="landing-contact-title">
-{"ESTABLECER ENLACE"}
+{"CONVERSEMOS"}
 </h2>
 {"\n"}
 <div className="landing-contact-divider">
@@ -985,7 +986,7 @@ export function Landing() {
 </div>
 {"\n"}
 <p className="landing-contact-desc">
-{"\n                    ¿Tienes un proyecto en mente o necesitas una solución digital? Transmite tus requerimientos por cualquiera de estos canales.\n                "}
+{"\n                    Si buscas ayuda o quieres desarrollar una propuesta digital, comparte tu consulta mediante los canales disponibles.\n                "}
 </p>
 {"\n"}
 <div className="landing-contact-buttons">
@@ -1040,6 +1041,7 @@ export function Landing() {
 {"\n"}
 {"\n"}
 <footer className="landing-footer">
+<div className="gp-footer-brand"><img src="assets/grafiplot-sesiones.png" alt="Logo de Sesiones GRAFIPLOT"/><div><strong>Sesiones GRAFIPLOT</strong><p>Tus ideas, convertidas en experiencias para aprender.</p></div></div>
 {"\n"}
 <div className="landing-creator-box">
 {"\n"}
@@ -1054,7 +1056,7 @@ export function Landing() {
 </div>
 {"\n"}
 <p className="landing-creator-text">
-{"\n                    SISTEMA CREADO CON "}
+{"\n                    PROYECTO ORIGINAL CREADO CON "}
 <svg className="ui-icon icon-heart" aria-hidden="true">
 <use href="#icon-heart">
 
@@ -1080,19 +1082,19 @@ export function Landing() {
 </a>
 {"\n"}
 <a href="descargas_landing.html" className="landing-footer-link">
-{"Motor Local de Word"}
+{"Exportación de Word"}
 </a>
 {"\n"}
 <a href="conexion.html" className="landing-footer-link">
-{"Estado de Conexión"}
+{"Estado del servicio"}
 </a>
 {"\n"}
 <a href="#" id="link-terms-footer" className="landing-footer-link">
-{"Términos y Privacidad"}
+{"Condiciones y privacidad"}
 </a>
 {"\n"}
 <a href="#/app" className="landing-footer-link" data-action="enter-app">
-{"Ir al Editor"}
+{"Abrir mi espacio"}
 </a>
 {"\n"}
 </div>

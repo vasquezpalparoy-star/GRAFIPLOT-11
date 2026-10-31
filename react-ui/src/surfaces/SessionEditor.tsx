@@ -14,18 +14,18 @@ export function SessionEditor() {
 {"\n"}
 <div className="header-leading">
 {"\n"}
-<div className="header-brand" data-action="view-landing" style={{"cursor": "pointer"} as CSSProperties} title="Volver al inicio / presentación" role="button" tabIndex={0} aria-label="Volver al inicio de Space Lab">
+<div className="header-brand" data-action="view-landing" style={{"cursor": "pointer"} as CSSProperties} title="Volver al inicio / presentación" role="button" tabIndex={0} aria-label="Volver al inicio de Sesiones GRAFIPLOT">
 {"\n"}
 <div className="brand-icon" style={{"background": "linear-gradient(135deg, rgba(0,212,255,0.2) 0%, rgba(123,97,255,0.2) 100%)", "borderColor": "rgba(0,212,255,0.35)"} as CSSProperties}>
 {"\n"}
-<img src="assets/favicon.svg" alt="Space Lab Logo" className="brand-logo-img"/>
+<img src="assets/grafiplot-sesiones.png" alt="Sesiones GRAFIPLOT Logo" className="brand-logo-img"/>
 {"\n"}
 </div>
 {"\n"}
 <div>
 {"\n"}
 <h1 className="brand-title">
-{"Space Lab"}
+{"Sesiones GRAFIPLOT"}
 </h1>
 {"\n"}
 <span className="brand-subtitle">
@@ -43,7 +43,7 @@ export function SessionEditor() {
 </span>
 {"\n"}
 <span id="session-context-title" className="header-context-title">
-{"Nueva sesión"}
+{"Nueva planificación"}
 </span>
 {"\n"}
 </div>
@@ -96,7 +96,7 @@ export function SessionEditor() {
 </span>
 {"\n"}
 <span className="save-text">
-{"Sin cambios"}
+{"Sin modificaciones pendientes"}
 </span>
 {"\n"}
 </div>
@@ -120,7 +120,7 @@ export function SessionEditor() {
 </svg>
 {"\n"}
 <span className="btn-label">
-{"Mi espacio"}
+{"Mi panel"}
 </span>
 {"\n"}
 </button>
@@ -456,23 +456,23 @@ export function SessionEditor() {
 <div>
 {"\n"}
 <span className="sidebar-eyebrow">
-{"Planificador docente"}
+{"Tu mesa de planificación"}
 </span>
 {"\n"}
 <h2 className="sidebar-title">
-{"Diseña tu sesión"}
+{"Construye tu propuesta"}
 </h2>
 {"\n"}
 </div>
 {"\n"}
-<button id="btn-close-sidebar" type="button" className="btn btn-ghost btn-sm" aria-label="Volver al documento">
+<button id="btn-close-sidebar" type="button" className="btn btn-ghost btn-sm" aria-label="Regresar al documento">
 <svg className="ui-icon" aria-hidden="true">
 <use href="#icon-close">
 
 </use>
 </svg>
 <span>
-{"Volver al documento"}
+{"Regresar al documento"}
 </span>
 </button>
 {"\n"}
@@ -494,15 +494,15 @@ export function SessionEditor() {
 </span>
 {"\n"}
 <h3 id="inspector-title">
-{"Configura el copiloto"}
+{"Prepara tu asistente"}
 </h3>
 {"\n"}
 <p id="inspector-description">
-{"Elige el modelo, la plantilla y las referencias para preparar tu sesión."}
+{"Selecciona las opciones de asistencia, el formato y las fuentes que orientarán tu propuesta."}
 </p>
 {"\n"}
 <p className="planner-scroll-help">
-{"Baja para continuar. El menú te lleva directo a cada sección."}
+{"Continúa hacia abajo o utiliza el menú para ir a la sección que necesites."}
 </p>
 {"\n"}
 </div>
@@ -515,7 +515,7 @@ export function SessionEditor() {
 <div>
 {"\n"}
 <span className="ai-model-eyebrow">
-{"Copiloto Space AI"}
+{"Asistente GRAFIPLOT IA"}
 </span>
 {"\n"}
 <strong>
@@ -756,7 +756,7 @@ export function SessionEditor() {
 {"Paso 02 de 06"}
 </span>
 <h3 id="planner-title-general">
-{"Completa los datos"}
+{"Indica el contexto"}
 </h3>
 <p>
 {"Define la institución, el grado, el área y la identidad de tu sesión."}
@@ -1855,7 +1855,7 @@ export function SessionEditor() {
 <div className="saved-sessions" style={{"marginTop": "1rem"} as CSSProperties}>
 {"\n"}
 <h3 className="saved-title" style={{"fontSize": "0.75rem", "marginBottom": "6px"} as CSSProperties}>
-{"Sesiones guardadas"}
+{"Planificaciones conservadas"}
 </h3>
 {"\n"}
 <ul id="saved-list" className="saved-list">
@@ -1887,11 +1887,11 @@ export function SessionEditor() {
 </svg>
 {"\n"}
 <h3 id="planning-summary-title">
-{"Tu próxima clase"}
+{"Tu siguiente experiencia"}
 </h3>
 {"\n"}
 <p id="planning-summary-context">
-{"Completa los datos de tu sesión."}
+{"Indica el contexto de tu sesión."}
 </p>
 {"\n"}
 <dl id="planning-summary-facts">
