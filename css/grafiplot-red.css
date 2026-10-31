@@ -1,0 +1,25 @@
+/* GRAFIPLOT Educativo: red chrome, independent of printable document. */
+@media screen {
+:root, html[data-theme="light"], html[data-theme="dark"] {
+ --color-primary:#b91c1c; --color-primary-hover:#991b1b; --color-primary-foreground:#fff;
+ --color-accent:#b91c1c; --color-accent-hover:#991b1b; --color-ring:#dc2626;
+ --color-border-focus:#dc2626; --color-primary-dim:#fef2f2; --color-primary-ring:#dc262633;
+ --color-violet:#b91c1c; --color-violet-dim:#fef2f2; --color-violet-border:#dc262644;
+ --accent:#b91c1c; --accent-dark:#991b1b; --text-accent:#b91c1c;
+ --accent-gradient:linear-gradient(125deg,#b91c1c,#e11d48); --accent-glow:#dc262633;
+ --accent-glow-strong:#dc262655; --surface-cyan:#fef2f2; --surface-blue:#fff1f2;
+ --color-step-cyan:#b91c1c; --color-step-blue:#b91c1c;
+}
+html[data-theme="dark"] {
+ --color-accent:#fca5a5; --text-accent:#fca5a5; --color-primary-dim:#351619;
+ --color-violet:#fca5a5; --color-violet-dim:#351619; --surface-cyan:#351619; --surface-blue:#351619;
+}
+html #react-preview-root, html[data-theme="dark"] #react-preview-root {
+ --sl-primary:#b91c1c; --sl-soft:#fef2f2; --sl-selected-surface:linear-gradient(135deg,#fee2e2,#fff1f2);
+ --sl-selected-border:#f87171; --sl-action:linear-gradient(135deg,#b91c1c,#e11d48);
+ --sl-action-hover:linear-gradient(135deg,#991b1b,#be123c); --sl-action-text:#fff; --sl-action-border:#b91c1c;
+}
+html[data-theme="dark"] #react-preview-root {--sl-primary:#fca5a5;--sl-soft:#351619;--sl-selected-surface:linear-gradient(135deg,#451a1a,#281216);}
+#react-preview-root .sl-sidebar {background:linear-gradient(180deg,#450a0a,#7f1d1d);color:#fecaca;}
+#react-preview-root .sl-sidebar button[aria-current="page"] {background:#ffffff20;color:#fff;}
+}

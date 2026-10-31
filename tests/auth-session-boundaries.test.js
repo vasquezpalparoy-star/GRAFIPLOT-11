@@ -88,7 +88,7 @@ const client = window.SupabaseClient;
     assert.equal(updatedPassword, 'new-password');
     assert.equal(client.isPasswordRecoveryPending(), false);
     emit('SIGNED_OUT', null);
-    values.set('sb-koptglmifwpzrfzvipnm-auth-token', JSON.stringify({ user: { id: 'stale-a' } }));
+    values.set('grafiplot-educativo-auth', JSON.stringify({ user: { id: 'stale-a' } }));
     assert.equal(client.getSessionUserSync(), null, 'Un evento de salida prevalece sobre una copia local obsoleta.');
     console.log('auth-session-boundaries.test.js: OK');
 })().catch(error => { console.error(error); process.exitCode = 1; });

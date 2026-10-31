@@ -8,8 +8,8 @@ window.SupabaseClient = (() => {
         throw new Error('No se cargó la allowlist de campos de perfil.');
     }
     // Credenciales dadas por el usuario
-    const SUPABASE_URL = 'https://koptglmifwpzrfzvipnm.supabase.co';
-    const SUPABASE_KEY = 'sb_publishable_erAiat0Q6VFXk5gveRnj4A_3WKFzBzI';
+    const SUPABASE_URL = 'https://gyvztqpvgtinxoqhyfbw.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_m5tDCWoaiu-xP-lezwd3Lg_rlUfq118';
 
     let supabase = null;
     let _cachedUser = null;
@@ -39,7 +39,7 @@ window.SupabaseClient = (() => {
         if (_sessionResolved) return _cachedUser;
         if (_cachedUser) return _cachedUser;
         try {
-            const exactKey = 'sb-koptglmifwpzrfzvipnm-auth-token';
+            const exactKey = 'grafiplot-educativo-auth';
             let item = window.localStorage ? window.localStorage.getItem(exactKey) : null;
             if (item) {
                 const parsed = JSON.parse(item);
@@ -61,6 +61,7 @@ window.SupabaseClient = (() => {
         if (window.supabase) {
             supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
                 auth: {
+                    storageKey: 'grafiplot-educativo-auth',
                     storage: window.localStorage,
                     persistSession: true,
                     autoRefreshToken: true,
@@ -183,10 +184,10 @@ window.SupabaseClient = (() => {
      */
     async function ensureUserProfile(user) {
         try {
-            const { data } = await supabase.from('profiles').select('*').eq('id', user.id).single();
+            const { data } = await supabase.from('educ_profiles').select('*').eq('id', user.id).single();
             if (!data) {
                 const username = user.user_metadata?.username || user.email.split('@')[0];
-                await supabase.from('profiles').insert([{
+                await supabase.from('educ_profiles').insert([{
                     id: user.id,
                     email: user.email,
                     username: username,
@@ -207,7 +208,7 @@ window.SupabaseClient = (() => {
         if (user) {
             await logAction('LOGOUT', `Usuario cerró sesión: ${user.email}`);
         }
-        const { error } = await supabase.auth.signOut();
+        const { error } = await supabase.auth.signOut({ scope: 'local' });
         if (error) throw error;
         setSessionContext(null);
         return true;
@@ -288,7 +289,7 @@ window.SupabaseClient = (() => {
         if (!ownerId || session.user?.id !== ownerId) throw new Error('La cuenta cambió. Inténtalo nuevamente.');
 
         try {
-            const { data, error } = await supabase.functions.invoke(functionName, { body });
+            const { data, error } = await supabase.functions.invoke(`educ-${functionName}`, { body });
             if (getSessionUserSync()?.id !== ownerId) throw new Error('La cuenta cambió. Se descartó la respuesta anterior.');
             if (error) {
                 if (error.name === 'FunctionsFetchError') {
@@ -319,7 +320,7 @@ window.SupabaseClient = (() => {
         if (!supabase || !userId) return 'user';
         try {
             const { data, error } = await supabase
-                .from('profiles')
+                .from('educ_profiles')
                 .select('role')
                 .eq('id', userId)
                 .single();
@@ -340,7 +341,7 @@ window.SupabaseClient = (() => {
         if (!supabase) return [];
         if (!expectedUserId || getSessionUserSync()?.id !== expectedUserId) throw new Error('La cuenta cambió.');
         const { data, error } = await supabase
-            .from('sesiones')
+            .from('educ_sesiones')
             .select('*')
             .eq('user_id', expectedUserId)
             .order('last_saved', { ascending: false });
@@ -379,9 +380,9 @@ window.SupabaseClient = (() => {
         // Postgres evaluates the version predicate while locking the row. A
         // concurrent writer cannot pass using the same revision after a commit.
         const query = expectedVersion
-            ? supabase.from('sesiones').update(payload).eq('id', snapshot.id)
+            ? supabase.from('educ_sesiones').update(payload).eq('id', snapshot.id)
                 .eq('user_id', expectedUserId).eq('last_saved', expectedVersion)
-            : supabase.from('sesiones').insert(payload);
+            : supabase.from('educ_sesiones').insert(payload);
         const {data, error} = await query.select('last_saved');
         if (getSessionUserSync()?.id !== expectedUserId) throw new Error('La cuenta cambió.');
         if (error && error.code !== '23505') {
@@ -390,7 +391,7 @@ window.SupabaseClient = (() => {
         }
         let version = data?.[0]?.last_saved;
         if (!version) {
-            const {data: remote, error: readError} = await supabase.from('sesiones').select('*')
+            const {data: remote, error: readError} = await supabase.from('educ_sesiones').select('*')
                 .eq('id', snapshot.id).eq('user_id', expectedUserId).maybeSingle();
             if (getSessionUserSync()?.id !== expectedUserId) throw new Error('La cuenta cambió.');
             if (readError) throw readError;
@@ -415,7 +416,7 @@ window.SupabaseClient = (() => {
     async function deleteSessionCloud(id) {
         if (!supabase) return false;
         const { error } = await supabase
-            .from('sesiones')
+            .from('educ_sesiones')
             .delete()
             .eq('id', id);
 
@@ -431,7 +432,7 @@ window.SupabaseClient = (() => {
         if (!supabase) return [];
         if (!expectedUserId || getSessionUserSync()?.id !== expectedUserId) throw new Error('La cuenta cambió.');
         const { data, error } = await supabase
-            .from('planning_containers')
+            .from('educ_planning_containers')
             .select('*')
             .eq('user_id', expectedUserId)
             .order('last_saved', { ascending: false });
@@ -458,7 +459,7 @@ window.SupabaseClient = (() => {
         if (!user) return false;
         if (!expectedUserId || user.id !== expectedUserId || getSessionUserSync()?.id !== expectedUserId) throw new Error('La cuenta cambió.');
         const { error } = await supabase
-            .from('planning_containers')
+            .from('educ_planning_containers')
             .upsert({
                 user_id: user.id,
                 id: record.id,
@@ -483,7 +484,7 @@ window.SupabaseClient = (() => {
         if (!supabase) return;
         try {
             const user = await getCurrentUser();
-            await supabase.from('security_logs').insert([{
+            await supabase.from('educ_security_logs').insert([{
                 user_id: user ? user.id : null,
                 action: action,
                 details: details
@@ -502,7 +503,7 @@ window.SupabaseClient = (() => {
         if (!user) return null;
         try {
             const { data, error } = await supabase
-                .from('profiles')
+                .from('educ_profiles')
                 .select('*')
                 .eq('id', user.id)
                 .single();
@@ -526,7 +527,7 @@ window.SupabaseClient = (() => {
             const editableData = window.SpaceLabProfileFields.sanitizeUpdate(profileData);
             if (Object.keys(editableData).length === 0) return true;
             const { error } = await supabase
-                .from('profiles')
+                .from('educ_profiles')
                 .update(editableData)
                 .eq('id', user.id);
             if (error) throw error;
@@ -548,7 +549,7 @@ window.SupabaseClient = (() => {
             return cachedEntitlements;
         }
         try {
-            const { data, error } = await supabase.rpc('get_user_entitlements');
+            const { data, error } = await supabase.rpc('educ_get_user_entitlements');
             if (error) throw error;
             if (getSessionUserSync()?.id !== user?.id) return { ok: false, plan: 'unknown', features: {} };
             if (data && typeof data === 'object') {
@@ -603,7 +604,7 @@ window.SupabaseClient = (() => {
         const user = sessionUser || await getCurrentUser();
         if (!user) return null;
         const { data, error } = await supabase
-            .from('ai_credit_wallets')
+            .from('educ_ai_credit_wallets')
             .select('balance, updated_at')
             .eq('user_id', user.id)
             .maybeSingle();
@@ -622,7 +623,7 @@ window.SupabaseClient = (() => {
         if (!user) return [];
         const safeLimit = Math.min(100, Math.max(1, Number(limit) || 20));
         const { data, error } = await supabase
-            .from('ai_usage')
+            .from('educ_ai_usage')
             .select('request_id, action, provider, model, credits, status, input_tokens, output_tokens, created_at, completed_at')
             .eq('user_id', user.id)
             .order('created_at', { ascending: false })
@@ -656,7 +657,7 @@ window.SupabaseClient = (() => {
         const fileName = `${user.id}/${Date.now()}_${Math.random().toString(36).substring(2, 8)}.${fileExt}`;
         
         const { error } = await supabase.storage
-            .from('logos')
+            .from('educ_logos')
             .upload(fileName, file, {
                 cacheControl: '3600',
                 upsert: false
@@ -664,12 +665,20 @@ window.SupabaseClient = (() => {
 
         if (error) throw error;
 
-        // Obtener la URL pública
-        const { data: { publicUrl } } = supabase.storage
-            .from('logos')
-            .getPublicUrl(fileName);
+        return await readPrivateLogo(fileName);
+    }
 
-        return publicUrl;
+    // Download through the authenticated API; persist image bytes, never an expiring link.
+    async function readPrivateLogo(path) {
+        const { data, error } = await supabase.storage.from('educ_logos').download(path);
+        if (error) throw error;
+        if (data.size > 5 * 1024 * 1024) throw new Error('El logo supera el límite de 5 MB.');
+        return await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = () => reject(new Error('No se pudo leer el logo.'));
+            reader.readAsDataURL(data);
+        });
     }
 
     /**
@@ -681,7 +690,7 @@ window.SupabaseClient = (() => {
             const user = await getCurrentUser();
             if (!user) return [];
             const { data, error } = await supabase.storage
-                .from('logos')
+                .from('educ_logos')
                 .list(user.id, {
                     limit: 50,
                     sortBy: { column: 'name', order: 'desc' }
@@ -690,15 +699,12 @@ window.SupabaseClient = (() => {
             if (error) throw error;
             if (getSessionUserSync()?.id !== user.id) return [];
 
-            return (data || []).map(file => {
-                const { data: { publicUrl } } = supabase.storage
-                    .from('logos')
-                    .getPublicUrl(`${user.id}/${file.name}`);
-                return {
-                    name: file.name,
-                    url: publicUrl
-                };
-            });
+            const logos = await Promise.all((data || []).map(async file => ({
+                name: file.name,
+                url: await readPrivateLogo(`${user.id}/${file.name}`)
+            })));
+            if (getSessionUserSync()?.id !== user.id) return [];
+            return logos;
         } catch (e) {
             console.warn('[Supabase] Error al listar logos del storage:', e);
             return [];
@@ -714,7 +720,7 @@ window.SupabaseClient = (() => {
         if (!user) return [];
         try {
             const { data, error } = await supabase
-                .from('alumnos')
+                .from('educ_alumnos')
                 .select('nombre_completo')
                 .eq('user_id', user.id)
                 .eq('nivel', nivel)
@@ -739,7 +745,7 @@ window.SupabaseClient = (() => {
         if (!user) throw new Error('Debes iniciar sesión para guardar alumnos');
         try {
             const nombres = [...new Set(nombresArray.map(nombre => nombre.trim()).filter(Boolean))];
-            const { error } = await supabase.rpc('replace_alumnos_roster', {
+            const { error } = await supabase.rpc('educ_replace_alumnos_roster', {
                 p_nivel: nivel,
                 p_grado: grado,
                 p_seccion: seccion,

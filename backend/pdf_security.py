@@ -14,8 +14,8 @@ from urllib.request import HTTPRedirectHandler, Request, build_opener
 from bs4 import BeautifulSoup
 
 MAX_IMAGE_BYTES = 5 * 1024 * 1024
-LOGO_HOST = 'koptglmifwpzrfzvipnm.supabase.co'
-LOGO_PATH = '/storage/v1/object/public/logos/'
+LOGO_HOST = 'gyvztqpvgtinxoqhyfbw.supabase.co'
+LOGO_PATH = '/storage/v1/object/public/educ_logos/'
 MATHJAX_SHA256 = 'd4295dc33744836935c1399feece5159577b34c5c8ffb9f1c6324cd82e03a882'
 DROP_TAGS = ['script', 'iframe', 'object', 'embed', 'link', 'base', 'form', 'input',
              'button', 'textarea', 'select', 'template', 'svg', 'math', 'audio', 'video']

@@ -19,7 +19,7 @@ function client(owner = 'teacher-a') {
             maybeSingle: () => {single = true; return api;},
             then(resolve, reject) {
                 return Promise.resolve().then(() => {
-                    if (table !== 'sesiones') return {data: [], error: null};
+                    if (table !== 'educ_sesiones') return {data: [], error: null};
                     const matching = Array.from(rows.values()).filter(row => row.user_id === user.id
                         && filters.every(([key, value]) => row[key] === value));
                     if (operation === 'insert' && rows.has(payload.id)) return {data: null, error: {code: '23505'}};

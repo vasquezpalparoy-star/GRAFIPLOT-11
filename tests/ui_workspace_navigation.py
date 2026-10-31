@@ -12,7 +12,7 @@ from ui_account_recovery_smoke import SDK
 from ui_session_lifecycle_smoke import SESSION
 
 ROOT = Path(__file__).resolve().parents[1]
-AUTHENTICATED_SDK = SDK + "window.__session={user:{id:'workspace-teacher',email:'workspace@example.test'}};localStorage.setItem('sb-koptglmifwpzrfzvipnm-auth-token',JSON.stringify(window.__session));"
+AUTHENTICATED_SDK = SDK + "window.__session={user:{id:'workspace-teacher',email:'workspace@example.test'}};localStorage.setItem('grafiplot-educativo-auth',JSON.stringify(window.__session));"
 
 
 class QuietHandler(SimpleHTTPRequestHandler):
